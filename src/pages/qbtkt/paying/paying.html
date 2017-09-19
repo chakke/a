@@ -1,0 +1,247 @@
+<ion-content class="qb-ion-content">
+    <div class="header-height"></div>
+
+    <div class="qb-content">
+        <div class="qb-segment">
+            <div class="qb-segment-button button-qb" [class.active]="segmentActive == 0" (click)="selectTab(0)">
+                <span>Thẻ của tôi</span>
+            </div>
+            <div class="qb-segment-button" [class.active]="segmentActive == 1" (click)="selectTab(1)">
+                <span>Phương thức khác</span>
+            </div>
+        </div>
+        <div class="segment-content" *ngIf="segmentActive == 0">
+            <div class="logo-images">
+                <img src="assets/qbtkt/paying/image_security.png" alt="logo" class="logo left">
+                <img src="assets/qbtkt/paying/image_visa_mastercard.png" alt="logo" class="logo right">
+            </div>
+            <div class="qb-section">
+                <div class="section-row">
+                    <span class="checkbox">
+                        <ion-checkbox color="danger" checked="true"></ion-checkbox>
+                    </span>
+                    <span class="phone">**** 9752</span>
+                    <span class="logo master-card-logo">
+                      <img src="assets/qbtkt/paying/logo_mastercard.png" alt="logo">
+                    </span>
+                </div>
+            </div>
+            <div class="qb-section plus-secttion">
+                <div class="section-row">
+                    <span class="plus">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </span>
+                    <span>Thêm thẻ</span>
+                </div>
+            </div>
+            <div class="qb-section">
+                <div class="section-header">
+                    <span class="discount-icon">
+                    <img src="assets/qbtkt/paying/icon_discount.png" alt="logo">
+                </span>
+                    <span>Mã giảm giá</span>
+                    <span class="button-right">
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="qb-section section-price">
+                <div class="section-header">
+                    <span class=" qb-black">Chi tiết giá</span>
+                </div>
+                <div class="section-body">
+                    <ion-row>
+                        <ion-col col-8>
+                            <span>Thai Lion Air </span>
+                            <span class="blue">(1x Người lớn)</span>
+                        </ion-col>
+                        <ion-col col-4>
+                            <span class=" qb-black bold">
+                                1.664.084 Vnđ
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-8>
+                            <span>Hành lý HAN - DMK</span>
+                        </ion-col>
+                        <ion-col col-4>
+                            <span class="bold green">
+                                Miễn phí
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-8>
+                            <span>Thai Lion Air </span>
+                            <span class="blue">(1x Người lớn)</span>
+                        </ion-col>
+                        <ion-col col-4>
+                            <span class=" qb-black bold">
+                                1.664.084 Vnđ
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-8>
+                            <span>Hành lý HAN - DMK</span>
+                        </ion-col>
+                        <ion-col col-4>
+                            <span class=" qb-black bold">
+                                330.000 Vnđ
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <div class="section-footer">
+                    <ion-row>
+                        <ion-col col-8>
+                            <span class="qb-black">Tổng giá tiền</span>
+                        </ion-col>
+                        <ion-col col-4>
+                            <span class="price">4.806.450</span>
+                            <span class="qb-black bold">Vnđ</span>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </div>
+            <div class="note">
+                <p>Bằng việc chạm vào nút <span class="blue">Thanh toán</span>, bạn đồng ý với các <span class="blue"> Điều khoản & Điều kiện </span>và <span class="blue">Chính sách quyền riêng tư</span> </p>
+            </div>
+        </div>
+        <div class="segment-content" *ngIf="segmentActive == 1">
+            <div class="qb-section section-logo">
+                <div class="section-header">
+                    <span class="qb-black">
+                  Chuyển khoản
+                </span>
+                    <span class="button-right">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                    <span class="text-right">23m</span>
+                </div>
+                <div class="section-body">
+                    <div class="logo-container">
+                        <img src="http://file.vforum.vn/hinh/2015/06/chi-nhanh-vietcombank.png" class="" alt="logo">
+                    </div>
+                    <div class="logo-container">
+                        <img src="https://freshbrand.vn/wp-content/uploads/2013/07/logo-ngan-hang-vietinbank.jpg" class="" alt="logo">
+                    </div>
+                    <div class="logo-container">
+                        <img src="https://www.seeklogo.net/wp-content/uploads/2016/07/BIDV-logo-without-artboard.png" class="" alt="logo">
+                    </div>
+                    <div class="logo-container">
+                        <img src="http://static.ybox.vn/2017/8/31/61148836-8ddc-11e7-abfd-56c566ee3692.jpg" class="" alt="logo">
+                    </div>
+                    <div class="logo-container">
+                        <img src="http://thetindungonline.com/wp-content/uploads/2017/07/Maritime-Bank.jpg" class="" alt="logo">
+                    </div>
+                    <div class="logo-container">
+                        <img src="http://www.vpbank.com.vn/sites/default/files/logo.jpg" class="" alt="logo">
+                    </div>
+                </div>
+            </div>
+            <div class="qb-section section-logo">
+                <div class="section-header">
+                    <span class="qb-black">
+                      Thẻ tín dụng
+                    </span>
+                    <span class="button-right">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                    <span class="text-right">23m</span>
+                </div>
+                <div class="section-body">
+                    <div class="logo-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" class="" alt="logo">
+                    </div>
+                    <div class="logo-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2000px-MasterCard_Logo.svg.png" class="" alt="logo">
+                    </div>
+                    <div class="logo-container">
+                        <img src="https://seeklogo.com/images/J/jcb-logo-B188C1B713-seeklogo.com.png" class="" alt="logo">
+                    </div>
+
+                </div>
+            </div>
+            <div class="qb-section section-logo">
+                <div class="section-header">
+                    <span class="qb-black">
+                      Tại cửa hàng
+                    </span>
+                    <span class="button-right">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                    <span class="text-right">23m</span>
+                </div>
+                <div class="section-body">
+                    <div class="logo-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" class="" alt="logo">
+                    </div>
+                </div>
+            </div>
+            <div class="qb-section section-logo">
+                <div class="section-header">
+                    <span class="qb-black">
+                      Thanh toán trực tuyến
+                    </span>
+                    <span class="button-right">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                    <span class="text-right">23m</span>
+                </div>
+                <div class="section-body">
+                    <div class="logo-container">
+                        <img src="https://seeklogo.com/images/J/jcb-logo-B188C1B713-seeklogo.com.png" class="" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-height"></div>
+</ion-content>
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar">
+        <ion-icon name="ios-arrow-back-outline" class="button-left" (tap)="onClickClosePage()"></ion-icon>
+        <span class="title">{{mDatas.headerTitle}}</span>
+        <span class="description">Mã đặt chỗ 123456789</span>
+        <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
+    </div>
+    <div class="step-group">
+        <div class="a1-fill-parent a3-container a3-items-center a3-justify-center">
+            <div *ngFor="let item of mDatas.headerFlow; let i = index" class="a3-container step" [class.active]="item.isActive" [class.done]="item.isDone">
+                <div class="header-index a3-container a3-items-center a3-justify-center"><span class="number" [innerHTML]="item.isDone? checkIcon :item.id"> </span></div>
+                <div class="header-data">{{item.text}}</div>
+                <ion-icon name="ios-arrow-round-forward-outline" *ngIf="i<mDatas.headerFlow.length-1" class="header-icon"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <div class="preview" (click)='gotoPreview()'>
+        <span class="place">HAN</span>
+        <span class="icon">
+          <i class="fa fa-exchange" aria-hidden="true"></i>
+        </span>
+        <span class="place">BKK</span>
+        <span class="high-dot"></span>
+        <span class="date">
+          12 thg 8 2017 - 14 thg 8 2017
+        </span>
+        <span class="prices">
+        <span class="price">4.800.000</span>
+        <span class="unit">Vnđ</span>
+        </span>
+        <span class="btn-right">
+          <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </span>
+    </div>
+</div>
+<div class="qb-footer">
+    <div class="text">
+        <span>Tổng giá tiền:</span>
+        <span class="price">4.806.450</span>
+        <span class="qb-black">Vnđ</span>
+    </div>
+    <button class="qb-btn">Thanh toán</button>
+</div>

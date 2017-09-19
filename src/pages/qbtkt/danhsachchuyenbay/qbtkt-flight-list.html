@@ -1,0 +1,75 @@
+<ion-content class="qb-ion-content" no-bounce>
+    <div class="header-height"></div>
+    <div class="qb-content">
+        <ion-grid id="page-content" no-padding>
+            <div class="below-header">
+                <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+                <img src="https://i.pinimg.com/originals/76/f2/3e/76f23ef08dc1ebabf4589ca0daa1fc14.jpg" class="img-cover" alt="cover">
+                <ion-row padding class="cover-div" align-items-center>
+                    <ion-col text-center>Hà Nội</ion-col>
+                    <ion-col col-2 text-center><img src="assets/qbtkt/flight-list/image_roundtrip.png" style="max-width:40px"></ion-col>
+                    <ion-col text-center>Bangkok</ion-col>
+                </ion-row>
+            </div>
+            <ion-row class="flight-container">
+                <ion-col col-12 col-md-6 col-lg-4 col-xl-3>
+                    <flight class="flight-item first-flight" (tap)="onClickFlight()"> </flight>
+                </ion-col>
+                <ion-col col-12 col-md-6 col-lg-4 col-xl-3>
+                    <flight class="flight-item" (tap)="onClickFlight()"> </flight>
+                </ion-col>
+                <ion-col col-12 col-md-6 col-lg-4 col-xl-3>
+                    <flight class="flight-item" (tap)="onClickFlight()"> </flight>
+                </ion-col>
+                <ion-col col-12 col-md-6 col-lg-4 col-xl-3>
+                    <flight class="flight-item" (tap)="onClickFlight()"> </flight>
+                </ion-col>
+                <ion-col col-12 col-md-6 col-lg-4 col-xl-3>
+                    <flight class="flight-item" (tap)="onClickFlight()"> </flight>
+                </ion-col>
+                <ion-col col-12 col-md-6 col-lg-4 col-xl-3>
+                    <flight class="flight-item" (tap)="onClickFlight()"> </flight>
+                </ion-col>
+                <ion-col col-12 col-md-6 col-lg-4 col-xl-3>
+                    <flight class="flight-item" (tap)="onClickFlight()"> </flight>
+                </ion-col>
+                <ion-col col-12 style="height:60px"></ion-col>
+            </ion-row>
+
+
+        </ion-grid>
+    </div>
+    <div class="footer-height"></div>
+</ion-content>
+
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar">
+        <ion-icon name="ios-arrow-back-outline" class="button-left" (tap)="onClickClosePage()"></ion-icon>
+        <span class="title"><span class="flight-type">1</span><span>Chuyến bay đi (29)</span> </span>
+        <span class="description">Th 7, 26 thg 8 - 2 vé - Business</span>
+        <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
+    </div>
+
+</div>
+
+<div class="qb-footer">
+    <div class="footer" [class.footer-show]="mShowFooter">
+
+        <div class="footer-item">
+            <span class="icon">
+                <img src="assets/qbtkt/icon/icon_arrange.png" alt="icon">
+            </span> Sắp xếp
+        </div>
+        <div class="footer-item item-center">
+            <span class="icon">
+                <img src="assets/qbtkt/icon/icon_filter.png" alt="icon">
+            </span> Bộ lọc
+        </div>
+        <div class="footer-item">
+            <span class="icon">
+                <img src="assets/qbtkt/icon/icon_changedate.png" alt="icon">
+            </span> Đổi ngày
+        </div>
+    </div>
+</div>

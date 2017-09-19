@@ -1,0 +1,20 @@
+<ion-content>
+    <div class="a1-container-absolute" (tap)="onClickCloseModal()" id="background"></div>
+    <div class="header" id="header">
+        <div style="height:20px"></div>
+        <img src="assets/qbtkt/home/top_bar_logo_2.png" id="qblogo">
+        <div>
+            <div class="toolbar">
+                Version {{mDatas.version}}
+                <div class="close" (tap)="onClickCloseModal()">
+                    {{mDatas.closeText}}
+                </div>
+            </div>
+
+            <div class="item-setting" *ngFor="let item of mDatas.items" (tap)="onClickSetting(item)">
+                {{item.name}}
+            </div>
+        </div>
+    </div>
+
+</ion-content>

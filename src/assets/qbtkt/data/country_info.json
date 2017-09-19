@@ -1,0 +1,108 @@
+{
+	"data": {
+		"PH": {
+			"availableLanguages": [
+				"en"
+			],
+			"defaultLanguage": "en",
+			"defaultCurrencyCode": "PHP",
+			"phoneNumberMap": {
+				"en": {
+					"csPhoneWithCountryCode": "+63-2-246-9057",
+					"csPhoneWithoutCountryCode": "02-246-9057"
+				}
+			},
+			"label": "Philippines"
+		},
+		"SG": {
+			"availableLanguages": [
+				"en"
+			],
+			"defaultLanguage": "en",
+			"defaultCurrencyCode": "SGD",
+			"phoneNumberMap": {
+				"en": {
+					"csPhoneWithCountryCode": "+65-3157-1471",
+					"csPhoneWithoutCountryCode": "3157-1471"
+				}
+			},
+			"label": "Singapore"
+		},
+		"MY": {
+			"availableLanguages": [
+				"ms",
+				"en"
+			],
+			"defaultLanguage": "en",
+			"defaultCurrencyCode": "MYR",
+			"phoneNumberMap": {
+				"ms": {
+					"csPhoneWithCountryCode": "+60-15-4840-9469",
+					"csPhoneWithoutCountryCode": "015-4840-9469"
+				},
+				"en": {
+					"csPhoneWithCountryCode": "+60-15-4840-9469",
+					"csPhoneWithoutCountryCode": "015-4840-9469"
+				}
+			},
+			"label": "Malaysia"
+		},
+		"VN": {
+			"availableLanguages": [
+				"vi",
+				"en"
+			],
+			"defaultLanguage": "vi",
+			"defaultCurrencyCode": "VND",
+			"phoneNumberMap": {
+				"vi": {
+					"csPhoneWithCountryCode": "+84-8-4458-1320",
+					"csPhoneWithoutCountryCode": "0844581320"
+				},
+				"en": {
+					"csPhoneWithCountryCode": "+84-8-4458-1320",
+					"csPhoneWithoutCountryCode": "0844581320"
+				}
+			},
+			"label": "Vietnam"
+		},
+		"TH": {
+			"availableLanguages": [
+				"en",
+				"th"
+			],
+			"defaultLanguage": "en",
+			"defaultCurrencyCode": "THB",
+			"phoneNumberMap": {
+				"en": {
+					"csPhoneWithCountryCode": "+66-2-118-5400",
+					"csPhoneWithoutCountryCode": "02-118-5400"
+				},
+				"th": {
+					"csPhoneWithCountryCode": "+66-2-118-5400",
+					"csPhoneWithoutCountryCode": "02-118-5400"
+				}
+			},
+			"label": "Thailand"
+		},
+		"ID": {
+			"availableLanguages": [
+				"id",
+				"en"
+			],
+			"defaultLanguage": "en",
+			"defaultCurrencyCode": "IDR",
+			"phoneNumberMap": {
+				"id": {
+					"csPhoneWithCountryCode": "0804 1500 308",
+					"csPhoneWithoutCountryCode": "0804-1500-308"
+				},
+				"en": {
+					"csPhoneWithCountryCode": "0804 1500 308",
+					"csPhoneWithoutCountryCode": "0804-1500-308"
+				}
+			},
+			"label": "Indonesia"
+		}
+	}
+}

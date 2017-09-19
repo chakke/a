@@ -1,0 +1,57 @@
+<ion-content class="qb-ion-content" no-bounce>
+    <div padding id="content-container" class="a1-fill-parent">
+        <ion-grid>
+            <ion-row padding class="main-row a1-relative" *ngFor="let item of mAccountPage.items" [class.unavailable-item]="!item.isAvailable">
+                <ion-col col-2 class="a3-container a3-items-center a3-justify-center">
+                    <img src={{item.url}}>
+                </ion-col>
+                <ion-col class="a3-container a3-wrap">
+                    <ion-row class="qb-big black a1-width-100">
+                        <div>{{item.title}}</div>
+                    </ion-row>
+                    <ion-row class="a1-width-100">
+                        <div>{{item.info}}</div>
+                    </ion-row>
+                </ion-col>
+                <ion-col no-padding col-1 *ngIf="item.isAvailable" class="a3-container a3-items-center a3-justify-center">
+                    <ion-icon name="ios-arrow-down-outline" class="arrow-down"></ion-icon>
+                </ion-col>
+            </ion-row>
+            <ion-row *ngIf="isLogin" style="padding: 10px;">
+                <div class="button-find" id="btnFind" (click)="onClickLogOut()">{{mAccountPage.text_logout}}</div>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>
+<div class="qb-header">
+    <div class="a-header-toolbar">
+        <img src="assets/qbtkt/home/top_bar_logo_1.png" class="qb-logo-button" (tap)="onClickLogo()">
+        <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
+    </div>
+    <div style="height:68px" class="a3-container a3-items-center">
+        <div *ngIf="isLogin" style="height: 48px" class="a1-width-100 a3-container" id="header-info-container">
+            <div id="header-user-info" class="white-text a3-container a3-items-center a1-padding-left">
+                <div class="a1-width-100">
+                    <div id="header-user-name" class="a1-width-100 bold-text">
+                        <span>{{mUser.name}}</span>
+                    </div>
+                    <div id="header-user-phone" class="a1-width-100">
+                        <span class="">{{mUser.phoneNumber}}</span>
+                    </div>
+                </div>
+            </div>
+            <div padding id="header-edit-button" (tap)="onClickEdit()">
+                <img class="a1-height-100" src="assets/qbtkt/account/btn_edit.png">
+            </div>
+        </div>
+        <div *ngIf="!isLogin" class="a1-width-100 a3-container a3-wrap white-text">
+            <div class="a1-width-100 a1-text-center">
+                <span>{{mAccountPage.text_letssignup}}</span>
+            </div>
+            <div class="a1-width-100 a3-container a3-justify-center">
+                <div class="login-button font-size-09" (tap)="onClickLogIn()">{{mAccountPage.text_login}}</div>
+                <div class="login-button font-size-09" (tap)="onClickSignUp()">{{mAccountPage.text_signup}}</div>
+            </div>
+        </div>
+    </div>
+</div>

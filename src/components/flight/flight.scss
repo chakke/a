@@ -1,0 +1,73 @@
+flight {
+    display: block;
+    position: relative;
+    .container {
+        padding: 10px 0px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        background-color: #FFF;
+        margin: 0 16px;
+    }
+    .airline {
+        display: flex;
+        -webkit-display: flex;
+        align-items: center;
+        -webkit-align-items: center;
+        color: gray;
+        padding: 0px;
+        margin: 0px;
+        img {
+            max-height: 40px;
+            padding: 0 16px;
+        }
+        .airline-name {
+            flex: 1;
+            -webkit-flex: 1;
+        }
+    }
+    .price-block {
+        .price {
+            color: red;
+            font-weight: bold;
+        }
+        background-color: #FFEAED;
+        padding: 6px 16px 6px 10px;
+        margin-right: 0;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .time {
+        color: map-get($QBTKTColors, black);
+        font-weight: bold;
+        letter-spacing: 1px;
+        .duration {
+            color: #83DA27;
+            float: right;
+            font-size: .8em;
+            font-weight: normal;
+            line-height: 1.4em;
+            white-space: nowrap;
+        }
+        padding: 10px 16px 0 16px;
+    }
+    .airport-code {
+        background-color: #EBEBEB;
+        border-radius: 20px;
+        padding: 4px 10px;
+        color: gray;
+        font-size: 1em;
+        margin-right: 10px;
+    }
+    .airport {
+        padding: 10px 16px;
+        color: gray;
+    }
+    .more {
+        text-align: right;
+        padding-right: 16px;
+        font-size: 16px;
+        ion-icon {
+            color: #5757F9;
+        }
+    }
+}

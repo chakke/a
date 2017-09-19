@@ -1,0 +1,86 @@
+page-qbtkt-tabs {
+    #a-tabs {
+        background-color: white !important;
+    }
+    .tabbar.show-tabbar {
+        background-image: url('../assets/qbtkt/home/bot_bar_1.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: transparent !important;
+        border-top: 0px;
+    }
+    .tabs-md .tab-button-text {
+        font-size: 1rem !important;
+    }
+    .tabbar {
+        padding: 0 0 4px 0;
+        .tab-button {
+            font-size: 1rem !important;
+        }
+        .tab-button-icon {
+            &:before {
+                display: none;
+            }
+        }
+        ion-icon {
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 4px !important;
+            height: 20px !important;
+            width: 20px !important;
+            min-width: 20px !important;
+        }
+        #tab-t0-0[aria-selected=true] {
+            ion-icon {
+                background-image: url("../assets/qbtkt/home/icon_home_2.png");
+            }
+        }
+        #tab-t0-0[aria-selected=false] {
+            ion-icon {
+                background-image: url("../assets/qbtkt/home/icon_home_1.png");
+            }
+        }
+        #tab-t0-1[aria-selected=true] {
+            ion-icon {
+                background-image: url("../assets/qbtkt/home/icon_booking_2.png");
+            }
+        }
+        #tab-t0-1[aria-selected=false] {
+            ion-icon {
+                background-image: url("../assets/qbtkt/home/icon_booking_1.png");
+            }
+        }
+        #tab-t0-2[aria-selected=true] {
+            ion-icon {
+                background-image: url("../assets/qbtkt/home/icon_noti_2.png");
+            }
+        }
+        #tab-t0-2[aria-selected=false] {
+            ion-icon {
+                background-image: url("../assets/qbtkt/home/icon_noti_1.png");
+            }
+        }
+        #tab-t0-3[aria-selected=true] {
+            ion-icon {
+                background-image: url("../assets/qbtkt/home/icon_account_2.png");
+            }
+        }
+        #tab-t0-3[aria-selected=false] {
+            ion-icon {
+                background-image: url("../assets/qbtkt/home/icon_account_1.png");
+            }
+        }
+        a[aria-selected=false] {
+            .tab-button-text {
+                color: #b9b6b6;
+            }
+        }
+        a[aria-selected=true] {
+            .tab-button-text {
+                color: map-get($QBTKTColors, primary);
+                font-weight: bold;
+            }
+        }
+    }
+}

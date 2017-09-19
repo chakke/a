@@ -1,0 +1,147 @@
+<ion-content class="qb-ion-content">
+    <div class="header-height"></div>
+    <div class="qb-content">
+        <div class="content-header">
+            <ion-row>
+                <ion-col text-center class="flight-point a1-text-ellipsis" (click)="onClickFindAirport(0)">
+                    <img src="assets/qbtkt/findflight/icon_departure_flight.png" style="width:1.2em; height: 1.2em; margin: 0 4px"> Điểm đi
+                </ion-col>
+                <ion-col col-2>
+                    <!-- <img src="assets/qbtkt/findflight/btn_divert.png"> -->
+                </ion-col>
+                <ion-col text-center class="flight-point a1-text-ellipsis" (click)="onClickFindAirport(1)">
+                    <img src="assets/qbtkt/findflight/icon_arrival_flight.png" style="width:1.2em; height: 1.2em; margin: 0 4px"> Điểm đến
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col text-center align-self-center (click)="onClickFindAirport(0)">
+                    <span id="departure-city">HAN</span>
+                </ion-col>
+                <ion-col col-2>
+                    <img src="assets/qbtkt/findflight/btn_divert.png">
+                </ion-col>
+                <ion-col text-center align-self-center (click)="onClickFindAirport(1)">
+                    <span id="arriver-city">BKKA</span>
+                </ion-col>
+            </ion-row>
+            <ion-row style="color:gray">
+                <ion-col>
+                    <div class="a3-container a3-items-center a3-justify-center"> <img src="assets/qbtkt/countries/vietnam.png" class="national_flag"> Hà Nội </div>
+
+                </ion-col>
+                <ion-col col-2>
+
+                </ion-col>
+                <ion-col>
+                    <div class="a3-container a3-items-center a3-justify-center">
+                        <img src="assets/qbtkt/countries/thailand.png" class="national_flag"> Bangkok
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="gray-line" style="margin-top: -10px"></div>
+
+        <div style="padding: 20px 30px 10px 30px;margin-top: -10px" [class.padding-bottom-20]="mFlightData.isRoundTrip">
+            <div class="a3-container departure-day">
+                <div class="a3-container" nowrap style="min-width:72px; padding-top:2px" (click)="onClickPickDay()">
+                    <img src="assets/qbtkt/findflight/icon_departure_day.png" style="width:1.2em; height : 1.2em; margin-right:6px"> Ngày đi
+                </div>
+                <div class="a3-flex-1" style="padding-left:4%" (click)="onClickPickDay()">
+                    <div class="a3-container">
+                        <div class="flight-day"> {{mFlightData.from.date}}</div>
+                        <div class="a3-flex-1">
+                            <div class="qb-black bold">{{mFlightData.from.day}}</div>
+                            <div style="color: #1f1f1f; padding-top:.4em; font-size : .8em"> {{mFlightData.from.month}} </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="khuhoi">
+                    <div text-center style="font-size:.8em"> Khứ hồi? </div>
+                    <div text-center>
+                        <ion-toggle class="toggle-flight" [(ngModel)]="mFlightData.isRoundTrip"></ion-toggle>
+                    </div>
+                </div>
+            </div>
+
+            <div class="a3-container arriver-day" [hidden]="!mFlightData.isRoundTrip" [class.arriver-enable]="mFlightData.isRoundTrip">
+                <div class="a3-container" style="min-width:72px;padding-top:2px" (tap)="onClickPickReturnDay()">
+                    <img src="assets/qbtkt/findflight/icon_arrival_day.png" style="width:1.2em; height : 1.2em; margin-right:6px"> Ngày về
+                </div>
+                <div class="a3-flex-1" style="padding-left:4%" (tap)="onClickPickReturnDay()">
+                    <div class="a3-container">
+                        <div class="flight-day"> {{mFlightData.to.date}}</div>
+                        <div class="a3-flex-1">
+                            <div class="qb-black bold"> {{mFlightData.to.day}} </div>
+                            <div style="color: #1f1f1f; padding-top:.4em; font-size : .8em"> {{mFlightData.to.month}} </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="gray-line"></div>
+
+        <div style="padding : 20px 30px" class="a3-container a3-justify-between">
+            <div class="col-age">
+                <div class="a3-container a3-items-center a1-text-center a1-text-ellipsis">
+                    <img src="assets/qbtkt/findflight/icon_adult.png" class="inline-img"> Trên 12 tuổi
+                </div>
+                <div text-center class="number-select">
+                    <span class="button-number" (tap)="onClickNumberPeople(0,0)">-</span>
+                    <span style="padding: 0 4px" (tap)="onClickNumberPeople(0,1)">{{mFlightData.person.adult}}</span>
+                    <span class="button-number" (tap)="onClickNumberPeople(0,2)">+</span>
+                </div>
+            </div>
+            <div class="col-age">
+                <div class="a3-container a3-items-center a1-text-center a1-text-ellipsis">
+                    <img src="assets/qbtkt/findflight/icon_children.png" class="inline-img"> Từ 2-11 tuổi
+                </div>
+                <div text-center class="number-select">
+                    <span class="button-number" (tap)="onClickNumberPeople(1,0)">-</span>
+                    <span style="padding: 0 4px" (tap)="onClickNumberPeople(1,1)">{{mFlightData.person.children}}</span>
+                    <span class="button-number" (tap)="onClickNumberPeople(1,2)">+</span>
+                </div>
+            </div>
+            <div class="col-age">
+                <div class="a3-container a3-items-center a1-text-center a1-text-ellipsis">
+                    <img src="assets/qbtkt/findflight/icon_infant.png" class="inline-img"> Dưới 2 tuổi
+                </div>
+                <div text-center class="number-select">
+                    <span class="button-number" (tap)="onClickNumberPeople(2,0)">-</span>
+                    <span style="padding: 0 4px" (tap)="onClickNumberPeople(2,1)">{{mFlightData.person.infant}}</span>
+                    <span class="button-number" (tap)="onClickNumberPeople(2,2)">+</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="gray-line"></div>
+        <div class="a3-container a3-items-center" style="padding: 20px 30px;" (tap)="onClickSelectSeatType()">
+
+            <img src="assets/qbtkt/findflight/icon_seat.png" class="inline-img">
+            <span style="color:gray" nowrap> Hạng ghế </span>
+            <div class="a3-flex-1 a1-text-right">
+                <span style="background-color:#ff6622; border-radius:100px; padding : 6px 16px;font-weight:bold; color:white">
+                            {{mFlightData.seat.name}}
+                        </span>
+            </div>
+        </div>
+        <div class="gray-line"></div>
+        <div style="height:40px"> </div>
+        <div class="button-find qb-big" id="btnFind" (click)="onClickFindFlight()"> Tìm kiếm </div>
+    </div>
+
+    <div style="height: 20px;"></div>
+</ion-content>
+
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar small-toolbar">
+        <ion-icon name="ios-arrow-back-outline" class="button-left" (tap)="onClickClosePage()"></ion-icon>
+        <span class="title">Tìm chuyến bay</span>
+        <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
+    </div>
+</div>
+<div class="below-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+</div>

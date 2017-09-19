@@ -1,0 +1,50 @@
+<ion-content>
+
+    <div id="a-background" (tap)="onClickCloseModal()"> </div>
+
+    <div class="a-content">
+        <div style="display:inline-block">
+            <div class="a-container">
+                <div class="a-container-header">
+                    <div class="a-container-title"> {{mDatas.title}} </div>
+
+                    <div class="container-header-button" (tap)="onClickCloseModal()">{{mDatas.text_close}}</div>
+                </div>
+
+                <div text-center>
+                    <div class="number-container">
+                        <div class="value-row">
+                            <div class="value">{{mValue}}</div>
+                            <div (click)="onClickBackspace()" class="backspace">
+                                <ion-icon name="ios-backspace-outline"></ion-icon>
+                            </div>
+                        </div>
+
+                        <div class="number-row">
+                            <div class="number" id="number-1" (click)="onClickNumber(1)"> 1 </div>
+                            <div class="number" id="number-2" (click)="onClickNumber(2)"> 2 </div>
+                            <div class="number" id="number-3" (click)="onClickNumber(3)"> 3 </div>
+                        </div>
+                        <div class="number-row">
+                            <div class="number" id="number-4" (click)="onClickNumber(4)"> 4 </div>
+                            <div class="number" id="number-5" (click)="onClickNumber(5)"> 5 </div>
+                            <div class="number" id="number-6" (click)="onClickNumber(6)"> 6 </div>
+                        </div>
+                        <div class="number-row">
+                            <div class="number" id="number-7" (click)="onClickNumber(7)"> 7 </div>
+                            <div class="number" id="number-8" (click)="onClickNumber(8)"> 8 </div>
+                            <div class="number" id="number-9" (click)="onClickNumber(9)"> 9 </div>
+                        </div>
+                        <div class="number-row">
+                            <div class="number" id="number-0" (click)="onClickNumber(0)"> 0 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-select" (tap)="onClickSelect()">
+                {{mDatas.text_select}}
+            </div>
+        </div>
+    </div>
+</ion-content>

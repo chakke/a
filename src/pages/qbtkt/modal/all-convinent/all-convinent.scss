@@ -1,0 +1,38 @@
+page-all-convinent {
+    .qb-header {
+        .a-header-toolbar {
+            height: 45px;
+            line-height: 45px;
+            overflow: hidden;
+            .title {
+                padding: 0;
+            }
+            .button-left {
+                font-size: 1.8em;
+                padding: 0 10px;
+            }
+        }
+    }
+    .header-height {
+        height: 55px;
+    }
+    .qb-content {
+        padding: 10px 16px;
+        .qb-section {
+            color: gray;
+            .small-right {
+                float: right;
+                margin-right: 5px;
+                font-size: .9em;
+            }
+            .section-body {
+                .item {
+                    line-height: 20px;
+                    .high-dot {
+                        background-color: map-get($QBTKTColors, primary);
+                    }
+                }
+            }
+        }
+    }
+}

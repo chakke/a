@@ -1,0 +1,66 @@
+<ion-content class="qb-ion-content">
+    <div class="header-height"></div>
+    <div class="a-slides-container">
+        <ion-slides pager loop="true" autoplay="3000">
+            <ion-slide>
+                <div class="a1-relative">
+                    <img src="assets/qbtkt/home/image_slide_1.png">
+                    <div class="a-dark-transparent"></div>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="a1-relative">
+                    <img src="assets/qbtkt/home/image_slide_2.png">
+                    <div class="a-dark-transparent"></div>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="a1-relative">
+                    <img src="assets/qbtkt/home/image_slide_3.png">
+                    <div class="a-dark-transparent"></div>
+                </div>
+
+            </ion-slide>
+        </ion-slides>
+    </div>
+
+    <div class="a-function-container" text-center>
+        <div class="a-function-item card-shadow" (tap)="onTapFunction(0)">
+            <div text-center>
+                <img src="assets/qbtkt/home/icon_flight.png" class="a1-relative">
+                <span class="a-red-dot"></span>
+            </div>
+            <div text-center> Tìm chuyến bay</div>
+        </div>
+        <div class="a-function-item card-shadow" (tap)="onTapFunction(1)">
+            <div text-center>
+                <img src="assets/qbtkt/home/icon_hotel.png" class="a1-relative">
+                <span class="a-red-dot"></span>
+            </div>
+            <div text-center> Tìm khách sạn</div>
+        </div>
+    </div>
+
+    <div class="a-category-info qb-shadow" *ngFor="let category of mCategories">
+        <div class="a-category-header">
+            <div class="a-strike-line"></div>
+            <div class="a-category-header-title qb-big" [navPush]="'SamplePage'">{{category.title}}</div>
+        </div>
+
+        <div class="horizontal-list">
+            <div>
+                <image-card *ngFor="let item of category.items" [src]="item.src" [description]="item.description" [navPush]="'SamplePage'"></image-card>
+            </div>
+        </div>
+    </div>
+
+    <div padding text-center></div>
+</ion-content>
+
+<div class="qb-header">
+    <div class="a-header-toolbar">
+        <img src="assets/qbtkt/home/top_bar_logo_1.png" class="qb-logo-button" (tap)="onClickLogo()">
+        <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
+    </div>
+    <div class="height-below"></div>
+</div>

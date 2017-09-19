@@ -1,0 +1,87 @@
+<ion-content class="qb-ion-content">
+
+    <div class="header-height"></div>
+    <div class="qb-content">
+        <div class="section">
+            <span class="icon">
+                <i class="fa fa-bullseye" aria-hidden="true"></i>
+            </span>
+            <span class="title qb-black bold">
+                Khách sạn gần bạn
+            </span>
+        </div>
+        <div class="section" [collapse]="{button:button1,icon: icon1}">
+            <div class="section-header">
+                <span class="header-text">Tìm kiếm gần đây</span>
+                <span class="header-button" #button1>
+                    <i #icon1 class="fa fa-angle-up" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="section-content">
+                <ion-row>
+                    <ion-col>
+                        <span class="title qb-big bold qb-black">Hà Nội</span><br>
+                        <span>Việt Nam</span>
+                    </ion-col>
+                    <ion-col>
+                        <span class="round-red">Thành phố</span><br>
+                        <span>914 khách sạn</span>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <span class="title qb-big bold qb-black">Bangkok</span><br>
+                        <span>Thailand</span>
+                    </ion-col>
+                    <ion-col>
+                        <span class="round-red">Vùng</span><br>
+                        <span>2053 khách sạn</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+        <div class="section" [collapse]="{button:button2,icon: icon2}">
+            <div class="section-header">
+                <span class="header-text">Điểm đến được ưa thích</span>
+                <span class="header-button" #button2>
+                    <i #icon2 class="fa fa-angle-up" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="section-content">
+                <ion-row>
+                    <ion-col>
+                        <span class="title qb-big bold qb-black">Hà Nội</span><br>
+                        <span>Việt Nam</span>
+                    </ion-col>
+                    <ion-col>
+                        <span class="round-red">Thành phố</span><br>
+                        <span>914 khách sạn</span>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <span class="title qb-big bold qb-black">Bangkok</span><br>
+                        <span>Thailand</span>
+                    </ion-col>
+                    <ion-col>
+                        <span class="round-red">Vùng</span><br>
+                        <span>2053 khách sạn</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar small-toolbar">
+        <span class="button-left">
+            <ion-icon name="ios-arrow-back-outline" (tap)="onClickClosePage()"></ion-icon>
+        </span>
+        <span class="title">Chọn điểm đến</span>
+    </div>
+    <div class="div-searchbar">
+        <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+{
+  "data": {
+    "SGD": {
+      "currencyId": "SGD",
+      "currencyLongName": "Singapore Dollar",
+      "numOfDecimalPoint": "2"
+    },
+    "PHP": {
+      "currencyId": "PHP",
+      "currencyLongName": "Philippines Peso",
+      "numOfDecimalPoint": "2"
+    },
+    "USD": {
+      "currencyId": "USD",
+      "currencyLongName": "US Dollar",
+      "numOfDecimalPoint": "2"
+    },
+    "THB": {
+      "currencyId": "THB",
+      "currencyLongName": "Thai Baht",
+      "numOfDecimalPoint": "2"
+    },
+    "VND": {
+      "currencyId": "VND",
+      "currencyLongName": "Vietnamese Dong",
+      "numOfDecimalPoint": "0"
+    },
+    "IDR": {
+      "currencyId": "IDR",
+      "currencyLongName": "Indonesian Rupiah",
+      "numOfDecimalPoint": "0"
+    },
+    "MYR": {
+      "currencyId": "MYR",
+      "currencyLongName": "Malaysian Ringgit",
+      "numOfDecimalPoint": "2"
+    }
+  }
+}

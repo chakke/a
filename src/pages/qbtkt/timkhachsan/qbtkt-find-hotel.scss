@@ -1,0 +1,143 @@
+page-qbtkt-find-hotel {
+    .qb-ion-content {
+        background-color: #FFF !important;
+    }
+    .header-height {
+        height: 96px;
+    }
+    .qb-content {
+        background-color: #FFF;
+    }
+    .below-header {
+        height: 48px;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(to right, #007628, #69a718);
+        background: -webkit-linear-gradient(to right, #007628, #69a718);
+        .logo {
+            position: absolute;
+            right: 20px;
+            top: -68px;
+            width: 30%;
+        }
+    }
+    .content-header {
+        margin-left: 24px;
+        margin-right: 24px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        transform: translateY(-30px);
+        box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.03);
+    }
+    .main-content {
+        margin-top: -30px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 20px;
+        background-color: #FFF;
+        border-radius: 10px;
+    }
+    .section {
+        .col {
+            padding: 0;
+        }
+        width: 100%;
+        border-bottom: solid 1px #ddd;
+        padding: 10px 0;
+        margin-bottom: 10px;
+        .section-icon {
+            color: map-get($QBTKTColors, primary);
+            margin: 0 5px;
+            width: auto;
+            height: 1.5em;
+            display: inline-block;
+            vertical-align: bottom;
+            img {
+                height: 100%;
+            }
+        }
+        .section-title {
+            color: gray;
+        }
+        .big-red {
+            width: 100%;
+            font-size: 1.5em;
+            color: #F00;
+            display: block;
+            padding-left: 21px;
+            margin: 15px 0;
+        }
+        .big-blue-date {
+            font-size: 3em;
+            color: map-get($QBTKTColors, blue);
+        }
+    }
+    number-picker {
+        font-size: 1.5em;
+    }
+    .gray {
+        color: gray;
+    }
+    .blue {
+        color: map-get($QBTKTColors, blue);
+    }
+    .number-picker-wrapper {
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 25px;
+    }
+    .star {
+        border-radius: 20px;
+        padding: 2px 8px;
+        background-color: map-get($QBTKTColors, orange);
+        color: #FFF;
+        margin-bottom: 5px;
+        float: right;
+        white-space: nowrap;
+    }
+    .right-20 {
+        padding-right: 20px;
+    }
+    .price {
+        color: #F00;
+        margin-right: 5px;
+    }
+    .unit {
+        color: gray;
+    }
+    .button-search {
+        border-radius: 5px;
+        background-color: map-get($QBTKTColors, primary);
+        background-image: -webkit-gradient(linear, left top, right top, from(#84BF38), to(#007628));
+        background-image: linear-gradient(to right, #84BF38, #007628);
+        -webkit-background-image: -webkit-gradient(linear, left top, right top, from(#84BF38), to(#007628));
+        -webkit-background-image: linear-gradient(to right, #84BF38, #007628);
+        color: #FFF;
+        font-size: 1.2em;
+    }
+    .button-group {
+        display: flex;
+    }
+    .button-map {
+        margin-left: 5px;
+        padding: 5px;
+        display: block;
+        height: 2.2em;
+        width: 2.5em;
+        text-align: center;
+        border-radius: 50%;
+        background-color: map-get($QBTKTColors, orange);
+        color: #3C1719;
+    }
+    .full-width {
+        display: block;
+        width: 100%;
+    }
+    .number-picker-number {
+        color: map-get($QBTKTColors, black)
+    }
+}

@@ -1,0 +1,197 @@
+<ion-content class="qb-ion-content">
+    <div class="header-height"></div>
+    <div class="cover-image">
+        <img src="http://www.popsci.com/sites/popsci.com/files/styles/medium_3x2/public/images/2016/08/empty-swimming-pool-holiday-inn-express-san-jose-creative-commons-flickr.jpg?itok=ICLCLGP8&fc=50,50" alt="cover">
+        <span class="see-all-button">Xem tất cả hình ảnh</span>
+    </div>
+    <div class="qb-content">
+        <div class="qb-section" (click)="gotoRate()">
+            <div class="section-header">
+                <span class="title">
+                    Xếp hạng và đánh giá
+                </span>
+                <span class="button-right">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="section-body">
+                <ion-row class="rating-box">
+                    <ion-col col-6 text-center>
+                        <span class="big qb-black bold">
+                            Quốc bảo
+                        </span>
+                        <br>
+                        <span class="point">8.3/10</span><br>
+                        <span>Từ 307 khách</span>
+                    </ion-col>
+                    <ion-col col-6 text-center>
+                        <span class="big qb-black bold">
+                            TripAdvisor
+                        </span><br>
+                        <div class="triadvisor-rate">
+                            <span class="tripadvisor-logo">
+                                <i class="fa fa-tripadvisor" aria-hidden="true"></i>
+                            </span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="cirle-rate"></span>
+                        </div>
+
+                        <span>Từ 1392 khách</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+        <div class="qb-section" (click)="gotoAllConvinent()">
+            <div class="section-header">
+                <span class="title">
+                    Xếp hạng và đánh giá
+                </span>
+                <span class="button-right">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="section-body">
+                <div class="convinent">
+                    <div class="convinent-item">
+                        <span class="convinent-icon">
+                            <img src="assets/qbtkt/hotel-detail/icon_airconditioner.png" alt="icon">
+                        </span>
+                        <span>Máy lạnh</span>
+                    </div>
+                    <div class="convinent-item">
+                        <span class="convinent-icon">
+                            <img src="assets/qbtkt/hotel-detail/icon_parking.png" alt="icon">
+                        </span>
+                        <span>Chỗ đậu xe</span>
+                    </div>
+                    <div class="convinent-item">
+                        <span class="convinent-icon">
+                            <img src="assets/qbtkt/hotel-detail/icon_service.png" alt="icon">
+                        </span>
+                        <span>Lễ tân 24h</span>
+                    </div>
+                    <div class="convinent-item">
+                        <span class="convinent-icon">
+                            <img src="assets/qbtkt/hotel-detail/icon_swimmingpool.png" alt="icon">
+                        </span>
+                        <span>Hồ bơi</span>
+                    </div>
+                    <div class="convinent-item">
+                        <span class="convinent-icon">
+                            <img src="assets/qbtkt/hotel-detail/icon_elevator.png" alt="icon">
+                        </span>
+                        <span>Thang máy</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="qb-section section-map">
+            <agm-map [latitude]="lat" [longitude]="lng">
+                <!-- <agm-marker [iconUrl]="'assets/qbtkt/home/top_bar_logo_2.png'" [latitude]="lat" [longitude]="lng"></agm-marker>
+                <agm-marker [iconUrl]="'../assets/qbtkt/home/top_bar_logo_2.png'" [latitude]="lat" [longitude]="lng"></agm-marker> -->
+                <agm-marker [iconUrl]="'https://image.ibb.co/bLc8KF/marker_hotel.png'" [latitude]="lat" [longitude]="lng"></agm-marker>
+                <agm-marker [iconUrl]="'https://thumb.ibb.co/cBiLYa/marker_location_nearby.png'" [latitude]="lat" [longitude]="lng"></agm-marker>
+            </agm-map>
+            <div class="hotel-item main-item" (click)="chooseRoom()">
+                <ion-row>
+                    <ion-col col-2>
+                        <span class="marker">
+                            <img src="assets/qbtkt/hotel-detail/marker_hotel.png" alt="marker">
+                        </span>
+                    </ion-col>
+                    <ion-col col-10>
+                        <span class="title">Asia Hotel Bangkok</span>
+                        <span>296 Ho Chi Minh city, Ha Dong, Ha Noi, VietNam</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div class="hotel-item">
+                <ion-row>
+                    <ion-col col-2>
+                        <span class="marker">
+                            <img src="assets/qbtkt/hotel-detail/marker_location_nearby.png" alt="marker">
+                        </span>
+                    </ion-col>
+                    <ion-col col-10>
+                        <span class="title">69 Cotco</span>
+                        <span>0.06 km</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div class="hotel-item">
+                <ion-row>
+                    <ion-col col-2>
+                        <span class="marker">
+                            <img src="assets/qbtkt/hotel-detail/marker_location_nearby.png" alt="marker">
+                        </span>
+                    </ion-col>
+                    <ion-col col-10>
+                        <span class="title">69 Cotco</span>
+                        <span>0.06 km</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div class="hotel-item">
+                <ion-row>
+                    <ion-col col-2>
+                        <span class="marker">
+                            <img src="assets/qbtkt/hotel-detail/marker_location_nearby.png" alt="marker">
+                        </span>
+                    </ion-col>
+                    <ion-col col-10>
+                        <span class="title">69 Cotco</span>
+                        <span>0.06 km</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div class="hotel-item">
+                <ion-row>
+                    <ion-col col-2>
+                        <span class="marker">
+                            <img src="assets/qbtkt/hotel-detail/marker_location_nearby.png" alt="marker">
+                        </span>
+                    </ion-col>
+                    <ion-col col-10>
+                        <span class="title">69 Cotco</span>
+                        <span>0.06 km</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+    </div>
+    <div class="footer-height"></div>
+</ion-content>
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar">
+        <span class="button-left" (tap)="onClickClosePage()">       
+            <ion-icon name="ios-arrow-back-outline" ></ion-icon>
+        </span>
+        <span class="title">Hotel detail</span>
+        <span class="description">
+          <span class="star">
+            <i class="fa fa-star"></i> 
+          </span>
+        <span class="star">
+            <i class="fa fa-star"></i> 
+          </span>
+        <span class="star">
+            <i class="fa fa-star"></i> 
+          </span>
+        <span class="star">
+            <i class="fa fa-star"></i> 
+          </span>
+        </span>
+        <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
+    </div>
+    <div class="height-below"></div>
+</div>
+<div class="qb-footer">
+    <span class="text"> Giá phòng mỗi đêm từ: <span class="price">1.038.029</span> <span class="unit">Vnđ</span> <span class="small">(Đã bao gồm thuế)</span></span>
+    <button class="qb-btn" (click)="chooseRoom()">Chọn phòng</button>
+</div>

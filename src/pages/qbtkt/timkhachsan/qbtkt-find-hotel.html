@@ -1,0 +1,125 @@
+<ion-content class="qb-ion-content">
+    <div class="header-height"></div>
+    <div class="main-content">
+        <div class="section" style="padding-top: 0" (click)="selectPlace()">
+            <span class="section-icon">
+                    <img src="assets/qbtkt/findhotel/icon_destination.png" >
+            </span>
+            <span class="section-title">
+                Điểm đến
+            </span>
+            <span class="big-red">
+                Khách sạn gần bạn
+            </span>
+        </div>
+        <div class="section">
+            <ion-row (click)="selectDate()">
+                <ion-col col-6>
+                    <span class="section-icon">
+                            <img src="assets/qbtkt/findhotel/icon_arrival_day.png" >
+                    </span>
+                    <span class="section-title">
+                        Ngày nhận phòng
+                    </span>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-row>
+                        <ion-col col-4>
+                            <span class="big-blue-date">{{departureDate.getDate()}}</span>
+                        </ion-col>
+                        <ion-col col-8 flex-center flex-wrap style="justify-content: flex-start">
+                            <span class="bold qb-black full-width">{{departureDate.getDay() == 0 ? "Chủ nhật" : "Thứ " + (departureDate.getDay() + 1)}}</span><span class="qb-black">tháng {{departureDate.getMonth() + 1}}, {{departureDate.getFullYear()}}</span>
+                        </ion-col>
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="section">
+            <ion-row>
+                <ion-col col-6>
+                    <span class="section-icon">
+                            <img src="assets/qbtkt/findhotel/icon_staynight.png" >
+                    </span>
+                    <span class="section-title">
+                        Số đêm nghỉ
+                    </span>
+                </ion-col>
+                <ion-col col-6 flex flex-wrap>
+                    <number-picker [number]="nightStay" (onDataChange)="onNightStatyChange($event)" class="full-width"></number-picker><br>
+                    <span class="gray full-width">Trả phòng</span>
+                    <span class="blue">{{getFullDateTime(leftDate)}}</span>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="section">
+            <ion-row>
+                <ion-col col-6>
+                    <span class="section-icon">
+                            <img src="assets/qbtkt/findhotel/icon_guest.png" > 
+                    </span>
+                    <span class="section-title">
+                            Số lượng khách
+                    </span>
+                    <div class="number-picker-wrapper">
+                        <number-picker [number]="numberOfPerson" (onDataChange)="onNumberOfPersonChange($event)"></number-picker>{{numbers}}
+                    </div>
+                </ion-col>
+                <ion-col col-6>
+                    <span class="section-icon">
+                            <img src="assets/qbtkt/findhotel/icon_room.png" > 
+                    </span>
+                    <span class="section-title">
+                            Số lượng phòng
+                    </span>
+                    <div class="number-picker-wrapper">
+                        <number-picker [number]="numberOfRoom" (onNumberOfRoomChange)="onNightStatyChange($event)"></number-picker>{{numbers}}
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="section">
+            <ion-row (click)="selectPrice()">
+                <ion-col col-8>
+                    <span class="section-icon">
+                            <img src="assets/qbtkt/findhotel/icon_fillter.png" > 
+                    </span>
+                    <span class="section-title">
+                        Lọc theo giá và hạng sao
+                    </span>
+                </ion-col>
+                <ion-col col-4 flex flex-wrap>
+                    <div class="full-width" text-right>
+                        <span class="star">{{star}} sao</span>
+                    </div>
+                    <div class="full-width" text-right>
+                        <span class="price" nowrap>{{formatNumber(price.lower)}}-{{formatNumber(price.upper)}}</span>
+                        <span class="unit">Vnđ</span>
+                    </div>
+
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="button-group">
+            <button ion-button full class="button-search" (click)="find()">Tìm kiếm</button>
+            <button ion-button round icon-only class="button-map" [navPush]="'SamplePage'">
+                <i class="fa fa-map" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</ion-content>
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar small-toolbar">
+        <span class="button-left">
+            <ion-icon name="ios-arrow-back-outline" (tap)="onClickClosePage()"></ion-icon>
+        </span>
+        <span class="title">
+                Tìm khách sạn
+        </span>
+        <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
+    </div>
+</div>
+<div class="below-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+</div>

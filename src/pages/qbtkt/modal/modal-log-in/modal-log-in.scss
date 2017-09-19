@@ -1,0 +1,43 @@
+page-modal-log-in {
+    .header-height {
+        height: 80px;
+    }
+    .login-button {
+        font-size: 1.4em;
+    }
+    .checkbox {
+        .checkbox-checked {
+            background: red;
+        }
+        .checkbox-ios .checkbox-icon {
+            border-radius: 4px;
+        }
+    }
+    .line {
+        height: 1px;
+        background-color: grey;
+        width: 30%;
+    }
+    .input-container {
+        .text-input-md {
+            margin: 4px 0;
+            padding: 4px 0;
+            border-bottom: 1px solid lightgrey;
+        }
+        .text-input-ios {
+            margin: 4px 0;
+            padding: 4px 0;
+            border-bottom: 1px solid lightgrey;
+        }
+         :focus {
+            color: #84BF38;
+            border-bottom: 1px solid #84BF38;
+        }
+    }
+    .red-text {
+        color: darkred;
+    }
+    .grey-text {
+        color: grey;
+    }
+}

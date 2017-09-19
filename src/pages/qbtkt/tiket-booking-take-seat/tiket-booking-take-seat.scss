@@ -1,0 +1,150 @@
+page-tiket-booking-take-seat {
+    $smallDivHeight: 22px;
+    .qb-header {
+        .step-group {
+            position: relative;
+            .line {
+                width: 2px;
+                box-sizing: border-box;
+                border-right: solid 2px #FFF;
+                border-right-style: dotted;
+                position: absolute;
+                top: 20px;
+                left: 23px;
+                height: 120px;
+            }
+            .step-div {
+                font-size: 1em;
+                text-align: center;
+                height: 50px;
+                overflow: hidden;
+                color: #FFF;
+                background-image: linear-gradient(to right, rgba(0, 118, 40, 0.5), #6ea91d), linear-gradient(to bottom, rgba(2, 101, 2, 0.5), rgba(255, 255, 255, 0));
+                z-index: 999999;
+                position: relative;
+                padding-left: 30px;
+                padding: 15px 16px 0 40px;
+                text-align: left;
+                position: relative;
+                &.active {
+                    background-color: rgba(110, 169, 29, 0.6);
+                    background-image: none;
+                    height: 65px
+                }
+                &.expried {
+                    background-color: rgba(251, 0, 11, 0.7);
+                    .circle.active {
+                        text-align: center;
+                        line-height: 10px;
+                        &::before {
+                            content: "x";
+                            font-size: 12px;
+                            color: rgb(193, 29, 36);
+                        }
+                    }
+                }
+                .circle {
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    top: 22px;
+                    left: 20px;
+                    background-color: rgb(0, 118, 40);
+                    border: solid 1px #FFF;
+                    border-radius: 50%;
+                    &.active {
+                        height: 14px;
+                        width: 14px;
+                        left: 17px;
+                        top: 18px;
+                        background-color: #FFF;
+                    }
+                }
+                .col {
+                    padding: 0;
+                }
+                .big {
+                    display: block;
+                    width: 100%;
+                    font-size: 1.2em;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .header-height {
+        height: 215px;
+    }
+    .section {
+        background-color: #FFF;
+        padding: 10px;
+        padding-left: 16px;
+        border-radius: 5px;
+        color: gray;
+        .section-header {
+            height: 25px;
+            line-height: 25px;
+            .title {
+                font-size: 1.2em;
+                color: map-get($QBTKTColors, black);
+                font-weight: bold;
+            }
+            .right-button {
+                float: right;
+                color: map-get($QBTKTColors, blue);
+                font-size: 1.5em;
+                display: block;
+                height: 25px;
+                line-height: 25px;
+                padding: 0 5px;
+                background-color: #FFF;
+            }
+        }
+        .section-body {
+            margin-top: 5px;
+            .item {
+                line-height: 20px;
+            }
+        }
+    }
+    .qb-footer {
+        color: gray;
+        line-height: 25px;
+        .title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: map-get($QBTKTColors, black);
+        }
+    }
+    .footer-height {
+        height: 130px;
+    }
+    .plane {
+        margin: 0 5px;
+        color: map-get($QBTKTColors, orange)
+    }
+    .qb-content {
+        padding: 8px 16px;
+        background-color: transparent;
+    }
+    .primary {
+        color: map-get($QBTKTColors, primary);
+    }
+    .blue {
+        color: map-get($QBTKTColors, blue);
+    }
+    .red {
+        color: #F00;
+    }
+    .black {
+        color: black;
+    }
+    .high-dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        vertical-align: middle;
+        background-color: gray;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,79 @@
+page-qbtkt-account {
+    .a-header {
+        background: -webkit-gradient(linear, left top, right top, from(#007628), to(#69a718));
+        background: linear-gradient(to right, #007628, #69a718);
+        background: -webkit-linear-gradient(to right, #007628, #69a718);
+    }
+    .a-header-toolbar {
+        background-image: url("../assets/qbtkt/home/top_bar_gradient.png");
+        background-size: cover;
+        background-position: left;
+        border-bottom: solid 2px rgba(#fff, 0.2);
+    }
+    #button-left {
+        height: 40px;
+        transform: scale(1.2);
+        transform-origin: 0% 20%;
+        padding-left: 16px;
+    }
+    #button-right {
+        float: right;
+        height: 40px;
+        padding: 4px 0px 4px 4px;
+    }
+    #header-user-info {
+        width: 80%;
+        height: 100%
+    }
+    #header-info-container {
+        background-color: rgba(yellowgreen, .2);
+    }
+    #header-edit-button {
+        width: 20%;
+        height: 100%;
+        text-align: right;
+    }
+    #content-container {
+        overflow: auto;
+        padding-top: 144px;
+    }
+    .white-text {
+        color: white;
+    }
+    .main-row {
+        background-color: white;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    .arrow-down {
+        float: right;
+        color: lightblue;
+    }
+    .font-size-09 {
+        font-size: 0.9em;
+    }
+    .unavailable-item {
+        background-color: rgba(white, .5);
+        color: rgba(black, .6);
+    }
+    .login-button {
+        padding: 6px 16px;
+        margin: 4px;
+        background-color: rgba(yellowgreen, .4);
+        border-radius: 10px;
+    }
+    #button-logout-container {
+        background-color: red;
+        border-radius: 10px
+    }
+    .button-find {
+        color: white;
+        background-image: linear-gradient(to right, #84BF38, #007628);
+        -webkit-background-image: linear-gradient(to right, #84BF38, #007628);
+        padding: 16px;
+        text-align: center;
+        border-radius: 6px;
+        font-weight: bold;
+        width: 100%;
+    }
+}

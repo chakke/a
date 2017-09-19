@@ -1,0 +1,316 @@
+<ion-content class="qb-ion-content">
+    <div class="header-height"></div>
+    <div class="image-background">
+        <img src="http://chungcuhanoi1102.com/Resources/Images/Images-News/N02T1-NGOAI%20GIAO%20DOAN/chung-cu-ngoai-giao-doan-banner.jpg" alt="img-background">
+        <div class="info">
+            <span class="info-button"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+            <span class="info-text">Giá đã bao gồm thuế. Không phí giao dịch. Không chi phí ẩn</span>
+        </div>
+    </div>
+    <div class="button-groups" id="search-button-groups">
+        <button class="btn active">Tất cả</button>
+        <button class="btn">Cao cấp</button>
+        <button class="btn">Tiết kiệm</button>
+        <button class="btn">Ven sông</button>
+        <button class="btn">Gần ga tàu</button>
+    </div>
+    <div class="qb-content">
+        <div class="list-item">
+            <div class="item" (click)="gotoDetail()" *ngFor="let item of items">
+                <ion-row>
+                    <ion-col col-4>
+                        <img src="{{item.image}}" alt="img">
+                    </ion-col>
+                    <ion-col col-8>
+                        <span class="title">{{item.name}}</span>
+                        <div class="star-div">
+                            <span class="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span>
+                            <span class="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span>
+                            <span class="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="adress">
+                            <span class="adress-icon">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </span>
+                            <span>{{item.address}}</span>
+                        </div>
+                        <div class="rate">
+                            <span>Xếp hạng</span>
+                            <span class="point">{{item.rate}}/10</span>
+
+                            <div class="triadvisor-rate">
+                                <span class="trip-advisor-icon">
+                                    <i class="fa fa-tripadvisor" aria-hidden="true"></i>
+                                </span>
+                                <span class="cirle-rate active"></span>
+                                <span class="cirle-rate active"></span>
+                                <span class="cirle-rate active"></span>
+                                <span class="cirle-rate"></span>
+                                <span class="cirle-rate"></span>
+                                <span>(135)</span>
+                            </div>
+
+                        </div>
+                        <div class="price-div">
+                            <span class="price">
+                                698.196
+                            </span>
+                            <span class="unit">Vnđ</span>
+                            <span>/đêm</span>
+                        </div>
+                        <span class="old-price">
+                            Giá cũ: 1.750.000 Vnđ
+                        </span>
+
+                    </ion-col>
+                </ion-row>
+                <span class="button-down">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </span>
+                <div class="sale-off">
+                    60% Save
+                </div>
+            </div>
+            <!-- <div class="item" (click)="gotoDetail()">
+                <ion-row>
+                    <ion-col col-4>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Billy_Booth_House_(entrance).jpg" alt="img">
+                    </ion-col>
+                    <ion-col col-8>
+                        <span class="title">Nice Palace Hotel</span>
+                        <div class="star-div">
+                            <span class="star">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </span>
+                            <span class="star">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </span>
+                            <span class="star">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </span>
+                        </div>
+                        <div class="adress">
+                            <span class="adress-icon">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </span>
+                            <span>Phaya Thai, Bangkok</span>
+                        </div>
+                        <div class="rate">
+                            <span>Xếp hạng</span>
+                            <span class="point">7.7/10</span>
+
+                            <div class="triadvisor-rate">
+                                <span class="trip-advisor-icon">
+                                        <i class="fa fa-tripadvisor" aria-hidden="true"></i>
+                                    </span>
+                                <span class="cirle-rate active"></span>
+                                <span class="cirle-rate active"></span>
+                                <span class="cirle-rate active"></span>
+                                <span class="cirle-rate"></span>
+                                <span class="cirle-rate"></span>
+                                <span>(135)</span>
+                            </div>
+
+                        </div>
+                        <div class="price-div">
+                            <span class="price">
+                                    698.196
+                                </span>
+                            <span class="unit">Vnđ</span>
+                            <span>/đêm</span>
+                        </div>
+                        <span class="old-price">
+                                Giá cũ: 1.750.000 Vnđ
+                            </span>
+
+                    </ion-col>
+                </ion-row>
+                <span class="button-down">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                <div class="sale-off">
+                    60% Save
+                </div>
+            </div>
+            <div class="item" (click)="gotoDetail()">
+                <ion-row>
+                    <ion-col col-4>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Billy_Booth_House_(entrance).jpg" alt="img">
+                    </ion-col>
+                    <ion-col col-8>
+                        <span class="title">Nice Palace Hotel</span>
+                        <div class="star-div">
+                            <span class="star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                            <span class="star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                            <span class="star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                        </div>
+                        <div class="adress">
+                            <span class="adress-icon">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    </span>
+                            <span>Phaya Thai, Bangkok</span>
+                        </div>
+                        <div class="rate">
+                            <span>Xếp hạng</span>
+                            <span class="point">7.7/10</span>
+
+                            <div class="triadvisor-rate">
+                                <span class="trip-advisor-icon">
+                                            <i class="fa fa-tripadvisor" aria-hidden="true"></i>
+                                        </span>
+                                <span class="cirle-rate active"></span>
+                                <span class="cirle-rate active"></span>
+                                <span class="cirle-rate active"></span>
+                                <span class="cirle-rate"></span>
+                                <span class="cirle-rate"></span>
+                                <span>(135)</span>
+                            </div>
+
+                        </div>
+                        <div class="price-div">
+                            <span class="price">
+                                        698.196
+                                    </span>
+                            <span class="unit">Vnđ</span>
+                            <span>/đêm</span>
+                        </div>
+                        <span class="old-price">
+                                    Giá cũ: 1.750.000 Vnđ
+                                </span>
+
+                    </ion-col>
+                </ion-row>
+                <span class="button-down">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                <div class="sale-off">
+                    60% Save
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div #overlayheight class="overlay-height open"></div>
+    <div class="footer-height"></div>
+</ion-content>
+<loading *ngIf="isShowLoading" text="Xin đợi"></loading>
+
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar">
+        <span class="button-left" (tap)="onClickClosePage()">
+            <ion-icon name="ios-close-outline" ></ion-icon>
+        </span>
+        <span class="title">VietNam Airline</span>
+        <span class="description">HNA - BKK - 7h 10m -  1 điểm dừng</span>
+        <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
+    </div>
+</div>
+<div class="overlay-ads">
+    <div class="overlay-header" (click)="toggleOverlay(overlaybody, overlayicon,overlayheight)">
+        <span>Khách sạn được ưa thích</span>
+        <span class="overlay-right-button">
+            <i #overlayicon class="fa fa-angle-down" aria-hidden="true"></i>
+        </span>
+    </div>
+    <div #overlaybody class="overlay-body">
+        <div class="overlay-item">
+            <img src="http://kythuatsenvang.com/wp-content/uploads/2015/11/434903-resort.jpg" alt="Image">
+            <div class="item-header">
+                <span class="name">BAIYOKE SKY HOTEL</span>
+                <div class="star-div">
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                </div>
+            </div>
+            <div class="item-place">
+                <span class="place-icon">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </span>
+                <span>Pratunam, Bangkok</span>
+            </div>
+            <div class="item-footer">
+                <span class="rate">Xếp hạng 8.5/10</span>
+                <span class="price">1.500.000 Vnđ</span>
+            </div>
+        </div>
+        <div class="overlay-item">
+            <img src="http://kythuatsenvang.com/wp-content/uploads/2015/11/434903-resort.jpg" alt="Image">
+            <div class="item-header">
+                <span class="name">BAIYOKE SKY HOTEL</span>
+                <div class="star-div">
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                </div>
+            </div>
+            <div class="item-place">
+                <span class="place-icon">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </span>
+                <span>Pratunam, Bangkok</span>
+            </div>
+            <div class="item-footer">
+                <span class="rate">Xếp hạng 8.5/10</span>
+                <span class="price">1.500.000 Vnđ</span>
+            </div>
+        </div>
+        <div class="overlay-item">
+            <img src="http://kythuatsenvang.com/wp-content/uploads/2015/11/434903-resort.jpg" alt="Image">
+            <div class="item-header">
+                <span class="name">BAIYOKE SKY HOTEL</span>
+                <div class="star-div">
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                </div>
+            </div>
+            <div class="item-place">
+                <span class="place-icon">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </span>
+                <span>Pratunam, Bangkok</span>
+            </div>
+            <div class="item-footer">
+                <span class="rate">Xếp hạng 8.5/10</span>
+                <span class="price">1.500.000 Vnđ</span>
+            </div>
+        </div>
+        <div style="height: 100%; min-width: 10px; height: 100px"></div>
+    </div>
+</div>
+<div class="qb-footer">
+    <div class="footer-item">
+        <span class="footer-item-icon">
+            <i class="fa fa-filter" aria-hidden="true"></i>
+        </span>
+        <span nowrap>Bộ lọc</span>
+    </div>
+    <div class="footer-item">
+        <span class="footer-item-icon">
+            <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+        </span>
+        <span nowrap>Sắp xếp</span>
+    </div>
+    <div class="footer-item">
+        <span class="footer-item-icon">
+            <i class="fa fa-map-o" aria-hidden="true"></i>
+        </span>
+        <span nowrap>Bản đồ</span>
+    </div>
+</div>

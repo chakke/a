@@ -1,0 +1,17 @@
+number-picker {
+    .number-picker {
+        display: inline-block;
+    }
+    .number-picker-button {
+        color: #F00;
+        margin: 0 .5em;
+        vertical-align: middle;
+    }
+    .button-minus {
+        margin-left: 0;
+    }
+    .number-picker-number {
+        font-size: 1.5em;
+        vertical-align: middle;
+    }
+}

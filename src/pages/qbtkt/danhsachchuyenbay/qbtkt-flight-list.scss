@@ -1,0 +1,116 @@
+page-qbtkt-flight-list {
+    ion-content {
+        .scroll-content {
+            overflow: hidden;
+        }
+    }
+    .qb-content {
+        padding-top: 0;
+    }
+    .qb-footer {
+        padding: 0;
+    }
+    .header-height {
+        height: 48px;
+    }
+    #page-content {
+        overflow-y: auto;
+        max-height: 60vh;
+    }
+    flight {
+        margin-top: 10px;
+        &.first-flight {
+            @media (max-width: 720px) {
+                margin-top: -15px;
+            }
+        }
+    }
+    .img-cover {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        opacity: .2;
+    }
+    .cover-div {
+        color: white;
+        font-size: 2em;
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+    .flight-type {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        line-height: 13px;
+        font-size: 9px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #148126;
+        text-align: center;
+        vertical-align: 2px;
+        margin-right: 5px;
+    }
+    #button-left {
+        font-size: 28px;
+        padding: 10px;
+    }
+    #button-right {
+        height: 30px;
+        padding: 0;
+    }
+    #logo {
+        position: absolute;
+        right: 20px;
+        top: -20px;
+        width: 30%;
+    }
+    .below-header {
+        min-height: 100px;
+        position: relative;
+        width: 100%;
+        background: linear-gradient(to right, #007628, #69a718);
+        background: -webkit-linear-gradient(to right, #007628, #69a718);
+        overflow: hidden;
+        .logo {
+            position: absolute;
+            right: 20px;
+            top: -70px;
+            width: 30%;
+            z-index: 1;
+            height: auto;
+        }
+    }
+    .footer {
+        white-space: nowrap;
+        overflow: hidden;
+        transform: translateY(100%);
+        transition: 400ms;
+        display: flex;
+        background: linear-gradient(to bottom, #006b06, #157605);
+    }
+    .footer-show {
+        transform: translateY(0);
+    }
+    .footer-item {
+        padding: 16px 0;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        flex-grow: 1;
+        border-right: solid 1px #FFF;
+        color: white;
+        .icon {
+            height: 1.2em;
+            vertical-align: text-top;
+            margin-right: 5px;
+            display: inline-block;
+            img {
+                height: 100%;
+            }
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
+}

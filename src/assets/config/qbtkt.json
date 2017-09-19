@@ -1,0 +1,427 @@
+{
+    "version": "1.0",
+    "QBTicketingHomePage": {
+        "submenu": [
+            { "id": 0, "name": "Đăng ký nhận bản tin" },
+            { "id": 1, "name": "Trợ giúp" },
+            { "id": 2, "name": "Cài đặt" }
+        ],
+        "categories": [{
+                "id": 0,
+                "title": "Chặng bay phổ biến",
+                "items": [
+                    { "id": 0, "src": "assets/qbtkt/home/image_1.png", "description": "Hồ Chí Minh - Hà Nội" },
+                    { "id": 1, "src": "assets/qbtkt/home/image_2.png", "description": "Hà Nội - Đà Nẵng" }
+                ]
+            },
+            {
+                "id": 1,
+                "title": "Tin tức",
+                "items": [
+                    { "id": 0, "src": "assets/qbtkt/home/image_3.png", "description": "Món ngon nhất định phải ăn khi tới Hà Nội" },
+                    { "id": 1, "src": "assets/qbtkt/home/image_4.png", "description": "Khách du lịch đến Đà Nẵng tăng vọt" }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Hướng dẫn thanh toán",
+                "items": [
+                    { "id": 0, "src": "assets/qbtkt/home/image_5.png", "description": "Thanh toán nhanh với thẻ Visa/Master hoặc thẻ thanh toán nội địa" },
+                    { "id": 1, "src": "assets/qbtkt/home/image_6.png", "description": "Thủ tục thanh toán tại quầy" }
+                ]
+            }
+        ]
+    },
+    "QBTicketingFindFlightPage": {
+        "person": {
+            "adult": 0,
+            "children": 0,
+            "infant": 0
+        },
+        "submenu": [
+            { "id": 0, "name": "Khuyến mãi hiện hành" },
+            { "id": 1, "name": "Trợ giúp" }
+        ]
+    },
+    "QBTicketingFindHotelPage": {
+        "submenu": [
+            { "id": 0, "name": "Khuyến mãi hiện hành" },
+            { "id": 1, "name": "Trợ giúp" }
+        ]
+    },
+    "BookingInfoPage": {
+        "headerTitle": "Điền thông tin",
+        "headerFlow": [{
+            "id": 1,
+            "text": "Đặt chỗ"
+        }, {
+            "id": 2,
+            "text": "Xem lại"
+        }, {
+            "id": 3,
+            "text": "Thanh toán"
+        }],
+        "text_next": "Tiếp tục",
+        "bookingDatas": {
+            "title": "Đặt chỗ của bạn",
+            "text_refundable": "Được hoàn tiền",
+            "text_nonrefundable": "Không hoàn tiền",
+            "text_transit": "điểm dừng",
+            "text_transits": "điểm dừng",
+            "text_direct": "bay thẳng"
+        },
+        "contactInfo": {
+            "title": "Thông tin liên hệ",
+            "text_suggest": "Điền thông tin liên hệ",
+            "text_add": "Thêm vào danh sách hành khách",
+            "text_phoneNumber": "Số di động",
+            "text_email": "Email"
+        },
+        "passengerInfo": {
+            "title": "Thông tin hành khách",
+            "text_adultPassenger": "hành khách người lớn",
+            "text_ChildrenPassenger": "hành khách trẻ em",
+            "text_birthDay": "Ngày sinh",
+            "text_passportNumber": "Số hộ chiếu",
+            "text_countryOfIssue": "Quốc gia cấp",
+            "text_PassportExpiryDate": "Thời hạn hộ chiếu",
+            "text_nationality": "Quốc tịch"
+        },
+        "baggage": {
+            "title": "Tiện ích chuyển bay",
+            "text_baggage": "Hành lý"
+        },
+        "bill": {
+            "title": "Chi tiết giá",
+            "text_total": "Tổng giá tiền"
+        }
+    },
+
+    "ModalLoaiGhe": {
+        "title": "Chọn hạng ghế của bạn",
+        "text_close": "Huỷ",
+        "text_select": "Chọn",
+        "seat_types": [
+            { "id": 0, "name": "Economy" },
+            { "id": 1, "name": "Business" },
+            { "id": 2, "name": "Premium Economy" }
+        ]
+    },
+    "ModalSoLuongKhach": {
+        "title": "Nhập số lượng hành khách",
+        "text_close": "Huỷ",
+        "text_select": "Chọn",
+        "min": 0,
+        "max": 1000,
+        "canStartWithZero": false
+    },
+    "ModalBaggage": {
+        "title": "Hành lý",
+        "text_close": "Huỷ",
+        "text_select": "Chọn",
+        "items": [{
+            "id": 0,
+            "weight": "0kg",
+            "price": "0 VND"
+        }, {
+            "id": 1,
+            "weight": "15kg",
+            "price": "000.000 VND"
+        }, {
+            "id": 2,
+            "weight": "20kg",
+            "price": "000.000 VND"
+        }, {
+            "id": 3,
+            "weight": "25kg",
+            "price": "000.000 VND"
+        }, {
+            "id": 4,
+            "weight": "30kg",
+            "price": "000.000 VND"
+        }]
+    },
+    "ModalBookingConfirm": {
+        "title": "Thông tin đặt chỗ của bạn đã chính xác?",
+        "text_close": "Kiếm tra lại",
+        "text_confirm": "Đúng, tiếp tục thanh toán",
+        "text_content": "Bạn sẽ không thể thay đổi thông tin đặt chỗ sau khi tiến hành thanh toán. Bạn có muốn tiếp tục?"
+    },
+    "ModalBookingContactInfo": {
+        "title": "Thông tin liên hệ",
+        "detail": {
+            "firstName": {
+                "text": "Tên đệm & tên",
+                "example": "vd: Thi Ngoc Anh"
+            },
+            "lastName": {
+                "text": "Họ",
+                "example": "vd: Nguyen"
+            },
+            "phoneNumber": {
+                "text": "Số điện thoại",
+                "example": "vd: 987654321"
+            },
+            "email": {
+                "text": "Địa chỉ email",
+                "example": "vd: myemail@gmail.com"
+            }
+        },
+        "text_save": "Lưu"
+    },
+    "ModalPassengerInfo": {
+        "title": "Thông tin hành khách",
+        "detail": {
+            "firstName": {
+                "text": "Tên đệm & tên",
+                "example": "vd: Thi Ngoc Anh"
+            },
+            "lastName": {
+                "text": "Họ",
+                "example": "vd: Nguyen"
+            },
+            "titleName": {
+                "text": "Danh xưng",
+                "example": "vd: Cô"
+            },
+            "birthDay": {
+                "text": "Ngày sinh",
+                "example": "vd: 01/01/1990"
+            },
+            "nationality": {
+                "text": "Quốc tịch",
+                "example": "vd: Việt Nam"
+            }
+        },
+        "text_save": "Lưu"
+    },
+    "ModalBookingRefundInfo": {
+        "title": "Thông tin hoàn tiền",
+        "text_refundable": "Được hoàn tiền",
+        "text_nonrefundable": "Không hoàn tiền",
+        "text_refundableNote": "Trên 2.160 tiếng sau khi mua, hành khách yêu cầu hoàn tiền vé phải chịu phí hủy tương đương 100% giá vé cơ bản/hành khách"
+    },
+    "AccountPage": {
+        "items": [{
+                "id": 0,
+                "name": "helpCenter",
+                "title": "Trung tâm hỗ trợ",
+                "info": "Nơi giải đáp mọi thắc mắc của bạn",
+                "url": "assets/qbtkt/account/icon_support.png",
+                "isAvailable": true
+            },
+            {
+                "id": 1,
+                "name": "myRefund",
+                "title": "Hoàn tiền của tôi",
+                "info": "Quản lý các yêu cầu hoàn tiền",
+                "url": "assets/qbtkt/account/icon_payback.png",
+                "isAvailable": false
+            },
+            {
+                "id": 2,
+                "name": "priceAlerts",
+                "title": "Thông báo giá",
+                "info": "Cập nhật tận tay, nắm ngay giá tốt",
+                "url": "assets/qbtkt/account/icon_noti_price.png",
+                "isAvailable": false
+            },
+            {
+                "id": 3,
+                "name": "myCards",
+                "title": "Thẻ của tôi",
+                "info": "Thanh toán siêu tốc chỉ trong 1 chạm",
+                "url": "assets/qbtkt/account/icon_credit.png",
+                "isAvailable": false
+            },
+            {
+                "id": 4,
+                "name": "travelersPicker",
+                "title": "Travelers Picker",
+                "info": "Lưu thông tin hành khách cho lần đặt chỗ sau",
+                "url": "assets/qbtkt/account/icon_traveler_picker.png",
+                "isAvailable": false
+            },
+            {
+                "id": 5,
+                "name": "newsAndPromo",
+                "title": "Bản tin & tin khuyến mãi",
+                "info": "Nhận các thông tin khuyến mãi mới nhất",
+                "url": "assets/qbtkt/account/icon_news.png",
+                "isAvailable": false
+            },
+            {
+                "id": 6,
+                "name": "pushNotification",
+                "title": "Thông báo",
+                "info": "Không bỏ lỡ các cập nhật từ Quốc Bảo",
+                "url": "assets/qbtkt/account/icon_noti_pushup.png",
+                "isAvailable": false
+            }
+        ],
+        "text_login": "Đăng nhập",
+        "text_logout": "Đăng xuất",
+        "text_signin": "Đăng ký",
+        "text_letssignin": "Đăng ký thành viên, hưởng nhiều ưu đãi !"
+    },
+    "LogIn": {
+        "title": "Đăng nhập",
+        "id_input": "Email hoặc số di động",
+        "password_input": "Mật khẩu",
+        "text_login": "Đăng nhập",
+        "text_or": "hoặc",
+        "text_login_google": "Đăng nhập bằng Google",
+        "text_login_facebook": "Đăng nhập bằng Facebook",
+        "text_show_password": "Hiển thị mật khẩu",
+        "text_forget_password": "Bạn quên mật khẩu?",
+        "password_min_length": 6
+    },
+    "SignUp": {
+        "title": "Đăng ký thành viên",
+        "email_description": "Email của bạn sẽ dùng để đăng nhập và đặt lại mật khẩu",
+        "phonenumber_description": "Số di động của bạn sẽ dùng để đăng nhập và đặt lại mật khẩu",
+        "text_sendme": "Gửi cho tôi tin",
+        "text_discount": "Khuyến mãi & Các giảm giá đặc biệt",
+        "from_QB": "của Quốc Bảo",
+        "text_email": "Email",
+        "text_code": "Mã quốc gia",
+        "text_phonenumber": "Số di động",
+        "text_use_email": "Đăng ký bằng email?",
+        "text_use_phonenumber": "Đăng ký bằng số di động?",
+        "text_signup": "Đăng ký",
+        "text_or": "hoặc",
+        "text_login_google": "Đăng nhập bằng Google",
+        "text_login_facebook": "Đăng nhập bằng Facebook"
+    },
+    "DatePicker": {
+        "title": "Chọn ngày",
+        "roundtrip_title1": "Chọn ngày bay đi",
+        "roundtrip_title2": "Chọn ngày bay về",
+        "daysOfWeek": ["CN", "Th 2", "Th 3", "Th 4", "Th 5", "Th 6", "Th 7"],
+        "text_today": "Hôm nay",
+        "text_departure": "Bay đi",
+        "text_return": "Bay về",
+        "text_reset": "Đặt lại",
+        "text_month": "Tháng",
+        "text_year": "Năm",
+        "text_show_lowest_price": "Xem ước tính giá thấp nhất"
+    },
+    "Pickmonth": {
+        "title": "Chọn tháng, năm",
+        "text_close": "Huỷ",
+        "text_select": "Chọn"
+    },
+    "resources": [
+        "assets/qbtkt/account/btn_edit.png",
+        "assets/qbtkt/account/icon_credit.png",
+        "assets/qbtkt/account/icon_news.png",
+        "assets/qbtkt/account/icon_noti_price.png",
+        "assets/qbtkt/account/icon_noti_pushup.png",
+        "assets/qbtkt/account/icon_payback.png",
+        "assets/qbtkt/account/icon_support.png",
+        "assets/qbtkt/account/icon_traveler_picker.png",
+        "assets/qbtkt/booked/icon_expired.png",
+        "assets/qbtkt/booked/icon_flight_1.png",
+        "assets/qbtkt/booked/icon_flight_2.png",
+        "assets/qbtkt/booked/icon_tab_hotel_1.png",
+        "assets/qbtkt/booked/icon_tab_hotel_2.png",
+        "assets/qbtkt/booking-info/btn_add.png",
+        "assets/qbtkt/booking-info/btn_detail.png",
+        "assets/qbtkt/booking-info/btn_remove.png",
+        "assets/qbtkt/booking-info/icon_birthday.png",
+        "assets/qbtkt/booking-info/icon_country.png",
+        "assets/qbtkt/booking-info/icon_date.png",
+        "assets/qbtkt/booking-info/icon_email.png",
+        "assets/qbtkt/booking-info/icon_flight_1.png",
+        "assets/qbtkt/booking-info/icon_flight_2.png",
+        "assets/qbtkt/booking-info/icon_flight_3.png",
+        "assets/qbtkt/booking-info/icon_nationality.png",
+        "assets/qbtkt/booking-info/icon_passport.png",
+        "assets/qbtkt/booking-info/icon_phone.png",
+        "assets/qbtkt/findflight/btn_divert.png",
+        "assets/qbtkt/findflight/icon_adult.png",
+        "assets/qbtkt/findflight/icon_arrival_day.png",
+        "assets/qbtkt/findflight/icon_arrival_flight.png",
+        "assets/qbtkt/findflight/icon_children.png",
+        "assets/qbtkt/findflight/icon_departure_day.png",
+        "assets/qbtkt/findflight/icon_departure_flight.png",
+        "assets/qbtkt/findflight/icon_infant.png",
+        "assets/qbtkt/findflight/icon_seat.png",
+        "assets/qbtkt/findhotel/icon_arrival_day.png",
+        "assets/qbtkt/findhotel/icon_destination.png",
+        "assets/qbtkt/findhotel/icon_fillter.png",
+        "assets/qbtkt/findhotel/icon_guest.png",
+        "assets/qbtkt/findhotel/icon_room.png",
+        "assets/qbtkt/findhotel/icon_staynight.png",
+        "assets/qbtkt/flight-list/bottom-bar.png",
+        "assets/qbtkt/flight-list/icon_entertainment_1.png",
+        "assets/qbtkt/flight-list/icon_flight_1.png",
+        "assets/qbtkt/flight-list/icon_info.png",
+        "assets/qbtkt/flight-list/icon_luggage_1.png",
+        "assets/qbtkt/flight-list/icon_meal_1.png",
+        "assets/qbtkt/flight-list/image_noflight.png",
+        "assets/qbtkt/flight-list/image_oneway.png",
+        "assets/qbtkt/flight-list/image_roundtrip.png",
+        "assets/qbtkt/flight-list/image_smartcombo_2.png",
+        "assets/qbtkt/home/bot_bar_1.png",
+        "assets/qbtkt/home/bot_bar_2.png",
+        "assets/qbtkt/home/btn_more.png",
+        "assets/qbtkt/home/icon_account_1.png",
+        "assets/qbtkt/home/icon_account_2.png",
+        "assets/qbtkt/home/icon_booking_1.png",
+        "assets/qbtkt/home/icon_booking_2.png",
+        "assets/qbtkt/home/icon_flight.png",
+        "assets/qbtkt/home/icon_home_1.png",
+        "assets/qbtkt/home/icon_home_2.png",
+        "assets/qbtkt/home/icon_hotel.png",
+        "assets/qbtkt/home/icon_noti_1.png",
+        "assets/qbtkt/home/icon_noti_2.png",
+        "assets/qbtkt/home/image_1.png",
+        "assets/qbtkt/home/image_2.png",
+        "assets/qbtkt/home/image_3.png",
+        "assets/qbtkt/home/image_4.png",
+        "assets/qbtkt/home/image_5.png",
+        "assets/qbtkt/home/image_6.png",
+        "assets/qbtkt/home/image_slide_1.png",
+        "assets/qbtkt/home/image_slide_2.png",
+        "assets/qbtkt/home/image_slide_3.png",
+        "assets/qbtkt/home/top_bar_3.png",
+        "assets/qbtkt/home/top_bar_framelight.png",
+        "assets/qbtkt/home/top_bar_gradient.png",
+        "assets/qbtkt/home/top_bar_logo_1.png",
+        "assets/qbtkt/home/top_bar_logo_2.png",
+        "assets/qbtkt/hotel-detail/icon_airconditioner.png",
+        "assets/qbtkt/hotel-detail/icon_breakfast_2.png",
+        "assets/qbtkt/hotel-detail/icon_elevator.png",
+        "assets/qbtkt/hotel-detail/icon_guest.png",
+        "assets/qbtkt/hotel-detail/icon_parking.png",
+        "assets/qbtkt/hotel-detail/icon_refund_2.png",
+        "assets/qbtkt/hotel-detail/icon_service.png",
+        "assets/qbtkt/hotel-detail/icon_swimmingpool.png",
+        "assets/qbtkt/hotel-detail/icon_tab_qb_1.png",
+        "assets/qbtkt/hotel-detail/icon_tab_qb_2.png",
+        "assets/qbtkt/hotel-detail/marker_hotel.png",
+        "assets/qbtkt/hotel-detail/marker_location_nearby.png",
+        "assets/qbtkt/icon/btn_more.png",
+        "assets/qbtkt/icon/icon_account_1.png",
+        "assets/qbtkt/icon/icon_account_2.png",
+        "assets/qbtkt/icon/icon_arrange.png",
+        "assets/qbtkt/icon/icon_booking_1.png",
+        "assets/qbtkt/icon/icon_booking_2.png",
+        "assets/qbtkt/icon/icon_changedate.png",
+        "assets/qbtkt/icon/icon_filter.png",
+        "assets/qbtkt/icon/icon_flight.png",
+        "assets/qbtkt/icon/icon_home_1.png",
+        "assets/qbtkt/icon/icon_home_2.png",
+        "assets/qbtkt/icon/icon_hotel.png",
+        "assets/qbtkt/icon/icon_noti_1.png",
+        "assets/qbtkt/icon/icon_noti_2.png",
+        "assets/qbtkt/icon/top_bar_logo_2.png",
+        "assets/qbtkt/login/icon_fb.png",
+        "assets/qbtkt/login/icon_google_plus.png",
+        "assets/qbtkt/paying/icon_discount.png",
+        "assets/qbtkt/paying/image_security.png",
+        "assets/qbtkt/paying/image_visa_mastercard.png",
+        "assets/qbtkt/paying/logo_mastercard.png"
+    ]
+}

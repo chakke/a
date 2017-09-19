@@ -1,0 +1,122 @@
+page-qbtkt-modal-number {
+    ion-content {
+        background: transparent !important;
+    }
+    #a-background {
+        background: rgba(black, .4);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    .a-content {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 404;
+        text-align: center;
+    }
+    .button-select {
+        color: white;
+        background-image: linear-gradient(to right, #84BF38, #007628);
+        -webkit-background-image: linear-gradient(to right, #84BF38, #007628);
+        margin: 20px 10px;
+        padding: 16px;
+        text-align: center;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+    .a-container {
+        background-color: white;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    .a-container-header {
+        padding: 20px 0 20px 16px;
+        background-color: #f0ffdc;
+        color: map-get($QBTKTColors, primary);
+        font-weight: bold;
+    }
+    .a-container-title {
+        display: inline-block;
+        max-width: 60vw;
+        white-space: nowrap;
+        padding-right: 30px;
+    }
+    .container-header-button {
+        float: right;
+        color: white;
+        background-color: #84c32e;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        padding: 8px 12px 8px 20px;
+        margin-top: -6px;
+        font-size: .9em;
+        font-weight: normal;
+    }
+    .number-container {
+        padding: 10px 20px;
+        color: gray;
+        display: inline-block;
+        width: 100%;
+    }
+    .value-row {
+        height: 40px;
+        line-height: 40px;
+        text-align: right;
+        font-size: 30px;
+    }
+    .backspace {
+        height: 40px;
+        display: inline-block;
+        padding: 0 16px 0 8px;
+        ion-icon {
+            font-size: 1em;
+            color: #BD3333;
+        }
+    }
+    .value {
+        max-width: 50vw;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
+        color: black;
+        vertical-align: bottom;
+    }
+    .number-row {
+        text-align: center;
+        padding: 0 10px;
+    }
+    .number {
+        color: gray;
+        font-size: 6vw;
+        display: inline-block;
+        border-radius: 50%;
+        border: solid 1px;
+        width: 16vw;
+        height: 16vw;
+        line-height: 16vw;
+        text-align: center;
+        margin: 2vw;
+    }
+    .touch-animation {
+        animation: touch-effect-animation 600ms;
+    }
+    @keyframes touch-effect-animation {
+        from {
+            background-color: transparent;
+            color: gray;
+        }
+        10% {
+            color: white;
+            background-color: pink;
+        }
+        to {
+            background-color: transparent;
+            color: gray;
+        }
+    }
+}

@@ -1,0 +1,352 @@
+<ion-content class="qb-ion-content" no-bounce>
+    <div class="a1-fill-parent overflow-auto">
+        <div class="a1-fill-parent" id="main-content" (touchend)="onTouchEnd($event)">
+            <div class="a1-fill-parent overflow-auto" id="top-main-content">
+                <div class="a1-fill-parent overflow-auto">
+                    <ion-grid padding>
+                        <ion-row class="main-row qb-shadow col-no-padding">
+                            <div class="a1-fill-parent">
+                                <ion-row class="main-row-header">
+                                    <ion-col col-4 class="a1-no-padding a3-container a3-items-center">
+                                        <div class="green-title">{{mDatas.bookingDatas.title}}</div>
+                                    </ion-col>
+                                    <ion-col col-8 class="qb-big qb-black  qb-bold a3-container a3-items-center a3-justify-end">
+                                        <ion-row>
+                                            <ion-col col-5 class="a3-container a3-items-center">
+                                                <span class="a1-fill-parent a1-text-right qb-bold">{{mBookingDatas.fromCity}}</span>
+                                            </ion-col>
+                                            <ion-col col-2 class="a3-container a3-items-center a3-justify-center">
+                                                <img src="assets/qbtkt/booking-info/icon_flight_3.png">
+                                            </ion-col>
+                                            <ion-col col-5 class="a3-container a3-items-center">
+                                                <span class="a1-fill-parent a1-text-left qb-bold">{{mBookingDatas.toCity}}</span>
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row padding class="line-height-20">
+                                    <div class="a1-fill-parent">
+                                        <ion-row *ngFor="let flight of mBookingDatas.flights; let i = index">
+                                            <div class="a1-fill-parent a1-padding-bottom border-bottom" [class.border-bottom]="i<mBookingDatas.flights.length - 1">
+                                                <ion-row>
+                                                    <ion-col class="qb-big qb-black qb-bold" col-10>{{flight.time.timeStr}}</ion-col>
+                                                    <ion-col col-2>
+                                                        <ion-icon name="ios-arrow-down-outline" class="arrow-down"></ion-icon>
+                                                    </ion-col>
+                                                </ion-row>
+                                                <ion-row>
+                                                    <ion-col>
+                                                        <ion-row>
+                                                            <ion-col col-5 class="a3-container a3-items-center a1-no-padding">
+                                                                <img src={{flight.brand.url}}>
+                                                            </ion-col>
+                                                            <ion-col class="a3-container a3-items-center a3-justify-center">
+                                                                <span>{{flight.brand.name}}</span>
+                                                            </ion-col>
+                                                        </ion-row>
+                                                        <ion-row>
+                                                            <div class="font-size-09">
+                                                                <span style="color: lightblue">{{flight.class}}</span>
+                                                                <span *ngIf="flight.numberOfTransit==0" class="grey-text"> ● {{mDatas.bookingDatas.text_direct}}</span>
+                                                                <span *ngIf="flight.numberOfTransit==1" class="grey-text"> ● {{flight.numberOfTransit}} {{mDatas.bookingDatas.text_transit}}</span>
+                                                                <span *ngIf="flight.numberOfTransit>1" class="grey-text"> ● {{flight.numberOfTransit}} {{mDatas.bookingDatas.text_transits}}</span>
+                                                            </div>
+                                                        </ion-row>
+                                                    </ion-col>
+                                                    <ion-col class="a3-container a3-items-center a1-no-padding a3-justify-end">
+                                                        <div>
+                                                            <ion-row>
+                                                                <ion-col class="qb-big qb-black  qb-bold" text-center>{{flight.timeStart}}</ion-col>
+                                                                <ion-col col-2>
+                                                                    <img src="assets/qbtkt/booking-info/icon_flight_2.png">
+                                                                </ion-col>
+                                                                <ion-col class="qb-big qb-black  qb-bold" text-center>{{flight.timeEnd}}</ion-col>
+                                                            </ion-row>
+                                                            <ion-row>
+                                                                <ion-col class="a3-container a3-items-center a3-justify-center a1-no-padding "><span class="ticket-city">{{flight.from.shortName}}</span></ion-col>
+                                                                <ion-col class="qb-big qb-black  qb-bold fly-time a1-no-padding a3-container a3-items-center a3-justify-center">
+                                                                    <span>{{flight.totalTime}}</span>
+                                                                </ion-col>
+                                                                <ion-col class="a3-container a3-items-center a3-justify-center a1-no-padding  "><span class="ticket-city">{{flight.to.shortName}}</span></ion-col>
+                                                            </ion-row>
+                                                        </div>
+                                                    </ion-col>
+                                                </ion-row>
+                                                <ion-row *ngIf="!flight.refundable" class="refund-status" (tap)="onClickRefundInfo()">
+                                                    <ion-col>
+                                                        <div>{{mDatas.bookingDatas.text_nonrefundable}}</div>
+                                                    </ion-col>
+                                                </ion-row>
+                                            </div>
+                                        </ion-row>
+                                    </div>
+                                </ion-row>
+                            </div>
+                        </ion-row>
+                        <ion-row class="main-row qb-shadow">
+                            <div class="a1-fill-parent">
+                                <ion-row class="main-row-header">
+                                    <ion-col class="a1-no-padding a3-container a3-items-center">
+                                        <div class="font-size-09 green-title">{{mDatas.contactInfo.title}}</div>
+                                    </ion-col>
+                                    <ion-col *ngIf="mContactInfo.name.firstName" class="a3-container a3-items-center a3-justify-end" (tap)="onClickContactInfo()">
+                                        <span class="white-space-nowrap"> 
+                                        <span class="white-space-nowrap qb-black qb-bold">{{mContactInfo.name.firstName.toUpperCase()}}</span>
+                                        <span class="white-space-nowrap qb-black qb-bold"> {{mContactInfo.name.lastName.toUpperCase()}}</span>
+                                        </span>
+                                        <ion-icon name="ios-arrow-down-outline" class="arrow-down a1-margin-right a1-margin-left"></ion-icon>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row padding *ngIf="!mContactInfo.name.firstName" (tap)="onClickContactInfo()">
+                                    <ion-col col-10 class="grey-text">{{mDatas.contactInfo.text_suggest}}</ion-col>
+                                    <ion-col col-2>
+                                        <ion-icon name="ios-arrow-down-outline" class="arrow-down"></ion-icon>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row padding *ngIf="mContactInfo.name.firstName">
+                                    <div class="a1-fill-parent">
+                                        <ion-row>
+                                            <ion-col no-padding col-1 class="padding-2">
+                                                <img src="assets/qbtkt/booking-info/icon_phone.png">
+                                            </ion-col>
+                                            <ion-col col-5 class="grey-text">
+                                                <span>{{mDatas.contactInfo.text_phoneNumber}}</span>
+                                            </ion-col>
+                                            <ion-col col-6 class="a1-text-right qb-black">
+                                                <span>{{mContactInfo.phoneNumber.code}}{{mContactInfo.phoneNumber.value}}</span>
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row class="border-bottom a1-margin-bottom a1-padding-bottom">
+                                            <ion-col no-padding col-1 class="padding-2">
+                                                <img src="assets/qbtkt/booking-info/icon_email.png">
+                                            </ion-col>
+                                            <ion-col col-5 class="grey-text">
+                                                <span>{{mDatas.contactInfo.text_email}}</span>
+                                            </ion-col>
+                                            <ion-col col-6 class="a1-text-right qb-black">
+                                                <span>{{mContactInfo.email}}</span>
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col no-padding col-1 class="padding-4" style="padding-bottom: 10px">
+                                                <img src="assets/qbtkt/booking-info/btn_add.png">
+                                            </ion-col>
+                                            <ion-col class="grey-text">{{mDatas.contactInfo.text_add}}</ion-col>
+                                        </ion-row>
+                                    </div>
+                                </ion-row>
+                            </div>
+                        </ion-row>
+                        <ion-row class="main-row qb-shadow">
+                            <div class="a1-fill-parent">
+                                <ion-row class="main-row-header">
+                                    <ion-col class="a1-no-padding a3-container a3-items-center">
+                                        <div class="font-size-09 green-title">{{mDatas.passengerInfo.title}}</div>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row class="a1-padding-left a1-padding-right" *ngFor="let passenger of mPassengerInfo.passengers; let i = index" (tap)="onClickPassengerInfo(passenger)">
+                                    <div *ngIf="!passenger.name.firstName" class="a1-fill-parent a1-padding-top a1-padding-bottom" [class.border-bottom]="i<mPassengerInfo.passengers.length-1">
+                                        <ion-col col-10 class="grey-text">{{mDatas.passengerInfo.text_adultPassenger}} {{i+1}}</ion-col>
+                                        <ion-col col-2>
+                                            <ion-icon name="ios-arrow-down-outline" class="arrow-down"></ion-icon>
+                                        </ion-col>
+                                    </div>
+                                    <div *ngIf="passenger.name.firstName" style="padding-top: 0" class="a1-fill-parent a1-padding-top a1-padding-bottom" [class.border-bottom]="i<mPassengerInfo.passengers.length-1">
+                                        <ion-row>
+                                            <ion-col col-10>
+                                                <span class=" qb-black">{{passenger.name.title}} </span>
+                                                <span class="white-space-nowrap qb-black qb-bold">{{mContactInfo.name.firstName.toUpperCase()}}</span>
+                                                <span class="white-space-nowrap qb-black qb-bold"> {{mContactInfo.name.lastName.toUpperCase()}}</span>
+                                            </ion-col>
+                                            <ion-col no-padding col-2>
+                                                <ion-icon name="ios-arrow-down-outline" class="arrow-down"></ion-icon>
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col class="padding-2" col-1>
+                                                <img src="assets/qbtkt/booking-info/icon_birthday.png">
+                                            </ion-col>
+                                            <ion-col>
+                                                <span class="grey-text">{{mDatas.passengerInfo.text_birthDay}}</span>
+                                            </ion-col>
+                                            <ion-col class="a1-text-right qb-black">
+                                                <span>{{passenger.birthday}}</span>
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col class="padding-2" col-1>
+                                                <img src="assets/qbtkt/booking-info/icon_passport.png">
+                                            </ion-col>
+                                            <ion-col>
+                                                <span class="grey-text">{{mDatas.passengerInfo.text_passportNumber}}</span>
+                                            </ion-col>
+                                            <ion-col class="a1-text-right qb-black">
+                                                <span>{{passenger.passport}}</span>
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col class="padding-2" col-1>
+                                                <img src="assets/qbtkt/booking-info/icon_country.png">
+                                            </ion-col>
+                                            <ion-col>
+                                                <span class="grey-text">{{mDatas.passengerInfo.text_countryOfIssue}}</span>
+                                            </ion-col>
+                                            <ion-col class="a1-text-right qb-black">
+                                                <span>{{passenger.countryOfIssue}}</span>
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col class="padding-2" col-1>
+                                                <img src="assets/qbtkt/booking-info/icon_date.png">
+                                            </ion-col>
+                                            <ion-col>
+                                                <span class="grey-text">{{mDatas.passengerInfo.text_PassportExpiryDate}}</span>
+                                            </ion-col>
+                                            <ion-col class="a1-text-right qb-black">
+                                                <span>{{passenger.PassportExpiryDate}}</span>
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col class="padding-2" col-1>
+                                                <img src="assets/qbtkt/booking-info/icon_nationality.png">
+                                            </ion-col>
+                                            <ion-col>
+                                                <span class="grey-text">{{mDatas.passengerInfo.text_nationality}}</span>
+                                            </ion-col>
+                                            <ion-col class="a1-text-right qb-black">
+                                                <span>{{passenger.nationality}}</span>
+                                            </ion-col>
+                                        </ion-row>
+                                    </div>
+                                </ion-row>
+                            </div>
+                        </ion-row>
+                        <ion-row class="a3-justify-center">
+                            <div id="btn-next" (tap)="onClickNext()">
+                                <span>{{mDatas.text_next}}</span>
+                                <ion-icon name="md-arrow-down"></ion-icon>
+                            </div>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+                <div class="middle">
+
+                </div>
+
+            </div>
+            <div class="a1-fill-parent overflow-auto" id="bottom-main-content">
+                <div class="middle">
+
+                </div>
+                <div class="a1-fill-parent overflow-auto">
+                    <ion-grid padding>
+                        <ion-row class="main-row">
+                            <div class="a1-fill-parent">
+                                <ion-row class="main-row-header">
+                                    <ion-col col-4 class="a1-no-padding a3-container a3-items-center">
+                                        <div class="font-size-09 green-title">{{mDatas.baggage.title}}</div>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row class="a1-padding-left a1-padding-right a1-padding-bottom">
+                                    <div class="a1-fill-parent" *ngFor="let flight of mBaggage.flights; let i = index" [class.border-bottom]="i<1" [class.padding-bottom]="i<1">
+                                        <ion-row>
+                                            <ion-col no-padding col-2 class="a3-container a3-items-center a3-justify-center">
+                                                <img src={{flight.brand.url}}>
+                                            </ion-col>
+                                            <ion-col class="a3-container a3-items-center">
+                                                <span class="margin-side">{{mDatas.baggage.text_baggage}}</span><span class="ticket-city margin-side">{{flight.from.shortName}}</span> - <span class="ticket-city margin-side">{{flight.to.shortName}}</span>
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col no-padding>
+                                                <span class="grey-text">
+                                                <span>{{flight.name.title}} </span>
+                                                <span class="white-space-nowrap">{{flight.name.firstName.toUpperCase()}}</span>
+                                                <span class="white-space-nowrap"> {{flight.name.lastName.toUpperCase()}}</span>
+                                                </span>
+                                            </ion-col>
+                                            <ion-col no-padding class="a3-container a3-justify-end">
+                                                <span class="green-text" (tap)="onClickBaggage(flight)">{{flight.weight.weight}}</span>
+                                                <ion-icon name="ios-arrow-down-outline" class="arrow-down margin-left" (tap)="onClickBaggage(flight)"></ion-icon>
+                                            </ion-col>
+                                        </ion-row>
+                                    </div>
+                                </ion-row>
+                            </div>
+                        </ion-row>
+                        <ion-row class="main-row" style="padding-bottom: 10px;">
+                            <div class="a1-fill-parent">
+                                <ion-row class="main-row-header">
+                                    <ion-col class="a1-no-padding a3-container a3-items-center">
+                                        <div class="font-size-09 green-title">{{mDatas.bill.title}}</div>
+                                    </ion-col>
+                                    <ion-col col-2 padding>
+                                        <ion-icon name="ios-arrow-down-outline" class="arrow-down"></ion-icon>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row padding>
+                                    <div class="a1-fill-parent">
+                                        <ion-row class="border-bottom qb-bold">
+                                            <ion-col class="grey-text">{{mDatas.bill.text_total}}</ion-col>
+                                            <ion-col class="a1-text-right prices">
+                                                <span class="red-text">{{mBill.total.value}}</span> {{mBill.unit}}
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <div class="a1-fill-parent">
+                                                <ion-row *ngFor="let flight of mBill.flights">
+                                                    <ion-col>
+                                                        <span class="grey-text">{{flight.brand}}</span>
+                                                        <span class="blue-text">({{flight.adults.value}}x {{flight.adults.text}})</span>
+                                                    </ion-col>
+                                                    <ion-col col-4 class="a1-text-right prices">
+                                                        <span>{{flight.price}}</span><span> {{mBill.unit}}</span>
+                                                    </ion-col>
+                                                </ion-row>
+                                                <ion-row *ngFor="let flight of mBaggage.flights">
+                                                    <ion-col>
+                                                        <span class="grey-text">
+                                                            <span>{{mBaggage.text_baggage}}</span>
+                                                        <span>{{flight.from.shortName}}</span> - <span>{{flight.to.shortName}}</span>
+                                                        </span>
+                                                    </ion-col>
+                                                    <ion-col col-4 class="a1-text-right prices">
+                                                        <span>{{flight.weight.price}}</span>
+                                                    </ion-col>
+                                                </ion-row>
+                                            </div>
+                                        </ion-row>
+                                    </div>
+                                </ion-row>
+                            </div>
+                        </ion-row>
+                        <ion-row class="a3-justify-center">
+                            <div class="button-next" (tap)="onClickConfirm()"> {{mDatas.text_next}} </div>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar small-toolbar">
+        <ion-icon name="ios-arrow-back-outline" class="button-left" (tap)="onClickClosePage()"></ion-icon>
+        {{mDatas.headerTitle}}
+        <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
+    </div>
+    <div class="step-group">
+        <div class="a1-fill-parent a3-container a3-items-center a3-justify-center">
+            <div *ngFor="let item of mDatas.headerFlow; let i = index" class="a3-container step {{item.isActive}}" [class.active]="item.isActive" [class.done]="item.isDone">
+                <div class="header-index a3-container a3-items-center a3-justify-center"><span class="number" [innerHTML]="item.isDone? checkIcon :item.id"> </span></div>
+                <div class="header-data">{{item.text}}</div>
+                <ion-icon name="ios-arrow-round-forward-outline" *ngIf="i<mDatas.headerFlow.length-1" class="header-icon"></ion-icon>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="qb-toast" *ngIf="showToast">
+    <span>Kiểm tra & điền thông tin đặt chỗ của bạn</span>
+</div>

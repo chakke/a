@@ -1,0 +1,169 @@
+page-qbtkt-datepicker {
+    .header-height {
+        height: 96px;
+    }
+    #footer {
+        z-index: 9;
+        position: absolute;
+        bottom: 0;
+        height: 48px;
+        width: 100%;
+        background-color: #007628;
+        color: white;
+        .toggle-div {
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-display: flex;
+            padding: 0 5px;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+        }
+        ion-toggle {
+            max-height: 16px;
+            height: 16px;
+            .toggle-inner {
+                width: 12px;
+                height: 12px;
+            }
+        }
+        .toggle-md .toggle-inner {
+            width: 20px !important;
+            height: 20px !important;
+        }
+        .toggle {
+            max-width: 36px;
+            width: 36px;
+        }
+        .toggle-checked .toggle-inner {
+            -webkit-transform: translateX(20px) !important;
+            transform: translateX(20px) !important;
+        }
+        .toggle-icon {
+            background-color: lightgray;
+        }
+        .toggle-icon::before {
+            background-color: lightgray !important;
+        }
+        .toggle-checked .toggle-icon {
+            background-color: map-get($QBTKTColors, primary) !important;
+        }
+    }
+    .calendar-arrow {
+        color: white;
+        width: 20vw;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+    #current-month {
+        width: 60vw;
+        color: white;
+    }
+    #calendar-container {
+        margin-top: 12px;
+        padding: 0;
+        background-color: white;
+        box-shadow: 0 -2px 30px -6px lightgrey;
+    }
+    #day-container {
+        background-color: #F0FFDC;
+        .col {
+            padding: 10px 5px;
+        }
+        color: #6CA717;
+        font-weight: 500;
+    }
+    .red-text {
+        color: red;
+    }
+    .green-text {
+        color: #6CA717;
+    }
+    .blue-text {
+        color: #5477E4;
+    }
+    .white-text {
+        color: white !important;
+    }
+    .smaller-text {
+        font-size: smaller;
+    }
+    .date {
+        width: calc(100vw/7);
+        height: calc(100vw/7);
+    }
+    .day-cell {
+        -ms-flex-preferred-size: 14.28%;
+        flex-basis: 14.28%;
+        min-height: 40px;
+        // color: black;
+        // display: flex;
+        // flex-direction: column;
+        // flex-wrap: wrap;
+        // align-items: center;
+        // justify-content: center;
+    }
+    .today {
+        background-color: #efecec;
+        border-radius: 4px;
+    }
+    .chosen-day {
+        background-color: #6CA717 !important;
+        color: white !important;
+        border-radius: 4px;
+    }
+    .on-trip {
+        background-color: #F0FFDC;
+    }
+    .unavailable-day {
+        color: grey !important;
+    }
+    .date .title {
+        height: 30%;
+        // font-size: smaller;
+        color: grey;
+    }
+    .date-price-container {
+        height: 70%;
+    }
+    .date-container {
+        // font-weight: 500;
+        height: 50%;
+    }
+    .price {
+        height: 50%;
+        // font-size: smaller;
+        color: grey;
+    }
+    .row-container {
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+    }
+    .calendar-arrow {
+        font-size: 1.4em;
+    }
+    .n-button-right {
+        font-size: 1em !important;
+        background: rgba(white, .2);
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+    .header-index {
+        width: 1em;
+        height: 1em;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        text-align: center;
+        color: #47770b;
+        margin-right: 4px;
+    }
+}

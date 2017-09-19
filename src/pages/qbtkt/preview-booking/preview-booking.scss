@@ -1,0 +1,162 @@
+page-preview-booking {
+    .qb-header {
+        font-size: 1em;
+    }
+    .header-height {
+        height: 110px;
+    }
+    .qb-content {
+        padding: 10px 16px;
+    }
+    .step-group {
+        height: 48px;
+        .number {
+            font-size: .8em;
+            font-weight: bold;
+        }
+        .step {
+            .header-index {
+                width: 1em;
+                height: 1em;
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                text-align: center;
+                color: map-get($QBTKTColors, primary);
+            }
+            .header-data {
+                color: rgba(255, 255, 255, 0.3);
+                margin: 0 4px;
+                white-space: nowrap;
+            }
+            .header-icon {
+                color: rgba(255, 255, 255, 0.3);
+                margin: 0 4px;
+            }
+            &.active {
+                .header-index {
+                    background-color: rgba(255, 255, 255, 1);
+                }
+                .header-data {
+                    color: white;
+                }
+                .header-icon {
+                    color: white;
+                }
+            }
+            &.done {
+                .header-index {
+                    background-color: transparent;
+                    color: rgba(255, 255, 255, 0.3);
+                    .number {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+        .qb-header {
+            font-size: 1em;
+        }
+    }
+    .qb-section {
+        .fly {
+            width: 100%;
+            border-bottom: solid 1px #ddd;
+            color: gray;
+            .logo {
+                margin: 0 5px;
+                vertical-align: middle;
+                display: inline-block;
+                height: 30px;
+                img {
+                    display: block;
+                    height: 100%;
+                }
+            }
+            .class {
+                color: #F00;
+                text-transform: uppercase;
+                float: right;
+                white-space: nowrap;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            .fly-header {
+                .right-col {
+                    flex-grow: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                }
+            }
+            .fly-body {
+                line-height: 25px;
+                .code {
+                    border-radius: 20px;
+                    padding: 2px 6px;
+                    background-color: #e3e1e2;
+                }
+                .place {
+                    color: map-get($QBTKTColors, black);
+                    font-weight: bold;
+                }
+                .airport {
+                    width: 100%;
+                    font-size: .9em;
+                    display: block;
+                    line-height: 15px;
+                }
+                .time {
+                    color: map-get($colors, primary);
+                }
+                .col-center {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    .icons {
+                        width: 100%;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+                    .time {
+                        width: 100%;
+                        text-align: center;
+                        color: map-get($QBTKTColors, primary)
+                    }
+                    i,
+                    icon,
+                    ion-icon,
+                    .fa {
+                        font-size: 4px;
+                        vertical-align: middle;
+                        margin: 0 1px;
+                        color: map-get($QBTKTColors, orange)
+                    }
+                    .plane {
+                        font-size: 1.5em !important;
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+    .button-container {
+        width: 100%;
+        padding: 5px 32px;
+    }
+}

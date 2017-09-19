@@ -1,0 +1,28 @@
+<ion-content no-bounce>
+    <div id="background" (tap)="onClickCloseModal()"> </div>
+    <div id="content">
+        <div class="container">
+            <div class="container-header">
+                {{mPickmonthDatas.title}}
+                <div class="container-header-button" (tap)="onClickCloseModal()">{{mPickmonthDatas.text_close}}</div>
+            </div>
+            <div style="padding:10px" class="a3-container a1-relative">
+                <div class="item-container" id="month" style="margin-left: 25%" (touchstart)="onTouchStart($event, MONTH)" (touchend)="onTouchEnd($event, MONTH)" (scroll)="onScroll($event)">
+                    <div class="item item-selected"></div>
+                    <div *ngFor="let month of mDatas.months" class="item a3-container a3-items-center a3-justify-center">{{month}}</div>
+                </div>
+                <div class="item-container" id="year" (touchstart)="onTouchStart($event, YEAR)" (touchend)="onTouchEnd($event, YEAR)" (scroll)="onScroll($event)">
+                    <div class="item item-selected" id="year-selected"></div>
+                    <div *ngFor="let year of mDatas.years" class="item a3-container a3-items-center a3-justify-center">{{year}}</div>
+                </div>
+                <!-- <div *ngFor="let item of mDatas.seat_types" class="item" [class.item-selected]="item.id==mSelectedIndex" (tap)="onClickSelectType(item)">
+                    {{item.name}}
+                </div> -->
+            </div>
+        </div>
+
+        <div class="button-select" (tap)="onClickSelect()">
+            {{mPickmonthDatas.text_select}}
+        </div>
+    </div>
+</ion-content>

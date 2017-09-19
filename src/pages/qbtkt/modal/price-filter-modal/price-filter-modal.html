@@ -1,0 +1,54 @@
+<ion-content>
+    <div id="a-background" (tap)="onClickCloseModal()"> </div>
+    <div class="a-content">
+        <div class="content-header">
+            <span class="title">Lọc kết quả</span>
+            <span class="button-right" navPop>Hủy</span>
+        </div>
+        <div class="content-body">
+            <span>Khoảng giá phòng mỗi đêm</span>
+            <ion-range [(ngModel)]="price" min="0" max="5000000" step="50000" dualKnobs="true" [(ngModel)]="saturation" color="secondary">
+            </ion-range>
+            <div class="div-price">
+                <span class="price">{{formatNumber(price.lower)}}</span> Vnđ - <span class="price">{{formatNumber(price.upper)}}</span> Vnđ
+            </div>
+            <span>Hạng sao</span>
+            <div class="star-div">
+                <span class="star" (click)="selectStar(1)" [class.active]="star == 1">
+                  1
+                  <span class="star-icon">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  </span>
+                </span>
+                <span class="star" (click)="selectStar(2)" [class.active]="star == 2">
+                  2
+                  <span class="star-icon">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  </span>
+                </span>
+                <span class="star" (click)="selectStar(3)" [class.active]="star == 3">
+                  3
+                  <span class="star-icon">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  </span>
+                </span>
+                <span class="star" (click)="selectStar(4)" [class.active]="star == 4">
+                  4
+                  <span class="star-icon">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  </span>
+                </span>
+                <span class="star" (click)="selectStar(5)" [class.active]="star == 5">
+                  5
+                  <span class="star-icon">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  </span>
+                </span>
+            </div>
+        </div>
+        <div class="content-footer">
+            <button class="btn-reset qb-btn" (click)="reset()">Đặt lại</button>
+            <button class="btn-done qb-btn" (click)="done()">Hoàn tất</button>
+        </div>
+    </div>
+</ion-content>

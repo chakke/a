@@ -1,0 +1,20 @@
+<ion-content no-bounce>
+    <div id="background" (tap)="onClickCloseModal()"> </div>
+    <div id="content">
+        <div class="container">
+            <div class="container-header">
+                {{mDatas.title}}
+                <div class="container-header-button" (tap)="onClickCloseModal()">{{mDatas.text_close}}</div>
+            </div>
+            <div style="padding:16px">
+                <div *ngFor="let item of mDatas.seat_types" class="item" [class.item-selected]="item.id==mSelectedIndex" (tap)="onClickSelectType(item)">
+                    {{item.name}}
+                </div>
+            </div>
+        </div>
+
+        <div class="button-select" (tap)="onClickSelect()">
+            {{mDatas.text_select}}
+        </div>
+    </div>
+</ion-content>

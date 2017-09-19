@@ -1,0 +1,99 @@
+loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    .my-loading {
+        $dotSize: 10px;
+        $dotColor: map-get($QBTKTColors, primary);
+        $backdropColor: #FFF;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        align-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        z-index: 999999;
+        .loading-backdrop {
+            width: 100%;
+            height: 100%;
+            background-color: $backdropColor;
+            opacity: .9;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9;
+        }
+        .dot-loading {
+            z-index: 99;
+        }
+        .text-loading {
+            color: #000;
+            z-index: 9999999;
+            text-align: center;
+            padding: 5px 0;
+        }
+        .loading-text {
+            z-index: 99;
+            background-color: $backdropColor;
+        }
+        .dot {
+            width: $dotSize;
+            height: $dotSize;
+            border-radius: 50%;
+            background-color: $dotColor;
+            margin: 0 2px;
+            display: inline-block;
+            -webkit-animation: growUp 3s infinite;
+            animation: growUp 3s infinite;
+        }
+        .dot:nth-child(2) {
+            -webkit-animation-delay: .3s;
+            animation-delay: .3s;
+        }
+        .dot:nth-child(3) {
+            -webkit-animation-delay: .6s;
+            animation-delay: .6s;
+        }
+        @-webkit-keyframes growUp {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                background-color: $dotColor;
+            }
+            50% {
+                -webkit-transform: scale(.3);
+                transform: scale(.3);
+                background-color: transparent;
+            }
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                background-color: $dotColor;
+            }
+        }
+        @keyframes growUp {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                background-color: $dotColor;
+            }
+            50% {
+                -webkit-transform: scale(.3);
+                transform: scale(.3);
+                background-color: transparent;
+            }
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                background-color: $dotColor;
+            }
+        }
+    }
+}

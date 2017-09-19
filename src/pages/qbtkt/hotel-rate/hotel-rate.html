@@ -1,0 +1,258 @@
+<ion-content class="qb-ion-content">
+    <div class="header-height"></div>
+    <div class="qb-content">
+        <div class="qb-segment">
+            <div class="qb-segment-button button-qb" [class.active]="segmentActive == 0" (click)="selectTab(0)">
+                <span class="icon">
+                  <img [src]="segmentActive == 0 ? segmentImages[0]['active'] : segmentImages[0]['normal']" alt="icon">
+                </span>
+                <span>Quốc Bảo</span>
+            </div>
+            <div class="qb-segment-button" [class.active]="segmentActive == 1" (click)="selectTab(1)">
+                <span class="icon">
+                    <i class="fa fa-tripadvisor" aria-hidden="true"></i>
+                </span>
+                <span>TripAdvisor</span>
+            </div>
+        </div>
+        <div class="qb-segment-content" *ngIf="segmentActive == 0">
+            <div class="qb-section section-point">
+                <ion-row>
+                    <ion-col col-6 class="col-left">
+                        <div class="div-point">
+                            <span class="big-point">8.1</span>
+                            <span class="small-point">/10</span>
+                        </div>
+                        <div>
+                            <span>Hài lòng</span>
+                        </div>
+                        <div>
+                            <span>(Từ 307 khách)</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-6>
+                        <div class="point-detail">
+                            <span>Thoải mái</span><span class="point">8.1</span>
+                        </div>
+                        <div class="point-detail">
+                            <span>Dịch vụ</span><span class="point">8.1</span>
+                        </div>
+                        <div class="point-detail">
+                            <span>Sạch sẽ</span><span class="point">8.1</span>
+                        </div>
+                        <div class="point-detail">
+                            <span>Đồ ăn</span><span class="point">8.1</span>
+                        </div>
+                        <div class="point-detail">
+                            <span>Vị trí</span><span class="point">8.1</span>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div class="qb-section section-comment">
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="name">Mạnh L.V.:</span>
+                        <span class="point">8.5/10</span>
+                    </div>
+                    <div class="comment-body">
+                        <p>
+                            Khách sạn rất tốt. Service đầy đủ từ A-Z. Nhân viên phục vụ nhiệt tình, chu đáo. Nên chọn :x
+                        </p>
+                        <p class="comment-date">
+                            29 thg 11 2016 - Mua sắm ẩm thực
+                        </p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="name">Mạnh L.V.:</span>
+                        <span class="point">8.5/10</span>
+                    </div>
+                    <div class="comment-body">
+                        <p>
+                            Khách sạn rất tốt. Service đầy đủ từ A-Z. Nhân viên phục vụ nhiệt tình, chu đáo. Nên chọn :x
+                        </p>
+                        <p class="comment-date">
+                            29 thg 11 2016 - Mua sắm ẩm thực
+                        </p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="name">Mạnh L.V.:</span>
+                        <span class="point">8.5/10</span>
+                    </div>
+                    <div class="comment-body">
+                        <p>
+                            Khách sạn rất tốt. Service đầy đủ từ A-Z. Nhân viên phục vụ nhiệt tình, chu đáo. Nên chọn :x
+                        </p>
+                        <p class="comment-date">
+                            29 thg 11 2016 - Mua sắm ẩm thực
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="qb-segment-content" *ngIf="segmentActive == 1">
+            <div class="qb-section section-point">
+                <ion-row>
+                    <ion-col col-6 class="col-left" text-center>
+                        <div class="title">
+                            <span>TripAdvisor</span>
+                        </div>
+                        <div style="margin: 5px 0">
+                            <span class="tripadvisor-logo">
+                              <i class="fa fa-tripadvisor" aria-hidden="true"></i>
+                            </span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="cirle-rate"></span>
+                        </div>
+                        <div style="margin: 5px 0">
+                            <span>Từ 1392 đánh giá</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-6>
+                        <div class="visor-point-item">
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="point">153</span>
+                        </div>
+                        <div class="visor-point-item">
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="point">548</span>
+                        </div>
+                        <div class="visor-point-item">
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="point">426</span>
+                        </div>
+                        <div class="visor-point-item">
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate "></span>
+                            <span class="cirle-rate"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="point">154</span>
+                        </div>
+                        <div class="visor-point-item">
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate "></span>
+                            <span class="cirle-rate "></span>
+                            <span class="cirle-rate"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="point">111</span>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div class="qb-section section-point section-point-detail">
+                <ion-row class="ion-col">
+                    <ion-col col-6>
+                        <div class="visor-point-item ">
+                            <span>Địa điểm: </span>
+                            <span class="point">
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="cirle-rate"></span>
+                            </span>
+                        </div>
+                        <div class="visor-point-item ">
+                            <span>Dịch vụ: </span>
+                            <span class="point">
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="cirle-rate"></span>
+                            </span>
+                        </div>
+                        <div class="visor-point-item ">
+                            <span>Sự sạch sẽ: </span>
+                            <span class="point">
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="cirle-rate"></span>
+                            </span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-6>
+                        <div class="visor-point-item ">
+                            <span>Phòng: </span>
+                            <span class="point">
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="cirle-rate"></span>
+                            </span>
+                        </div>
+                        <div class="visor-point-item ">
+                            <span>Giá trị: </span>
+                            <span class="point">
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate active"></span>
+                            <span class="cirle-rate"></span>
+                            <span class="cirle-rate"></span>
+                            </span>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div class="qb-section section-comment">
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="name">Mạnh L.V.</span>
+                        <span class="point-group">
+                        <span class="cirle-rate active"></span>
+                        <span class="cirle-rate active"></span>
+                        <span class="cirle-rate active"></span>
+                        <span class="cirle-rate"></span>
+                        <span class="cirle-rate"></span>
+                        </span>
+                    </div>
+                    <div class="title">
+                        <span>Thuận tiện để đi BTS</span>
+                    </div>
+                    <div class="comment-body">
+                        <p>
+                            Khách sạn rất tốt. Service đầy đủ từ A-Z. Nhân viên phục vụ nhiệt tình, chu đáo. Nên chọn :x
+                        </p>
+                        <p class="comment-date">
+                            29 thg 11 2016 - Mua sắm ẩm thực
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</ion-content>
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar">
+        <span class="button-left" (tap)="onClickClosePage()">       
+          <ion-icon name="ios-close-outline" ></ion-icon>
+        </span>
+        <span class="title">Đánh giá của khách</span>
+    </div>
+    <div style="height: 15px;"></div>
+</div>

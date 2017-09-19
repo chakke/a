@@ -1,0 +1,166 @@
+page-qbtkt-find-flight {
+    .qb-ion-content {
+        background-color: #FFF !important;
+    }
+    .header-height {
+        height: 96px;
+    }
+    .qb-content {
+        background-color: #FFF;
+    }
+    .below-header {
+        height: 48px;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(to right, #007628, #69a718);
+        background: -webkit-linear-gradient(to right, #007628, #69a718);
+        .logo {
+            position: absolute;
+            right: 20px;
+            top: -68px;
+            width: 30%;
+        }
+    }
+    .padding-bottom-20 {
+        padding-bottom: 20px !important;
+    }
+    .content-header {
+        margin-left: 24px;
+        margin-right: 24px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        transform: translateY(-30px);
+        box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.03);
+    }
+    #departure-city {
+        // font-weight: bold;
+        // letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 2em;
+        background-image: linear-gradient(to right, #84BF38, #007628);
+        -webkit-background-image: linear-gradient(to right, #84BF38, #007628);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+    #arriver-city {
+        //  font-weight: bold;
+        // letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 2em;
+        background-image: linear-gradient(to right, #D76D20, #dd0421);
+        -webkit-background-image: linear-gradient(to right, #D76D20, #dd0421);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+    .flight-point {
+        color: gray;
+        line-height: 24px;
+        img {
+            width: 24px;
+        }
+    }
+    .gray-line {
+        height: 1px;
+        background: lightgray;
+        margin: 0 30px;
+    }
+    .flight-day {
+        font-size: 3em;
+        line-height: 0.9em;
+        color: #1ebfed;
+        margin: 0 4px;
+    }
+    .khuhoi {
+        .toggle-flight {
+            // height: 20px;
+            // width: 42px;
+            margin-top: 8px;
+            // .toggle-inner {
+            //     width: 20px;
+            //     height: 20px;
+            //     top: 0px;
+            // }
+        }
+        // .toggle-flight {
+        //     max-height: 20px;
+        //     height: 20px;
+        //     width: 40px;
+        //     .toggle-inner {
+        //         width: 20px;
+        //         height: 20px;
+        //         top: 0px;
+        //     }
+        // }
+        // .toggle-checked .toggle-inner {
+        //     transform: translateX(20px) !important;
+        // }
+        .toggle-icon {
+            background-color: lightgray;
+        }
+        // .toggle-icon::before {
+        //     background-color: lightgray !important;
+        // }
+        .toggle-checked .toggle-icon {
+            background-color: map-get($QBTKTColors, primary) !important;
+        }
+    }
+    .departure-day {
+        color: gray;
+        font-size: 1em;
+    }
+    .arriver-day {
+        color: gray;
+        font-size: 1em;
+        max-height: 0px;
+        transition: max-height 400ms;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+    .arriver-enable {
+        max-height: 200px;
+    }
+    .col-age {
+        color: gray;
+    }
+    .number-select {
+        padding-top: 10px;
+        font-size: 2em;
+        color: map-get($QBTKTColors, black);
+    }
+    .button-number {
+        color: red;
+    }
+    .inline-img {
+        width: 1.2em;
+        height: 1.2em;
+        margin: 0 4px;
+    }
+    .button-find {
+        color: white;
+        background-image: linear-gradient(to right, #84BF38, #007628);
+        -webkit-background-image: linear-gradient(to right, #84BF38, #007628);
+        padding: 16px;
+        text-align: center;
+        border-radius: 6px;
+        font-weight: bold;
+        width: 80%;
+        margin: 10px 10%;
+    }
+    .btn-hover {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+    }
+    .national_flag {
+        border-radius: .6em;
+        width: 1.2em;
+        height: 1.2em;
+        margin: 0 .4em;
+    }
+}

@@ -1,0 +1,175 @@
+page-booking-info {
+    .padding-2 {
+        padding: 2px;
+    }
+    .padding-4 {
+        padding: 4px;
+    }
+    .a-header {
+        background: linear-gradient(to right, #007628, #69a718);
+        background: -webkit-linear-gradient(to right, #007628, #69a718);
+    }
+    .qb-header {
+        font-size: 1em;
+        .a-header-toolbar {
+            background-image: url("../assets/qbtkt/home/top_bar_gradient.png");
+            background-size: cover;
+            background-position: left;
+            position: relative;
+            border-bottom: solid 2px rgba(#fff, 0.2);
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+        }
+    }
+    .row[padding] {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    #main-content {
+        overflow: hidden;
+        padding-top: 126px;
+    }
+    .main-row {
+        background-color: white;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    .main-row-header {
+        min-height: 40px;
+    }
+    .green-title {
+        padding: 6px 10px;
+        background: #F0FFDC;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        color: #67a41b;
+        font-weight: bold;
+        white-space: nowrap;
+        display: table;
+    }
+    .arrow-down {
+        float: right;
+        color: map-get($QBTKTColors, blue);
+        font-size: 1.5em;
+    }
+    .fly-time {
+        color: #67a41b;
+        text-align: center;
+    }
+    .border-bottom {
+        border-bottom: 1px solid lightgrey;
+        margin-bottom: 10px;
+    }
+    .ticket-city {
+        background-color: #f3f3f3;
+        border-radius: 100px;
+        padding: 4px 10px;
+        white-space: nowrap;
+    }
+    .refund-status {
+        padding-top: 10px;
+        color: grey;
+    }
+    .grey-text {
+        color: grey;
+    }
+    .overflow-auto {
+        overflow: auto;
+    }
+    .margin-left {
+        margin-left: 4px;
+    }
+    .margin-side {
+        margin: 0 4px;
+    }
+    .green-text {
+        color: map-get($QBTKTColors, primary)
+    }
+    .red-text {
+        color: #F00;
+    }
+    .prices {
+        color: map-get($QBTKTColors, black);
+        font-weight: bold;
+    }
+    .blue-text {
+        color: lightseagreen
+    }
+    .middle {
+        height: 20px;
+        background-color: white;
+    }
+    #btn-next {
+        padding: 6px 10px;
+        background: #4e981b;
+        color: white;
+        border-radius: 10px;
+        ion-icon {
+            vertical-align: middle;
+            font-size: 1.5em;
+        }
+    }
+    .button-next {
+        color: white;
+        background-image: linear-gradient(to right, #84BF38, #007628);
+        -webkit-background-image: linear-gradient(to right, #84BF38, #007628);
+        padding: 16px;
+        text-align: center;
+        border-radius: 6px;
+        font-weight: bold;
+        width: 80%;
+        margin: 20px 10%;
+    }
+    .float-right {
+        float: right;
+    }
+    .white-space-nowrap {
+        white-space: nowrap
+    }
+    .col-no-padding {
+        .col {
+            padding: 0;
+        }
+    }
+    .line-height-20 {
+        line-height: 20px;
+    }
+    .step-group {
+        height: 48px;
+        .number {
+            font-size: .8em;
+            font-weight: bold;
+        }
+        .step {
+            .header-index {
+                width: 1em;
+                height: 1em;
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                text-align: center;
+                color: map-get($QBTKTColors, primary);
+            }
+            .header-data {
+                color: rgba(255, 255, 255, 0.3);
+                margin: 0 4px;
+                white-space: nowrap;
+            }
+            .header-icon {
+                color: rgba(255, 255, 255, 0.3);
+                margin: 0 4px;
+            }
+            &.active {
+                .header-index {
+                    background-color: rgba(255, 255, 255, 1);
+                }
+                .header-data {
+                    color: white;
+                }
+                .header-icon {
+                    color: white;
+                }
+            }
+        }
+    }
+}

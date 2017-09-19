@@ -1,0 +1,54 @@
+<ion-content class="qb-ion-content">
+    <div class="header-height"></div>
+    <div>
+        <ion-grid padding>
+            <ion-row padding class="main-content" *ngFor="let flight of mBookingDatas.flights">
+                <div class="a1-fill-parent">
+                    <ion-row>
+                        <ion-col no-padding class="a3-container a3-items-center a3-justify-end">
+                            <span class="ticket-city" style="margin-right: 6px">{{flight.from.shortName}}</span><span class="bold-text">{{flight.from.fullName}}</span>
+                        </ion-col>
+                        <ion-col col-2 no-padding class="a3-container a3-items-center a3-justify-center height-1em">
+                            <img class="a1-height-100" src="assets/qbtkt/booking-info/icon_flight_1.png">
+                        </ion-col>
+                        <ion-col no-padding class="a3-container a3-items-center a3-justify-start">
+                            <span class="bold-text">{{flight.to.fullName}}</span><span class="ticket-city" style="margin-left: 6px">{{flight.to.shortName}}</span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-3 class="a3-container a3-items-center a3-justify-center">
+                            <img src={{flight.brand.url}}>
+                        </ion-col>
+                        <ion-col class="a3-container a3-items-center">
+                            <span>{{flight.brand.name}}</span>
+                        </ion-col>
+                        <ion-col class="a3-container a3-items-center a3-justify-end font-size-08 a1-text-center">
+                            <span *ngIf="flight.refundable" class="refundable">{{mDatas.text_refundable}}</span>
+                            <span *ngIf="!flight.refundable" class="grey-text">{{mDatas.text_nonrefundable}}</span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="flight.refundable">
+                        <div class="grey-text font-size-08">{{mDatas.refundableNote}}</div>
+                    </ion-row>
+                    <ion-row *ngIf="flight.refundable">
+                        <ion-col no-padding>
+                            <ion-icon name="ios-arrow-down-outline" class="arrow-down"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-row>
+            <ion-row>
+
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar a3-container a3-items-center a3-justify-center">
+        <ion-icon name="ios-close-outline" class="button-left" (tap)="onClickClosePage()"></ion-icon>
+        <div>{{mDatas.title}}</div>
+    </div>
+    <div style="height:48px">
+    </div>
+</div>

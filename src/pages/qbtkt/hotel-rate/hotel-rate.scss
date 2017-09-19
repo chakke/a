@@ -1,0 +1,158 @@
+page-hotel-rate {
+    .header-height {
+        height: 60px;
+    }
+    .qb-header {
+        .a-header-toolbar {
+            height: 45px;
+            line-height: 45px;
+            .title {
+                padding: 0;
+            }
+        }
+        .button-left {
+            height: 45px;
+            line-height: 45px;
+            padding: 2px 15px;
+        }
+    }
+    .qb-content {
+        padding: 10px 16px;
+        color: gray;
+        .tripadvisor-logo {
+            color: map-get($QBTKTColors, orange);
+            font-size: 1.5en;
+        }
+        .cirle-rate {
+            width: 9px;
+            height: 9px;
+            border: solid 1px map-get($QBTKTColors, primary);
+            background-color: #FFF;
+            display: inline-block;
+            border-radius: 50%;
+            position: relative;
+            margin-left: -2px;
+            &.active::before {
+                content: " ";
+                display: block;
+                width: 5px;
+                height: 5px;
+                background-color: map-get($QBTKTColors, primary);
+                position: absolute;
+                top: 1px;
+                left: 1px;
+                border-radius: 50%;
+            }
+        }
+        .qb-segment {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .qb-segment-button {
+                width: 50%;
+                &:first-child {
+                    margin-right: 2px;
+                }
+                height: 40px;
+                line-height: 40px;
+                background-color: rgb(228, 228, 228);
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                text-align: center;
+                font-size: 1.2em;
+                font-weight: bold;
+                .icon {
+                    img {
+                        height: 1.5em;
+                        vertical-align: middle;
+                    }
+                }
+                &.active {
+                    color: map-get($QBTKTColors, primary);
+                    background-color: #FFF;
+                }
+            }
+        }
+        .qb-segment-content {
+            margin-top: 10px;
+            .section-point-detail {
+                .visor-point-item {
+                    padding: 0 5px 3px 0 !important;
+                }
+            }
+            .section-point {
+                line-height: 18px;
+                .title {
+                    color: map-get($QBTKTColors, black);
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    margin: 15px 0 5px 0;
+                }
+                .visor-point-item {
+                    padding: 0 10px 3px 10px;
+                    width: 100%;
+                    clear: both;
+                    .point {
+                        float: right;
+                    }
+                }
+            }
+            .col-left {
+                padding-left: 10px;
+                border-right: solid 1px lightgray;
+            }
+            .div-point {
+                color: map-get($QBTKTColors, blue);
+                margin: 10px 0;
+                .big-point {
+                    font-size: 3.5em;
+                }
+                .small-point {
+                    font-size: 1.7em;
+                }
+            }
+            .point-detail {
+                padding: 0 10px;
+                width: 100%;
+                clear: both;
+                .point {
+                    color: map-get($QBTKTColors, primary);
+                    float: right;
+                }
+            }
+            .section-comment {
+                .comment {
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    border-bottom: solid 1px lightgray;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    .comment-header {
+                        width: 100%;
+                        font-size: 1.1em;
+                        font-weight: bold;
+                        .name {
+                            color: map-get($QBTKTColors, black);
+                        }
+                        .point {
+                            color: map-get($QBTKTColors, blue);
+                        }
+                        .point-group {
+                            float: right;
+                        }
+                        margin: 5px 0;
+                    }
+                    .title {
+                        width: 100%;
+                        color: map-get($QBTKTColors, blue);
+                        font-size: 1.1em;
+                    }
+                    p {
+                        margin: 5px 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,184 @@
+page-ticket-detail {
+    $smallDivHeight: 22px;
+    .qb-header {
+        font-size: .8em;
+        .button-right {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            height: auto;
+            margin-top: 4px;
+            display: block;
+            z-index: 99;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            padding: 5px 20px 5px 15px;
+            font-size: 1.3em;
+        }
+        .small-div {
+            width: 100%;
+            height: $smallDivHeight;
+            text-align: center;
+            color: #FFF;
+            line-height: $smallDivHeight;
+        }
+        .number-div {
+            height: 2*$smallDivHeight;
+            font-size: 2em;
+            text-align: center;
+            color: #FFF;
+            line-height: 2*$smallDivHeight;
+            background-color: rgba(100, 181, 1, 0.66);
+            z-index: 999999;
+            position: relative;
+        }
+    }
+    .plane {
+        margin: 0 5px;
+        color: map-get($QBTKTColors, orange)
+    }
+    .header-height {
+        height: 140px;
+    }
+    .qb-content {
+        padding: 8px 16px;
+        background-color: transparent;
+    }
+    .section {
+        width: 100%;
+        border-bottom: solid 1px #ddd;
+        color: gray;
+        padding: 10px 0;
+        background-color: #FFF;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        .section-header {
+            height: $smallDivHeight;
+            line-height: $smallDivHeight;
+            width: 100%;
+            margin-left: -10px;
+            .title {
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                color: map-get($QBTKTColors, primary);
+                background-color: rgb(240, 255, 220);
+                padding: 0 10px;
+                display: inline-block;
+            }
+            .right-button {
+                float: right;
+                color: map-get($QBTKTColors, blue);
+                font-size: 1.5em;
+            }
+        }
+        .section-body {
+            padding: 5px 0 5px 5px;
+            line-height: 20px;
+            margin-top: 10px;
+            .high-dot {
+                margin-right: 5px;
+            }
+        }
+        .right-content {
+            color: #000;
+            font-weight: bold;
+            float: right;
+        }
+    }
+    .high-dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        vertical-align: middle;
+        background-color: gray;
+        display: inline-block;
+    }
+    .fly {
+        .logo {
+            margin-right: 5px;
+            vertical-align: middle;
+            display: inline-block;
+            height: $smallDivHeight;
+            img {
+                display: block;
+                max-height: 100%;
+            }
+        }
+        .fly-name {
+            color: #000;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+        .fly-body {
+            line-height: 1.5em;
+            .code {
+                border-radius: 20px;
+                padding: 2px 6px;
+                background-color: #e3e1e2;
+            }
+            .place {
+                color: #000;
+                font-weight: bold;
+            }
+            .airport {
+                width: 100%;
+                font-size: .9em;
+                display: block;
+            }
+            .time {
+                color: map-get($colors, primary);
+            }
+            .col-center {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                .icons {
+                    width: 100%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                }
+                .time {
+                    width: 100%;
+                    text-align: center;
+                    color: map-get($QBTKTColors, primary)
+                }
+                i,
+                icon,
+                ion-icon,
+                .fa {
+                    font-size: 4px;
+                    vertical-align: middle;
+                    margin: 0 1px;
+                    color: map-get($QBTKTColors, orange)
+                }
+                .plane {
+                    font-size: 1.5em !important;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+    .primary {
+        color: map-get($QBTKTColors, primary);
+    }
+    .blue {
+        color: map-get($QBTKTColors, blue);
+    }
+}

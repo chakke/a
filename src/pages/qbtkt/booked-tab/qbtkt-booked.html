@@ -1,0 +1,77 @@
+<ion-content class="qb-ion-content">
+    <div class="header-height"></div>
+    <div class="qb-content">
+        <div class="qb-switch">
+            <div class="qb-switch-button" [class.active]="tab=='plane'" (click)="selectTab('plane')">
+                <span class="icon" *ngIf="tab=='plane'">
+                    <img src="assets/qbtkt/booked/icon_flight_1.png" alt="">
+                </span>
+                <span class="icon" *ngIf="tab!='plane'">
+                    <img src="assets/qbtkt/booked/icon_flight_2.png" alt="">
+                </span>
+                <span class="text"> Vé máy bay</span>
+                <span class="circle"></span>
+            </div>
+            <div class="qb-switch-button" [class.active]="tab=='hotel'" (click)="selectTab('hotel')">
+                <span class="icon" *ngIf="tab=='hotel'">
+                    <img src="assets/qbtkt/booked/icon_tab_hotel_1.png" alt="">
+                </span>
+                <span class="icon" *ngIf="tab!='hotel'">
+                    <img src="assets/qbtkt/booked/icon_tab_hotel_2.png" alt="">
+                </span>
+                <span class="text"> Khách sạn</span>
+                <span class="circle"></span>
+            </div>
+        </div>
+        <div class="switch-content">
+            <div class="item" (click)="gotoDetail()">
+                <div class="item-header">
+                    <span class="title">Hà Nội</span>
+                    <span class="icon"><i class="fa fa-exchange" aria-hidden="true"></i></span>
+                    <span class="title">Bangkok</span>
+                    <span class="down-button">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="item-des">
+                    <span class="air-line">Thai Lion Air</span>
+                    <span class="dot"></span>
+                    <span class="date">Th 7, 12 thg 8 2017  </span>
+                    <span class="dot"></span>
+                    <span class="time">20:50</span>
+                </div>
+                <div class="item-des">
+                    <span class="air-line">Thai Lion Air</span>
+                    <span class="dot"></span>
+                    <span class="date">Th 7, 12 thg 8 2017  </span>
+                    <span class="dot"></span>
+                    <span class="time">20:50</span>
+                </div>
+                <div class="pay-method">
+                    <span class="text">Đợi chọn phương thức thanh toán</span>
+                    <span class="time">23:40</span>
+                </div>
+            </div>
+            <button class="show-detail qb-btn" (click)="gotoDetail()">Xem tiến độ đặt chỗ</button>
+            <div class="item item-ticket" (click)="gotoExiredTicket()">
+                <div class="item-header">
+                    <span class="icon">
+                        <img src="assets/qbtkt/booked/icon_expired.png" alt="icon">
+                    </span>
+                    <span> Vé hết hiệu lực</span>
+                    <span class="down-button">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<div class="qb-header">
+    <div class="a-header-toolbar">
+        <img src="assets/qbtkt/home/top_bar_logo_1.png" class="qb-logo-button" (tap)="onClickLogo()">
+        <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
+    </div>
+    <div class="height-below"></div>
+</div>

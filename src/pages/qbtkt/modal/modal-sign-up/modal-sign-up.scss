@@ -1,0 +1,77 @@
+page-modal-sign-up {
+    .header-height {
+        height: 80px;
+    }
+    .login-button {
+        font-size: 1.4em;
+    }
+    .checkbox {
+        .checkbox-checked {
+            background: red;
+        }
+        .checkbox-ios .checkbox-icon {
+            border-radius: 4px;
+        }
+    }
+    .line {
+        height: 1px;
+        background-color: grey;
+        width: 30%;
+    }
+    .input-container {
+        .text-input {
+            margin: 4px 0;
+            padding: 4px 0;
+            border-bottom: 1px solid lightgrey;
+        }
+         :focus {
+            color: #84BF38;
+            border-bottom: 1px solid #84BF38;
+        }
+    }
+    .phonenumber .input-container :focus {
+        color: deepskyblue;
+        border-bottom: 1px solid deepskyblue;
+    }
+    .red-text {
+        color: darkred;
+    }
+    .grey-text {
+        color: grey;
+    }
+    .deep-blue-text {
+        color: lightblue;
+    }
+    .toggle-container {
+        margin-right: 10px;
+        ion-toggle {
+            max-height: 16px;
+            height: 16px;
+            .toggle-inner {
+                width: 12px;
+                height: 12px;
+                background: white;
+            }
+        }
+        .toggle-md .toggle-inner {
+            width: 20px !important;
+            height: 20px !important;
+        }
+        .toggle {
+            max-width: 36px;
+            width: 36px;
+        }
+        .toggle-checked .toggle-inner {
+            transform: translateX(20px) !important;
+        }
+        .toggle-icon {
+            background-color: deepskyblue;
+        }
+        .toggle-icon::before {
+            background-color: deepskyblue !important;
+        }
+        .toggle-checked .toggle-icon {
+            background-color: map-get($QBTKTColors, primary) !important;
+        }
+    }
+}

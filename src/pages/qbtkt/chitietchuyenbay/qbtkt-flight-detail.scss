@@ -1,0 +1,318 @@
+page-qbtkt-flight-detail {
+    line-height: 20px;
+    .segment-button {
+        text-transform: none !important;
+    }
+    .swiper-slide {
+        padding: 0 16px;
+        -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+        align-items: flex-start !important;
+    }
+    .header-height {
+        height: 95px;
+        width: 100%;
+    }
+    .footer-height {
+        width: 100%;
+        height: 100px;
+    }
+    .segment-button {
+        background-color: transparent !important;
+        border: none!important;
+        color: #ddd!important;
+        border-radius: 0 !important;
+        height: 40px !important;
+        line-height: 40px !important;
+        position: relative;
+        z-index: 99;
+        &.segment-activated {
+            color: #FFF !important;
+            border-top: 1px solid #FFF !important;
+        }
+    }
+    .main-content {
+        border-radius: 10px;
+        background-color: #FFF;
+        padding: 10px;
+    }
+    .swiper-slide {
+        font-size: 1em;
+    }
+    .number {
+        background-color: #F00;
+        color: #FFF;
+        margin: 0 5px;
+        vertical-align: middle;
+        display: inline-block;
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 50%;
+        line-height: 1.5em;
+        font-size: 1em;
+        text-align: center;
+    }
+    .logo {
+        margin: 0 5px;
+        vertical-align: middle;
+        display: inline-block;
+        height: 30px;
+        img {
+            display: block;
+        }
+    }
+    .high-dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        vertical-align: middle;
+        background-color: gray;
+        display: inline-block;
+    }
+    .plane {
+        margin: 0 5px;
+        color: map-get($QBTKTColors, orange)
+    }
+    .fly {
+        width: 100%;
+        border-bottom: solid 1px #ddd;
+        color: gray;
+        padding: 10px 0;
+        &:last-child {
+            border-bottom: none;
+        }
+        .fly-body {
+            line-height: 25px;
+            .code {
+                border-radius: 20px;
+                padding: 2px 6px;
+                background-color: #f2f2f2;
+            }
+            .place {
+                color: map-get($QBTKTColors, black);
+                font-weight: 500;
+            }
+            .airport {
+                width: 100%;
+                font-size: .9em;
+                display: block;
+                line-height: 15px;
+            }
+            .time {
+                color: map-get($colors, primary);
+                font-weight: bold;
+            }
+            .col-center {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                .icons {
+                    width: 100%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                }
+                .time {
+                    width: 100%;
+                    text-align: center;
+                    color: map-get($QBTKTColors, primary)
+                }
+                i,
+                icon,
+                ion-icon,
+                .fa {
+                    font-size: 4px;
+                    vertical-align: middle;
+                    margin: 0 1px;
+                    color: map-get($QBTKTColors, orange)
+                }
+                .plane {
+                    font-size: 1.5em !important;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+    .info {
+        width: 100%;
+        color: gray;
+        padding: 10px;
+        margin-bottom: 15px;
+        // font-size: 1.2em;
+        border-radius: 10px;
+        background-color: #FFF;
+        .info-header {
+            border-bottom: solid 1px #ddd;
+            .col-left {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                .number {
+                    margin: 0;
+                }
+            }
+            .col-right {
+                text-align: left;
+                .col {
+                    padding: 0;
+                }
+            }
+            .info-title {
+                color: map-get($QBTKTColors, black);
+            }
+        }
+        .info-body {
+            .col-left {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                color: map-get($QBTKTColors, primary);
+                padding-top: 9px;
+                .icon {
+                    height: 1.5em;
+                    margin-top: -3px;
+                    img {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+            }
+            .col-right {
+                text-align: left;
+                line-height: 20px;
+            }
+        }
+    }
+    .detail {
+        color: gray;
+        .detail-header {
+            border-bottom: solid 1px #ddd;
+        }
+        .col-left {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 0;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+        .col-right {
+            text-align: left;
+        }
+        .name {
+            display: block;
+            width: 100%;
+            text-align: left;
+            color: map-get($QBTKTColors, black);
+            font-size: 1.1em;
+        }
+        .detail-body {
+            .col {
+                padding: 10px 5px;
+            }
+            @media screen and (max-width: 320px) {
+                .col-price {
+                    -ms-flex-preferred-size: 105px !important;
+                    flex-basis: 105px !important;
+                    padding-right: 10px;
+                    .price {
+                        font-weight: normal;
+                    }
+                }
+            }
+            .col-price {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                width: auto;
+                -webkit-box-flex: 0;
+                -ms-flex-positive: 0;
+                flex-grow: 0;
+                -ms-flex-preferred-size: 90px;
+                flex-basis: 90px;
+            }
+            .col-text {
+                -webkit-box-flex: 5;
+                -ms-flex-positive: 5;
+                flex-grow: 5;
+                text-align: left;
+                padding-left: 10px;
+            }
+            .total {
+                border-radius: 20px;
+                background-color: #fff5f4;
+            }
+        }
+    }
+    .stay-time {
+        width: auto;
+        border-radius: 15px;
+        border: solid 1px #ddd;
+        background-color: #FFF;
+        margin-top: -10px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: 10px;
+        padding: 0 10px;
+        line-height: 18px;
+    }
+    .primary {
+        color: map-get($QBTKTColors, primary);
+    }
+    .blue {
+        color: map-get($QBTKTColors, blue);
+    }
+    .qb-footer {
+        .button-select {
+            text-transform: none !important;
+            border-radius: 5px;
+            background-color: map-get($QBTKTColors, primary);
+            color: #FFF;
+            font-size: 1.2em;
+        }
+        .div-price {
+            line-height: 30px;
+            color: gray;
+        }
+        .combo {
+            height: 1.5em;
+            display: inline-block;
+            vertical-align: -5px;
+            img {
+                height: 100%;
+            }
+        }
+    }
+    .price {
+        color: #F00;
+        font-weight: bold;
+        margin: 0 5px;
+        font-size: 1.2em;
+    }
+    .unit {
+        color: map-get($QBTKTColors, black);
+    }
+}

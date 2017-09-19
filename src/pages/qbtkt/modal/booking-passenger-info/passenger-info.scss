@@ -1,0 +1,40 @@
+page-passenger-info {
+    ion-content {
+        background-color: #F4F2F3 !important;
+    }
+    .header-height {
+        height: 140px;
+    }
+    .main-content {
+        background-color: white;
+        border-radius: 4px;
+    }
+    .border-bottom {
+        border-bottom: 1px solid lightgrey;
+    }
+    .grey-text {
+        color: grey;
+    }
+    .blue-text {
+        color: lightblue;
+    }
+    .text-input {
+        border-bottom: 1px solid lightgrey;
+    }
+    .button-save {
+        color: white;
+        background-image: linear-gradient(to right, #84BF38, #007628);
+        -webkit-background-image: linear-gradient(to right, #84BF38, #007628);
+        padding: 16px;
+        text-align: center;
+        border-radius: 6px;
+        font-weight: bold;
+        width: 100%;
+    }
+    #button-container {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}

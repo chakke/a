@@ -1,0 +1,15 @@
+<ion-content no-bounce>
+    <div id="background" (tap)="onClickCancel()"> </div>
+    <div id="container" class="a1-fill-parent a3-container a3-items-center a3-justify-center">
+        <div id="content" class="container">
+            <div class="container-header">
+                {{mDatas.title}}
+            </div>
+            <div padding>
+                <div class="a1-margin-bottom">{{mDatas.text_content}}</div>
+                <div class="button-select" (tap)="onClickConfirm()">{{mDatas.text_confirm}}</div>
+                <div class="button-cancel" (tap)="onClickCancel()" padding>{{mDatas.text_close}}</div>
+            </div>
+        </div>
+    </div>
+</ion-content>

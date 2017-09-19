@@ -1,0 +1,48 @@
+<ion-content class="qb-ion-content">
+    <div class="header-height"></div>
+    <div padding>
+        <ion-grid padding class="main-content">
+            <ion-row>
+                <div class="grey-text font-size-08">{{mDatas.detail.firstName.text}}</div>
+            </ion-row>
+            <ion-row>
+                <ion-input placeholder="{{mDatas.detail.firstName.example}}" [(ngModel)]="mContactInfo.name.firstName"></ion-input>
+            </ion-row>
+            <ion-row>
+                <div class="grey-text font-size-08">{{mDatas.detail.lastName.text}}</div>
+            </ion-row>
+            <ion-row>
+                <ion-input placeholder="{{mDatas.detail.lastName.example}}" [(ngModel)]="mContactInfo.name.lastName"></ion-input>
+            </ion-row>
+            <ion-row>
+                <div class="grey-text font-size-08">{{mDatas.detail.phoneNumber.text}}</div>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>
+                    <ion-input placeholder="Code" [(ngModel)]="mContactInfo.phoneNumber.code"></ion-input>
+                </ion-col>
+                <ion-col>
+                    <ion-input placeholder="{{mDatas.detail.phoneNumber.example}}" [(ngModel)]="mContactInfo.phoneNumber.value"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <div class="grey-text font-size-08">{{mDatas.detail.email.text}}</div>
+            </ion-row>
+            <ion-row>
+                <ion-input placeholder="{{mDatas.detail.email.example}}" [(ngModel)]="mContactInfo.email"></ion-input>
+            </ion-row>
+        </ion-grid>
+        <div padding id="button-container">
+            <div class="button-save" (click)="onClickSave()"> {{mDatas.text_save}} </div>
+        </div>
+    </div>
+</ion-content>
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" id="logo">
+    <div class="a-header-toolbar a3-container a3-items-center a3-justify-center">
+        <ion-icon name="ios-close-outline" id="button-left" (tap)="onClickClosePage()"></ion-icon>
+        <div>{{mDatas.title}}</div>
+    </div>
+    <div style="height:48px">
+    </div>
+</div>

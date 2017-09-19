@@ -1,0 +1,131 @@
+page-qbtkt-booked {
+    color: gray;
+    ion-content {
+        background-color: #f4f2f3 !important;
+    }
+    .qb-content {
+        padding: 10px 16px;
+        background-color: #f4f2f3 !important
+    }
+    .header-height {
+        height: 65px;
+    }
+    .qb-switch {
+        display: flex;
+        width: 100%;
+        font-size: 1.1em;
+    }
+    .qb-switch-button {
+        width: 50%;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        background-color: #e4e4e4;
+        color: gray;
+        transition: all .3s;
+        .icon {
+            display: inline-block;
+            height: 1.3em;
+            vertical-align: bottom;
+            img {
+                height: 100%;
+            }
+        }
+        &:first-child {
+            margin-right: 10px;
+        }
+        &.active {
+            background-color: #FFF;
+            color: map-get($QBTKTColors, primary);
+            .circle {
+                width: 8px;
+                height: 8px;
+                display: inline-block;
+                border-radius: 50%;
+                background-color: #F00;
+                vertical-align: text-top;
+                margin-left: 3px;
+            }
+        }
+    }
+    .switch-content {
+        .item {
+            padding: 10px 10px 10px 16px;
+            border-radius: 5px;
+            color: gray;
+            background-color: #FFF;
+            margin: 5px 0;
+            line-height: 18px;
+            .item-header {
+                font-size: 1.2em;
+                position: relative;
+                margin-bottom: 5px;
+                .title {
+                    font-weight: bold;
+                    color: map-get($QBTKTColors, black);
+                }
+                .icon {
+                    color: map-get($QBTKTColors, orange);
+                    margin: 0 5px;
+                    display: inline-block;
+                    height: 1.5em;
+                    vertical-align: bottom;
+                    img {
+                        height: 100%;
+                    }
+                }
+                .down-button {
+                    color: map-get($QBTKTColors, blue);
+                    height: 100%;
+                    padding: 0 5px;
+                    position: absolute;
+                    background-color: #FFF;
+                    right: 0;
+                    top: 0;
+                    font-size: 1.5em;
+                }
+            }
+            .item-des {
+                .dot {
+                    display: inline-block;
+                    width: 3px;
+                    height: 3px;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                    margin: 0 3px;
+                    background-color: gray;
+                }
+                .date {
+                    color: map-get($QBTKTColors, blue);
+                }
+                .time {
+                    color: map-get($QBTKTColors, black);
+                }
+            }
+            .pay-method {
+                margin: 5px 0;
+                width: 100%;
+                background-color: #eff5e7;
+                color: #67a41b;
+                border-radius: 20px;
+                padding: 3px 10px;
+                .time {
+                    float: right;
+                }
+            }
+        }
+        .show-detail {
+            width: 90%;
+            margin: 5px 5%;
+        }
+        .item-ticket {
+            margin-top: 10px;
+            .item-header {
+                font-size: 1em;
+                .icon {
+                    color: map-get($QBTKTColors, primary);
+                }
+            }
+        }
+    }
+}

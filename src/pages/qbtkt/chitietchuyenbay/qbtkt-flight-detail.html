@@ -1,0 +1,326 @@
+<ion-content class="qb-ion-content">
+    <div class="header-height"></div>
+    <div class="qb-content">
+        <ion-slides (ionSlideDidChange)="slideChanged()">
+            <ion-slide>
+                <div [style.min-height]="slideMinHeight" style="width: 100%;">
+                    <div class="main-content qb-shadow">
+                        <div class="fly">
+                            <div class="fly-header">
+                                <span class="number">1</span>
+                                <span class="logo">
+                                            <img src="http://vietnamairlinesvn.com/image/air/VN.png" alt="logo">
+                                        </span>
+                                <span class="fly-name">
+                                            VietNam Airline <span class="high-dot"></span> VN-209
+                                </span>
+                            </div>
+                            <div class="fly-body">
+                                <ion-row>
+                                    <ion-col class="col-left">
+                                        <span class="code">HAN</span>
+                                        <span class="place qb-big">Hà Nội</span>
+                                        <span class="airport">Sân bay Nội Bài</span>
+                                        <span class="time">06:00</span> -
+                                        <span class="date">13 thg 10</span>
+                                    </ion-col>
+                                    <ion-col class="col-center" col-3>
+                                        <span class="icon-flight-one-way"></span>
+                                        <span class="time" nowrap>
+                                                    2h 10m
+                                                </span>
+                                    </ion-col>
+                                    <ion-col class="col-right">
+                                        <span class="code">SGN</span>
+                                        <span class="place qb-big">TP HCM</span>
+                                        <span class="airport">Sân bay Tân Sơn Nhât</span>
+                                        <span class="time">08:10</span> -
+                                        <span class="date">13 thg 10</span>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+
+                        <div class="stay-time" nowrap>
+                            Quá cảnh <span class="primary">3h 25m</span> tại <span style="color: #000"> TP HCM</span>
+                        </div>
+                        <div class="fly">
+                            <div class="fly-header">
+                                <span class="number">1</span>
+                                <span class="logo">
+                                                <img src="http://vietnamairlinesvn.com/image/air/VN.png" alt="logo">
+                                            </span>
+                                <span class="fly-name">
+                                                VietNam Airline <span class="high-dot"></span> VN-209
+                                </span>
+                            </div>
+                            <div class="fly-body">
+                                <ion-row>
+                                    <ion-col class="col-left">
+                                        <span class="code">HAN</span>
+                                        <span class="place qb-big">Hà Nội</span>
+                                        <span class="airport">Sân bay Nội Bài</span>
+                                        <span class="time">06:00</span> -
+                                        <span class="date">13 thg 10</span>
+                                    </ion-col>
+                                    <ion-col class="col-center" col-3>
+                                        <span class="icon-flight-one-way"></span>
+                                        <span class="time" nowrap>
+                                                        2h 10m
+                                                    </span>
+                                    </ion-col>
+                                    <ion-col class="col-right">
+                                        <span class="code">SGN</span>
+                                        <span class="place qb-big">TP HCM</span>
+                                        <span class="airport">Sân bay Tân Sơn Nhât</span>
+                                        <span class="time">08:10</span> -
+                                        <span class="date">13 thg 10</span>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </ion-slide>
+            <ion-slide>
+                <div [style.min-height]="slideMinHeight" style="width: 100%;">
+                    <div class="info qb-shadow">
+                        <div class="info-header">
+                            <ion-row>
+                                <ion-col col-3 class="col-left">
+                                    <span class="number">1</span>
+                                    <span class="logo">
+                                            <img src="http://vietnamairlinesvn.com/image/air/VN.png" alt="logo">
+                                        </span>
+                                </ion-col>
+                                <ion-col class="col-right">
+                                    <ion-row>
+                                        <ion-col>
+                                            <span class="info-title">VietNam Airline</span>
+                                            <span class="high-dot"></span>
+                                            <span class="blue">Economy</span>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col>
+                                            <span class="place">Hà Nội</span>
+                                            <span class="icon-plane"></span>
+                                            <span class="place">TP HCM</span>
+                                        </ion-col>
+                                    </ion-row>
+
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                        <div class="info-body">
+                            <ion-row>
+                                <ion-col col-2 class="col-left">
+                                    <span class="icon">
+                                                <img src="assets/qbtkt/flight-list/icon_info.png" alt="">
+                                            </span>
+                                </ion-col>
+                                <ion-col class="col-right">
+                                    Airbus A321 <br> Sơ đồ ghế ngồi 3-3 <br> Khoảng cách ghế 30 inch (Trên tiêu chuẩn)<br> 7 KG hành lý xách tay
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col col-2 class="col-left">
+                                    <span class="icon">
+                                        <img src="assets/qbtkt/flight-list/icon_luggage_1.png" alt="">
+                                    </span>
+                                </ion-col>
+                                <ion-col class="col-right">
+                                    Hành lý 30 KG
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col col-2 class="col-left">
+                                    <span class="icon">
+                                        <img src="assets/qbtkt/flight-list/icon_meal_1.png" alt="">
+                                    </span>
+                                </ion-col>
+                                <ion-col class="col-right">
+                                    Suất ăn trên máy bay
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col col-2 class="col-left">
+                                    <span class="icon">
+                                                <img src="assets/qbtkt/flight-list/icon_entertainment_1.png" alt="">
+                                            </span>
+                                </ion-col>
+                                <ion-col class="col-right">
+                                    Hệ thống giải trí
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                    <div class="info qb-shadow">
+                        <div class="info-header">
+                            <ion-row>
+                                <ion-col col-3 class="col-left">
+                                    <span class="number">1</span>
+                                    <span class="logo">
+                                                <img src="http://vietnamairlinesvn.com/image/air/VN.png" alt="logo">
+                                            </span>
+                                </ion-col>
+                                <ion-col class="col-right">
+                                    <ion-row>
+                                        <ion-col>
+                                            <span class="info-title">VietNam Airline</span>
+                                            <span class="high-dot"></span>
+                                            <span class="blue">Economy</span>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col>
+                                            <span class="place">Hà Nội</span>
+                                            <span class="icon-plane"></span>
+                                            <span class="place">TP HCM</span>
+                                        </ion-col>
+                                    </ion-row>
+
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                        <div class="info-body">
+                            <ion-row>
+                                <ion-col col-2 class="col-left">
+                                    <span class="icon">
+                                                    <img src="assets/qbtkt/flight-list/icon_info.png" alt="">
+                                                </span>
+                                </ion-col>
+                                <ion-col class="col-right">
+                                    Airbus A321 <br> Sơ đồ ghế ngồi 3-3 <br> Khoảng cách ghế 30 inch (Trên tiêu chuẩn)<br> 7 KG hành lý xách tay
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col col-2 class="col-left">
+                                    <span class="icon">
+                                            <img src="assets/qbtkt/flight-list/icon_luggage_1.png" alt="">
+                                        </span>
+                                </ion-col>
+                                <ion-col class="col-right">
+                                    Hành lý 30 KG
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col col-2 class="col-left">
+                                    <span class="icon">
+                                            <img src="assets/qbtkt/flight-list/icon_meal_1.png" alt="">
+                                        </span>
+                                </ion-col>
+                                <ion-col class="col-right">
+                                    Suất ăn trên máy bay
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col col-2 class="col-left">
+                                    <span class="icon">
+                                                    <img src="assets/qbtkt/flight-list/icon_entertainment_1.png" alt="">
+                                                </span>
+                                </ion-col>
+                                <ion-col class="col-right">
+                                    Hệ thống giải trí
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div [style.min-height]="slideMinHeight" style="width: 100%;">
+                    <div class="main-content qb-shadow">
+                        <div class="detail">
+                            <div class="detail-header">
+                                <ion-row>
+                                    <ion-col col-2 class="col-left">
+                                        <span class="logo">
+                                        <img src="http://vietnamairlinesvn.com/image/air/VN.png" alt="logo">
+                                    </span></ion-col>
+                                    <ion-col class="col-right">
+                                        <span class="name">VietNam Airline</span>
+                                        <span>Khả năng hoàn tiền vé tùy thuộc vào chính sách chính hãng</span>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                            <div class="detail-body">
+                                <ion-row>
+                                    <ion-col class="col-text ">
+                                        <span>Giá vé người lớn cơ bản <span class="blue">(x1)</span></span>
+                                    </ion-col>
+                                    <ion-col class="col-price">
+                                        <span class="price" nowrap>
+                                        2.175.000
+                                    </span>
+                                        <span class="unit qb-black" nowrap>Vnđ</span>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row>
+                                    <ion-col class="col-text ">
+                                        <span>Giá vé người lớn cơ bản <span class="blue">(x1)</span></span>
+                                    </ion-col>
+                                    <ion-col class="col-price">
+                                        <span class="price" nowrap>
+                                                2.175.000
+                                            </span>
+                                        <span class="unit blakc" nowrap>Vnđ</span>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row class="total">
+                                    <ion-col class="col-text">
+                                        <span>Bạn trả</span>
+                                    </ion-col>
+                                    <ion-col class="col-price">
+                                        <span class="price" nowrap>
+                                                2.175.000
+                                            </span>
+                                        <span class="unit black" nowrap>Vnđ</span>
+                                    </ion-col>
+                                </ion-row>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slides>
+    </div>
+    <div class="footer-height"></div>
+</ion-content>
+
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar">
+        <span class="button-left">
+                    <ion-icon name="ios-close-outline" (tap)="onClickClosePage()"></ion-icon>
+            </span>
+        <span class="title">VietNam Airline</span>
+        <span class="description">HNA - BKK - 7h 10m -  1 điểm dừng</span>
+    </div>
+    <div class="header-segment">
+        <ion-segment [(ngModel)]="tab" (ionChange)="segmentChanged()">
+            <ion-segment-button value="0">
+                Chuyến bay
+            </ion-segment-button>
+            <ion-segment-button value="1">
+                Tiện ích
+            </ion-segment-button>
+            <ion-segment-button value="2">
+                Chi tiết
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+</div>
+<div class="qb-footer">
+    <div class="div-price">
+        <span class="combo"> 
+            <img src="assets/qbtkt/flight-list/image_smartcombo_2.png" alt="combo">
+        </span>
+        <span class="price"> 2.175.000</span>
+        <span class="unit black">Vnđ</span>/vé
+    </div>
+    <button ion-button full class="button-select qb-btn" (tap)="onClickBookingInfo()">Chọn</button>
+</div>

@@ -1,0 +1,24 @@
+page-sample {
+    .header-height {
+        height: 80px;
+    }
+    .qb-header {
+        .button-right {
+            padding-right: 16px;
+            font-size: 3em;
+            background-color: rgba(218, 218, 218, 0.35);
+            padding-left: 15px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+    }
+    .img-container {
+        width: 200px;
+        margin: 100px auto;
+        text-align: center;
+        font-size: 1.2em;
+        img {
+            width: 150px;
+        }
+    }
+}
