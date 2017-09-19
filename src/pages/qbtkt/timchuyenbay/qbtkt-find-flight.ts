@@ -13,6 +13,7 @@ import { CalendarDate } from '../../../providers/qbtkt/classes/calendar';
 export class QBTicketingFindFlightPage {
   @ViewChild(Content) content: Content;
   mDatas = {};
+  //comment
   mFlightData = {
     "fromDate": new Date(),
     "toDate": new Date(),
