@@ -14,6 +14,7 @@ page-qbtkt-find-flight {
         top: 48px;
         left: 0;
         width: 100%;
+        background: -webkit-gradient(linear, left top, right top, from(#007628), to(#69a718));
         background: linear-gradient(to right, #007628, #69a718);
         background: -webkit-linear-gradient(to right, #007628, #69a718);
         .logo {
@@ -32,7 +33,9 @@ page-qbtkt-find-flight {
         background-color: white;
         padding: 10px;
         border-radius: 10px;
+        -webkit-transform: translateY(-30px);
         transform: translateY(-30px);
+        -webkit-box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.03);
         box-shadow: 0px -2px 8px 2px rgba(0, 0, 0, 0.03);
     }
     #departure-city {
@@ -40,7 +43,9 @@ page-qbtkt-find-flight {
         // letter-spacing: 2px;
         text-transform: uppercase;
         font-size: 2em;
+        background-image: -webkit-gradient(linear, left top, right top, from(#84BF38), to(#007628));
         background-image: linear-gradient(to right, #84BF38, #007628);
+        -webkit-background-image: -webkit-gradient(linear, left top, right top, from(#84BF38), to(#007628));
         -webkit-background-image: linear-gradient(to right, #84BF38, #007628);
         color: transparent;
         background-clip: text;
@@ -51,7 +56,9 @@ page-qbtkt-find-flight {
         // letter-spacing: 2px;
         text-transform: uppercase;
         font-size: 2em;
+        background-image: -webkit-gradient(linear, left top, right top, from(#D76D20), to(#dd0421));
         background-image: linear-gradient(to right, #D76D20, #dd0421);
+        -webkit-background-image: -webkit-gradient(linear, left top, right top, from(#D76D20), to(#dd0421));
         -webkit-background-image: linear-gradient(to right, #D76D20, #dd0421);
         color: transparent;
         background-clip: text;
@@ -76,35 +83,54 @@ page-qbtkt-find-flight {
         margin: 0 4px;
     }
     .khuhoi {
-        .toggle-flight {
-            // height: 20px;
-            // width: 42px;
-            margin-top: 8px;
-            // .toggle-inner {
-            //     width: 20px;
-            //     height: 20px;
-            //     top: 0px;
-            // }
+        .toggle-ios {
+            display: block;
         }
-        // .toggle-flight {
-        //     max-height: 20px;
-        //     height: 20px;
-        //     width: 40px;
-        //     .toggle-inner {
-        //         width: 20px;
-        //         height: 20px;
-        //         top: 0px;
-        //     }
-        // }
-        // .toggle-checked .toggle-inner {
-        //     transform: translateX(20px) !important;
-        // }
+        .toggle-inner {
+            background: #FFF !important;
+        }
+        .toggle-div {
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-display: flex;
+            padding: 0 5px;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+        }
+        ion-toggle {
+            max-height: 16px;
+            height: 16px;
+            .toggle-inner {
+                width: 12px;
+                height: 12px;
+            }
+        }
+        .toggle-md .toggle-inner {
+            width: 20px !important;
+            height: 20px !important;
+        }
+        .toggle {
+            max-width: 36px;
+            width: 36px;
+        }
+        .toggle-checked .toggle-inner {
+            -webkit-transform: translateX(20px) !important;
+            transform: translateX(20px) !important;
+        }
         .toggle-icon {
             background-color: lightgray;
         }
-        // .toggle-icon::before {
-        //     background-color: lightgray !important;
-        // }
+        .toggle-icon::before {
+            background-color: lightgray !important;
+        }
         .toggle-checked .toggle-icon {
             background-color: map-get($QBTKTColors, primary) !important;
         }
@@ -117,6 +143,7 @@ page-qbtkt-find-flight {
         color: gray;
         font-size: 1em;
         max-height: 0px;
+        -webkit-transition: max-height 400ms;
         transition: max-height 400ms;
         overflow: hidden;
         margin-top: 20px;
@@ -142,7 +169,9 @@ page-qbtkt-find-flight {
     }
     .button-find {
         color: white;
+        background-image: -webkit-gradient(linear, left top, right top, from(#84BF38), to(#007628));
         background-image: linear-gradient(to right, #84BF38, #007628);
+        -webkit-background-image: -webkit-gradient(linear, left top, right top, from(#84BF38), to(#007628));
         -webkit-background-image: linear-gradient(to right, #84BF38, #007628);
         padding: 16px;
         text-align: center;
