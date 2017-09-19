@@ -45,11 +45,15 @@ export class SearchResultPage {
         this.menuButtonClick(button, 6 - i);
       })
     }
-    this.content.ionScroll.subscribe((event) => {
-      let breakPoint = 1.5 * this.infoHeight;
-      if (event.scrollTop >= breakPoint) {
+    let breakPoint = 1.5 * this.infoHeight;
+    let scrollContent = document.querySelector('.scroll-content');
+    scrollContent.addEventListener('scroll', (event) => {
+      let scrollTop = (<HTMLElement>(event.target)).scrollTop;
+      if (scrollTop >= breakPoint) {
+        // this.btnGroup.style.transform = `translateY(${scrollTop - 1.5 * this.infoHeight}px)`;
         this.btnGroup.classList.add("fixed-top");
       } else {
+        // this.btnGroup.style.transform = `translateY(0)`;
         this.btnGroup.classList.remove("fixed-top");
       }
     })

@@ -62,8 +62,9 @@
          padding: 5px 15px;
          overflow: auto;
          white-space: nowrap;
+         transition: 100ms;
          &.fixed-top {
-             position: fixed;
+             //  position: fixed;
              top: $headerHeight;
              background: -webkit-gradient(linear, left top, right top, from(rgba(0, 118, 40, 0.7)), to(rgba(105, 167, 24, 0.69)));
              background: linear-gradient(to right, rgba(0, 118, 40, 0.7), rgba(105, 167, 24, 0.69));

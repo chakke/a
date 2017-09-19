@@ -7,13 +7,7 @@
             <span class="info-text">Giá đã bao gồm thuế. Không phí giao dịch. Không chi phí ẩn</span>
         </div>
     </div>
-    <div class="button-groups" id="search-button-groups">
-        <button class="btn active">Tất cả</button>
-        <button class="btn">Cao cấp</button>
-        <button class="btn">Tiết kiệm</button>
-        <button class="btn">Ven sông</button>
-        <button class="btn">Gần ga tàu</button>
-    </div>
+
     <div class="qb-content">
         <div class="list-item">
             <div class="item" (click)="gotoDetail()" *ngFor="let item of items">
@@ -217,6 +211,14 @@
         <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
     </div>
 </div>
+<div class="button-groups" id="search-button-groups">
+    <button class="btn active">Tất cả</button>
+    <button class="btn">Cao cấp</button>
+    <button class="btn">Tiết kiệm</button>
+    <button class="btn">Ven sông</button>
+    <button class="btn">Gần ga tàu</button>
+</div>
+
 <div class="overlay-ads">
     <div class="overlay-header" (click)="toggleOverlay(overlaybody, overlayicon,overlayheight)">
         <span>Khách sạn được ưa thích</span>
