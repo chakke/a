@@ -14,19 +14,26 @@
                 </ion-col>
             </ion-row>
             <ion-row>
-                <ion-col text-center align-self-center (click)="onClickFindAirport(0)">
-                    <span id="departure-city">HAN</span>
+                <ion-col text-center align-self-center (tap)="onClickFindAirport(departurePlace, 'Chọn điểm đi')">
+                    <span *ngIf="departurePlace.hasData" id="departure-city">{{departurePlace.code}}</span>
+                    <span *ngIf="!departurePlace.hasData" class="under-line departure-line"></span>
                 </ion-col>
                 <ion-col col-2>
                     <img src="assets/qbtkt/findflight/btn_divert.png">
                 </ion-col>
-                <ion-col text-center align-self-center (click)="onClickFindAirport(1)">
-                    <span id="arriver-city">BKKA</span>
+                <ion-col text-center align-self-center (tap)="onClickFindAirport(arrivePlace,'Chọn điểm đến')">
+                    <span *ngIf="arrivePlace.hasData" id="arriver-city">{{arrivePlace.code}}</span>
+                    <span *ngIf="!arrivePlace.hasData" class="under-line arrive-line"></span>
                 </ion-col>
             </ion-row>
             <ion-row style="color:gray">
                 <ion-col>
-                    <div class="a3-container a3-items-center a3-justify-center"> <img src="assets/qbtkt/countries/vietnam.png" class="national_flag"> Hà Nội </div>
+                    <div class="a3-container a3-items-center a3-justify-center">
+                        <span *ngIf="departurePlace.hasData">
+                            <img src="{{departurePlace.nationalFlag}}" class="national_flag">{{ departurePlace.city}}
+                        </span>
+                        <span *ngIf="!departurePlace.hasData">Chọn điểm đi</span>
+                    </div>
 
                 </ion-col>
                 <ion-col col-2>
@@ -34,7 +41,10 @@
                 </ion-col>
                 <ion-col>
                     <div class="a3-container a3-items-center a3-justify-center">
-                        <img src="assets/qbtkt/countries/thailand.png" class="national_flag"> Bangkok
+                        <span *ngIf="arrivePlace.hasData">
+                            <img src="{{arrivePlace.nationalFlag}}" class="national_flag"> {{ arrivePlace.city}}
+                        </span>
+                        <span *ngIf="!arrivePlace.hasData">Chọn điểm đến</span>
                     </div>
                 </ion-col>
             </ion-row>

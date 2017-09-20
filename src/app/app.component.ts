@@ -9,6 +9,7 @@ import { AppController } from '../providers/app-controller';
 })
 export class MyApp {
   rootPage = "QBTicketingLoadingPage";
+  // rootPage = "FindFlightPickPlacePage";
 
   constructor(public platform: Platform, public mStatusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

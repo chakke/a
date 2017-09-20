@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component  } from '@angular/core';
 import { IonicPage, NavController, ModalController, IonicFormInput } from 'ionic-angular';
 import { QBTicketingModule } from '../../../providers/qbtkt/qbtkt';
 import { AppController } from "../../../providers/app-controller";
@@ -9,10 +9,8 @@ import { AppController } from "../../../providers/app-controller";
   selector: 'page-qbtkt-home',
   templateUrl: 'qbtkt-home.html',
 })
-export class QBTicketingHomePage { 
-
-  mViewData: any = {};
-
+export class QBTicketingHomePage {  
+  mViewData: any = {}; 
 
   mCategories = [];
 
@@ -24,7 +22,7 @@ export class QBTicketingHomePage {
     this.mViewData = this.mAppModule.getAppConfig().getViewData("QBTicketingHomePage");
     this.mCategories = this.mViewData.categories;
 
-  }
+  } 
   
   onTapFunction(index: number) {
     if (index == 0) this.navCtrl.push("QBTicketingFindFlightPage");

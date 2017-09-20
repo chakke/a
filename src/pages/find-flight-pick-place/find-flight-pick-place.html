@@ -1,0 +1,76 @@
+<ion-content class="qb-ion-content">
+
+    <div class="header-height"></div>
+    <div class="qb-content">
+
+        <div class="section" [collapse]="{button:button1,icon: icon1}">
+            <div class="section-header">
+                <span class="header-text">Thành phố bạn chọn gần đây</span>
+                <span class="header-button" #button1>
+                      <i #icon1 class="fa fa-angle-up" aria-hidden="true"></i>
+                  </span>
+            </div>
+            <div class="section-content">
+
+                <ion-row *ngFor="let place of recentPlaces" (tap)="onClickItem(place)">
+                    <ion-col col-11>
+                        <span class="title qb-big bold qb-black">{{place.title}}</span><br>
+                        <span class="code">{{place.code}}</span><span>{{place.airport}}</span>
+                    </ion-col>
+                    <ion-col col-1>
+                        <span class="button-remove">
+                          <ion-icon name="ios-close"></ion-icon> 
+                        </span>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+        <div class="section" [collapse]="{button:button2,icon: icon2}">
+            <div class="section-header">
+                <span class="header-text">Điểm đến phổ biến</span>
+                <span class="header-button" #button2>
+                      <i #icon2 class="fa fa-angle-up" aria-hidden="true"></i>
+                  </span>
+            </div>
+            <div class="section-content">
+
+                <ion-row *ngFor="let place of popularPlaces" (tap)="onClickItem(place)">
+                    <ion-col>
+                        <span class="title qb-big bold qb-black">{{place.title}}</span><br>
+                        <span class="code">{{place.code}}</span> <span>{{place.airport}}</span>
+                    </ion-col>
+                </ion-row>
+
+            </div>
+        </div>
+        <div class="section" [collapse]="{button:button3,icon: icon3}">
+            <div class="section-header">
+                <span class="header-text">Việt Nam</span>
+                <span class="header-button" #button3>
+                    <i #icon3 class="fa fa-angle-up" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="section-content">
+                <ion-row *ngFor="let place of vietnamPlaces" (tap)="onClickItem(place)">
+                    <ion-col>
+                        <span class="title qb-big bold qb-black">{{place.title}}</span><br>
+                        <span class="code">{{place.code}}</span> <span>{{place.airport}}</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<div class="qb-header">
+    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    <div class="a-header-toolbar small-toolbar">
+        <span class="button-left">
+              <ion-icon name="ios-arrow-back-outline" (tap)="onClickClosePage()"></ion-icon>
+          </span>
+        <span class="title">{{title}}</span>
+    </div>
+    <div class="div-searchbar">
+        <ion-searchbar (ionInput)="getItems($event)" placeholder="Tên thành phố, sân bay, quốc gia..."></ion-searchbar>
+    </div>
+</div>

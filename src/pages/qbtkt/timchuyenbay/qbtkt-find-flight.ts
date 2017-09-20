@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, Content, NavController, ModalController } from 'ionic-angular';
-import { QBTicketingModule } from '../../../providers/qbtkt/qbtkt';
 import { Utils } from '../../../providers/app-utils';
 
 import { CalendarDate } from '../../../providers/qbtkt/classes/calendar';
+import { QBTicketingModule } from '../../../providers/qbtkt/qbtkt';
 
 @IonicPage()
 @Component({
@@ -13,7 +13,8 @@ import { CalendarDate } from '../../../providers/qbtkt/classes/calendar';
 export class QBTicketingFindFlightPage {
   @ViewChild(Content) content: Content;
   mDatas = {};
-  //comment
+  departurePlace = { hasData: false };
+  arrivePlace = { hasData: false };
   mFlightData = {
     "fromDate": new Date(),
     "toDate": new Date(),
@@ -228,10 +229,22 @@ export class QBTicketingFindFlightPage {
     this.navCtrl.push("QBTicketingFlightListPage");
   }
 
-  onClickFindAirport(direction: number) {
-    let modal = this.mModalController.create("QBTicketingModalAirport");
-    modal.present({
-      animate: false
-    });
+  onClickFindAirport(place, title) {
+    let modal = this.mModalController.create("FindFlightPickPlacePage", { title: title });
+    modal.present();
+    modal.onDidDismiss((data) => {
+      if (data) {
+        console.log("data", data);
+        place["city"] = data.city;
+        place["country"] = data.country;
+        place["countryId"] = data.countryId;
+        place["code"] = data.code;
+        let country = this.mAppModule.getCountries().getItem(place.countryId);
+        if (country) {
+          place["nationalFlag"] = country.nationalFlag;
+        }
+        place.hasData = true;
+      }
+    })
   }
 }

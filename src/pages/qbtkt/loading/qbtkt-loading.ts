@@ -17,29 +17,30 @@ export class QBTicketingLoadingPage {
   }
 
   ionViewDidEnter() {
-  
+
     this.mAppModule.loadConfig().then(
-      ()=>{
+      () => {
         this.onLoadedConfig();
       }
     );
-  
+    this.mAppModule.loadCountriesFlag();
+
   }
 
-  onLoadedConfig(){
- 
+  onLoadedConfig() {
+
     let assets = this.mAppModule.getAppConfig().get("resources");
     AppModule.getInstance().getResourceLoader().load(assets).then(
-      ()=>{
+      () => {
         this.onLoaded();
       }
     );
-    
-    
+
+
   }
 
   onLoaded() {
- 
+
     this.navCtrl.setRoot("QBTicketingTabsPage", {}, {
       animate: true,
       direction: "forward",

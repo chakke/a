@@ -38,8 +38,4 @@ export class QBTicketingConfig {
         if (this.mAppData && this.mAppData[key]) return this.mAppData[key];
         return {};
     }
-
-
-
-
 }

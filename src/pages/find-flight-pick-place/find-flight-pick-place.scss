@@ -1,0 +1,115 @@
+page-find-flight-pick-place {
+    .qb-header {
+        .div-searchbar {
+            height: 48px;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            .searchbar {
+                height: 35px;
+                min-height: 35px;
+                background: transparent;
+                padding: 0 5px;
+                .searchbar-input-container {
+                    height: 35px;
+                }
+                .searchbar-input {
+                    border-radius: 20px;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    line-height: 35px;
+                    height: 35px;
+                }
+                .searchbar-search-icon {
+                    top: 0;
+                    left: 0;
+                    background-position: center;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+    .header-height {
+        height: 96px;
+        width: 100%;
+    }
+    .section {
+        width: 100%;
+        background-color: #FFF;
+        border-radius: 10px;
+        padding: 16px;
+        margin-bottom: 10px;
+        transition: all 400ms;
+        overflow: hidden;
+        &.collapsed {
+            height: 44px !important;
+            padding-top: 10px !important;
+        }
+        .icon {
+            font-size: 1.2em;
+            vertical-align: baseline;
+            color: #F00;
+            margin: 0 5px 0 0;
+        }
+        .button-remove {
+            color: #F00;
+            font-size: 1.8em;
+        }
+        .section-header {
+            position: relative;
+            .header-text {
+                padding: 5px 16px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                color: map-get($QBTKTColors, primary);
+                background-color: rgba(107, 249, 0, 0.12);
+                margin-left: -16px;
+                display: inline-block;
+                font-weight: bold;
+            }
+            .header-button {
+                color: map-get($QBTKTColors, blue);
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 0 5px;
+                font-size: 1.8em;
+            }
+        }
+        .section-content {
+            .code {
+                background-color: #f3f3f3;
+                border-radius: 20px;
+                font-size: 1.1em;
+                padding: 2px 5px;
+                margin-right: 5px;
+            }
+            .row {
+                padding: 10px 0 5px 0;
+                border-bottom: solid 1px #ddd;
+                .col {
+                    line-height: 1.8em;
+                }
+                >.col:first-child {
+                    text-align: left;
+                }
+                // >.col:last-child {
+                //     text-align: right;
+                // }
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+            .round-red {
+                padding: 2px 5px;
+                color: #F00;
+                background-color: rgba(255, 0, 0, 0.11);
+                border-radius: 20px;
+            }
+        }
+    }
+    .qb-content {
+        padding: 16px;
+    }
+}
