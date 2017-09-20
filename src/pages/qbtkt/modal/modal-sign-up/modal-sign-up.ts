@@ -27,8 +27,8 @@ export class ModalSignUpPage {
     "text_use_phonenumber": "Đăng ký bằng số di động?",
     "text_signup": "Đăng ký",
     "text_or": "hoặc",
-    "text_login_google": "Đăng nhập bằng Google",
-    "text_login_facebook": "Đăng nhập bằng Facebook"
+    "text_login_google": "Đăng ký bằng Google",
+    "text_login_facebook": "Đăng kus bằng Facebook"
   }
 
   constructor(public navCtrl: NavController,

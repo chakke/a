@@ -49,9 +49,9 @@ export class BookingContactInfoPage {
     public navParams: NavParams,
     public mViewController: ViewController,
     private mAppModule: QBTicketingModule) {
-    // this.mDatas = this.mAppModule.getAppConfig().getViewData("ModalBookingContactInfo");
+    this.mDatas = this.mAppModule.getAppConfig().getViewData("ModalBookingContactInfo");
 
-    // this.mContactInfo = navParams.get("contactInfo");
+    this.mContactInfo = navParams.get("contactInfo");
 
 
   }

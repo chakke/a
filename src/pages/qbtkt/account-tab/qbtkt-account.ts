@@ -124,7 +124,7 @@ export class QBTicketingAccountPage {
         this.checkLogin();
       }
     })
-    
+
     modal.present({
       animate: false
     });
@@ -133,7 +133,13 @@ export class QBTicketingAccountPage {
   onClickLogOut() {
     console.log("onClickLogOut");
     this.isLogin = false;
-    // this.checkLogin();
+    this.checkLogin();
+  }
+
+  itemClick(item) {
+    if (item.isAvailable) {
+      this.navCtrl.push("SamplePage");
+    }
   }
 
   onClickEdit() {

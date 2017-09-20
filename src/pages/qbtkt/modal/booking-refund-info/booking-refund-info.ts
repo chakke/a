@@ -106,8 +106,8 @@ export class BookingRefundInfoPage {
     public navParams: NavParams,
     public mViewController: ViewController,
     private mAppModule: QBTicketingModule) {
-    // this.mDatas = this.mAppModule.getAppConfig().getViewData("ModalBookingRefundInfo");
-    // this.mBookingDatas = navParams.get("bookingDatas");
+    this.mDatas = this.mAppModule.getAppConfig().getViewData("ModalBookingRefundInfo");
+    this.mBookingDatas = navParams.get("bookingDatas");
     
   }
 

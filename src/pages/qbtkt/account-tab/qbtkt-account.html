@@ -1,7 +1,8 @@
 <ion-content class="qb-ion-content" no-bounce>
+    <div class="header-height"></div>
     <div padding id="content-container" class="a1-fill-parent">
         <ion-grid>
-            <ion-row padding class="main-row a1-relative" *ngFor="let item of mAccountPage.items" [class.unavailable-item]="!item.isAvailable">
+            <ion-row (tap)="itemClick(item)" padding class="main-row a1-relative" *ngFor="let item of mAccountPage.items" [class.unavailable-item]="!item.isAvailable">
                 <ion-col col-2 class="a3-container a3-items-center a3-justify-center">
                     <img src={{item.url}}>
                 </ion-col>
@@ -18,7 +19,7 @@
                 </ion-col>
             </ion-row>
             <ion-row *ngIf="isLogin" style="padding: 10px;">
-                <div class="button-find" id="btnFind" (click)="onClickLogOut()">{{mAccountPage.text_logout}}</div>
+                <div class="button-find qb-btn" id="btnFind" (click)="onClickLogOut()">{{mAccountPage.text_logout}}</div>
             </ion-row>
         </ion-grid>
     </div>
@@ -49,8 +50,8 @@
                 <span>{{mAccountPage.text_letssignup}}</span>
             </div>
             <div class="a1-width-100 a3-container a3-justify-center">
-                <div class="login-button font-size-09" (tap)="onClickLogIn()">{{mAccountPage.text_login}}</div>
-                <div class="login-button font-size-09" (tap)="onClickSignUp()">{{mAccountPage.text_signup}}</div>
+                <div class="login-button " (tap)="onClickLogIn()">{{mAccountPage.text_login}}</div>
+                <div class="login-button  " (tap)="onClickSignUp()">{{mAccountPage.text_signup}}</div>
             </div>
         </div>
     </div>

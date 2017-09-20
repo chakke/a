@@ -42,15 +42,28 @@ page-modal-sign-up {
     .deep-blue-text {
         color: lightblue;
     }
+    .blue-text {
+        color: map-get($QBTKTColors, blue);
+    }
+    .qb-btn {
+        font-weight: 500 !important;
+    }
+    .qb-section.grid {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
     .toggle-container {
         margin-right: 10px;
+        .toggle-ios {
+            display: block;
+        }
         ion-toggle {
             max-height: 16px;
             height: 16px;
             .toggle-inner {
                 width: 12px;
                 height: 12px;
-                background: white;
+                background: white !important;
             }
         }
         .toggle-md .toggle-inner {

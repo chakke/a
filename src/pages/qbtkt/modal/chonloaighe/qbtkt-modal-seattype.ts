@@ -26,8 +26,8 @@ export class QBTicketingModalLoaiGhe {
     private mAppModule: QBTicketingModule
   
   ) {
-    // this.mSelectedIndex = this.navParams.get("selectedIndex");
-    // this.mDatas = this.mAppModule.getAppConfig().getViewData("ModalLoaiGhe");
+    this.mSelectedIndex = this.navParams.get("selectedIndex");
+    this.mDatas = this.mAppModule.getAppConfig().getViewData("ModalLoaiGhe");
   }
 
   onClickCloseModal() {

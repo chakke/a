@@ -1,4 +1,10 @@
 page-qbtkt-account {
+    .header-height {
+        height: 116px;
+    }
+    .a1-fill-parent {
+        padding-top: 10px !important;
+    }
     .a-header {
         background: -webkit-gradient(linear, left top, right top, from(#007628), to(#69a718));
         background: linear-gradient(to right, #007628, #69a718);
@@ -44,36 +50,35 @@ page-qbtkt-account {
         background-color: white;
         margin-bottom: 10px;
         border-radius: 10px;
+        padding: 10px 10px 10px 16px !important;
     }
     .arrow-down {
         float: right;
-        color: lightblue;
+        color: map-get($QBTKTColors, blue);
+        font-size: 1.5em;
     }
     .font-size-09 {
         font-size: 0.9em;
     }
     .unavailable-item {
-        background-color: rgba(white, .5);
-        color: rgba(black, .6);
+        opacity: .5;
     }
     .login-button {
         padding: 6px 16px;
         margin: 4px;
         background-color: rgba(yellowgreen, .4);
-        border-radius: 10px;
+        border-radius: 5px;
     }
     #button-logout-container {
         background-color: red;
-        border-radius: 10px
+        border-radius: 10px;
     }
     .button-find {
         color: white;
-        background-image: linear-gradient(to right, #84BF38, #007628);
-        -webkit-background-image: linear-gradient(to right, #84BF38, #007628);
-        padding: 16px;
         text-align: center;
         border-radius: 6px;
-        font-weight: bold;
+        font-weight: 500;
         width: 100%;
+        font-size: 1.2em;
     }
 }

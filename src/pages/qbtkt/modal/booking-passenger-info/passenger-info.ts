@@ -54,8 +54,8 @@ export class PassengerInfoPage {
     public mViewController: ViewController,
     private mAppModule: QBTicketingModule
   ) {
-    // this.mDatas = this.mAppModule.getAppConfig().getViewData("ModalPassengerInfo");
-    // this.mPassengerInfo = navParams.get("passenger");
+    this.mDatas = this.mAppModule.getAppConfig().getViewData("ModalPassengerInfo");
+    this.mPassengerInfo = navParams.get("passenger");
   }
 
   ionViewDidLoad() {
