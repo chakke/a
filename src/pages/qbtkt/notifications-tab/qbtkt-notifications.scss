@@ -1,1 +1,220 @@
-page-qbtkt-notifications {}
+page-qbtkt-notifications {
+    .header-height {
+        height: 65px;
+    }
+    .qb-header {
+        .a-header-toolbar {
+            height: 45px;
+            line-height: 45px;
+            .title {
+                padding: 0;
+            }
+        }
+        .button-left {
+            height: 45px;
+            line-height: 45px;
+            padding: 2px 15px;
+        }
+    }
+    .qb-content {
+        padding: 10px 16px;
+        color: gray;
+        .tripadvisor-logo {
+            color: map-get($QBTKTColors, orange);
+            font-size: 1.5en;
+        }
+        .cirle-rate {
+            width: 9px;
+            height: 9px;
+            border: solid 1px map-get($QBTKTColors, primary);
+            background-color: #FFF;
+            display: inline-block;
+            border-radius: 50%;
+            position: relative;
+            margin-left: -2px;
+            &.active::before {
+                content: " ";
+                display: block;
+                width: 5px;
+                height: 5px;
+                background-color: map-get($QBTKTColors, primary);
+                position: absolute;
+                top: 1px;
+                left: 1px;
+                border-radius: 50%;
+            }
+        }
+        .qb-segment {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .qb-segment-button {
+                width: 50%;
+                &:first-child {
+                    margin-right: 2px;
+                }
+                height: 40px;
+                line-height: 40px;
+                background-color: rgb(228, 228, 228);
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                text-align: center;
+                font-size: 1.2em;
+                font-weight: 500;
+                .icon {
+                    img {
+                        height: 1.5em;
+                        vertical-align: middle;
+                    }
+                }
+                &.active {
+                    color: map-get($QBTKTColors, primary);
+                    background-color: #FFF;
+                    .circle {
+                        width: 8px;
+                        height: 8px;
+                        display: inline-block;
+                        border-radius: 50%;
+                        background-color: #F00;
+                        vertical-align: text-top;
+                        margin-left: 3px;
+                    }
+                }
+            }
+        }
+        .qb-segment-content {
+            margin-top: 10px;
+            .section-point-detail {
+                .visor-point-item {
+                    padding: 0 5px 3px 0 !important;
+                }
+            }
+            .section-point {
+                line-height: 18px;
+                .title {
+                    color: map-get($QBTKTColors, black);
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    margin: 15px 0 5px 0;
+                }
+                .visor-point-item {
+                    padding: 0 10px 3px 10px;
+                    width: 100%;
+                    clear: both;
+                    .point {
+                        float: right;
+                    }
+                }
+            }
+            .col-left {
+                padding-left: 10px;
+                border-right: solid 1px lightgray;
+            }
+            .div-point {
+                color: map-get($QBTKTColors, blue);
+                margin: 10px 0;
+                .big-point {
+                    font-size: 3.5em;
+                }
+                .small-point {
+                    font-size: 1.7em;
+                }
+            }
+            .point-detail {
+                padding: 0 10px;
+                width: 100%;
+                clear: both;
+                .point {
+                    color: map-get($QBTKTColors, primary);
+                    float: right;
+                }
+            }
+            .section-comment {
+                .comment {
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    border-bottom: solid 1px lightgray;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    .comment-header {
+                        width: 100%;
+                        font-size: 1.1em;
+                        font-weight: bold;
+                        .name {
+                            color: map-get($QBTKTColors, black);
+                        }
+                        .point {
+                            color: map-get($QBTKTColors, blue);
+                        }
+                        .point-group {
+                            float: right;
+                        }
+                        margin: 5px 0;
+                    }
+                    .title {
+                        width: 100%;
+                        color: map-get($QBTKTColors, blue);
+                        font-size: 1.1em;
+                    }
+                    p {
+                        margin: 5px 0;
+                    }
+                    .comment-body {
+                        color: map-get($QBTKTColors, black);
+                        .time {
+                            color: gray;
+                        }
+                        &.in-active {
+                            color: #F00 !important;
+                            font-weight: 500;
+                            background-color: rgb(255, 245, 244);
+                            border-radius: 10px;
+                            .time {
+                                font-weight: normal;
+                                color: #F00 !important;
+                            }
+                            .high-dot {
+                                background-color: #F00 !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .button-remove {
+                font-size: 1.8em;
+                color: #F00;
+                width: 100%;
+                display: block;
+                padding-bottom: 10px;
+            }
+            .center-flex {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .image-support {
+                display: block;
+                width: 60%;
+                margin: 30% auto 0 auto;
+            }
+            .text-support {
+                font-size: 2em;
+                display: block;
+                width: 100%;
+                padding: 30px;
+                text-align: center;
+            }
+            .qb-btn {
+                width: 40%;
+                display: inline-block;
+            }
+            .qb-segment-footer {
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+}

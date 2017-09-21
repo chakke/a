@@ -100,7 +100,6 @@ page-qbtkt-flight-detail {
             }
             .time {
                 color: map-get($colors, primary);
-                font-weight: bold;
             }
             .col-center {
                 display: -webkit-box;
@@ -128,7 +127,8 @@ page-qbtkt-flight-detail {
                 .time {
                     width: 100%;
                     text-align: center;
-                    color: map-get($QBTKTColors, primary)
+                    color: map-get($QBTKTColors, primary);
+                    font-weight: 500;
                 }
                 i,
                 icon,
@@ -175,6 +175,7 @@ page-qbtkt-flight-detail {
             }
             .info-title {
                 color: map-get($QBTKTColors, black);
+                font-weight: 500;
             }
         }
         .info-body {
@@ -239,7 +240,7 @@ page-qbtkt-flight-detail {
                     flex-basis: 105px !important;
                     padding-right: 10px;
                     .price {
-                        font-weight: normal;
+                        font-weight: 500;
                     }
                 }
             }
@@ -314,5 +315,6 @@ page-qbtkt-flight-detail {
     }
     .unit {
         color: map-get($QBTKTColors, black);
+        font-weight: 500;
     }
 }

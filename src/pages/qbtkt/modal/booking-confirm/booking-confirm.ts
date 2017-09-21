@@ -28,6 +28,7 @@ export class BookingConfirmPage {
   }
 
   onClickConfirm() {
+    this.mViewController.dismiss();
     this.navCtrl.push("PreviewBookingPage");
   }
 

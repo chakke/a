@@ -134,7 +134,9 @@
 <div class="qb-header">
     <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
     <div class="a-header-toolbar">
-        <ion-icon name="ios-arrow-back-outline" class="button-left" (tap)="onClickClosePage()"></ion-icon>
+        <span class="button-left" (tap)="onClickClosePage()">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </span>
         <span class="title">{{mDatas.headerTitle}}</span>
         <span class="description">Mã đặt chỗ 123456789</span>
         <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">

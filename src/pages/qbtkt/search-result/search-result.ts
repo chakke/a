@@ -32,6 +32,7 @@ export class SearchResultPage {
   }
 
   ionViewDidEnter() {
+    console.log("did enter");
     this.items = [];
     for (let i = 1; i <= 6; i++) {
       this.items.push(this.item);
@@ -45,15 +46,15 @@ export class SearchResultPage {
         this.menuButtonClick(button, 6 - i);
       })
     }
-    let breakPoint = 1.5 * this.infoHeight;
-    let scrollContent = document.querySelector('.scroll-content');
-    scrollContent.addEventListener('scroll', (event) => {
-      let scrollTop = (<HTMLElement>(event.target)).scrollTop;
+    let breakPoint = 1.5 * this.infoHeight; 
+    
+    this.content.ionScroll.subscribe(() => { 
+      let scrollTop = this.content.scrollTop;
       if (scrollTop >= breakPoint) {
-        // this.btnGroup.style.transform = `translateY(${scrollTop - 1.5 * this.infoHeight}px)`;
         this.btnGroup.classList.add("fixed-top");
+        this.btnGroup.style.transform = `translateY(-${breakPoint}px)`;
       } else {
-        // this.btnGroup.style.transform = `translateY(0)`;
+        this.btnGroup.style.transform = `translateY(-${scrollTop}px)`;
         this.btnGroup.classList.remove("fixed-top");
       }
     })
@@ -92,7 +93,10 @@ export class SearchResultPage {
     overlayheight.classList.toggle("close");
   }
   onClickClosePage() {
-    this.navCtrl.pop();
+    this.navCtrl.pop({
+      animation: "md-transition",
+      animate: true
+    });
   }
   gotoDetail() {
     this.navCtrl.push("HotelDetailPage");

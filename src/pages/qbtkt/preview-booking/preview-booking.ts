@@ -74,4 +74,8 @@ export class PreviewBookingPage {
     this.navCtrl.push("PayingPage");
   }
 
+
+  onClickClosePage(){
+    this.navCtrl.pop();
+  }
 }

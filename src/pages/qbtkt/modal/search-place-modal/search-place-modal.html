@@ -6,7 +6,7 @@
             <span class="icon">
                 <i class="fa fa-bullseye" aria-hidden="true"></i>
             </span>
-            <span class="title qb-black bold">
+            <span class="title qb-black qb-bold">
                 Khách sạn gần bạn
             </span>
         </div>
@@ -20,7 +20,7 @@
             <div class="section-content">
                 <ion-row>
                     <ion-col>
-                        <span class="title qb-big bold qb-black">Hà Nội</span><br>
+                        <span class="title qb-big qb-bold qb-black">Hà Nội</span><br>
                         <span>Việt Nam</span>
                     </ion-col>
                     <ion-col>
@@ -30,7 +30,7 @@
                 </ion-row>
                 <ion-row>
                     <ion-col>
-                        <span class="title qb-big bold qb-black">Bangkok</span><br>
+                        <span class="title qb-big qb-bold qb-black">Bangkok</span><br>
                         <span>Thailand</span>
                     </ion-col>
                     <ion-col>
@@ -50,7 +50,7 @@
             <div class="section-content">
                 <ion-row>
                     <ion-col>
-                        <span class="title qb-big bold qb-black">Hà Nội</span><br>
+                        <span class="title qb-big qb-bold qb-black">Hà Nội</span><br>
                         <span>Việt Nam</span>
                     </ion-col>
                     <ion-col>
@@ -60,7 +60,7 @@
                 </ion-row>
                 <ion-row>
                     <ion-col>
-                        <span class="title qb-big bold qb-black">Bangkok</span><br>
+                        <span class="title qb-big qb-bold qb-black">Bangkok</span><br>
                         <span>Thailand</span>
                     </ion-col>
                     <ion-col>
@@ -76,12 +76,12 @@
 <div class="qb-header">
     <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
     <div class="a-header-toolbar small-toolbar">
-        <span class="button-left">
-            <ion-icon name="ios-arrow-back-outline" (tap)="onClickClosePage()"></ion-icon>
+        <span class="button-left" (tap)="onClickClosePage()">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
         </span>
         <span class="title">Chọn điểm đến</span>
     </div>
     <div class="div-searchbar">
-        <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+        <ion-searchbar placeholder="Thành phố, khách sạn, điểm đến..." (ionInput)="getItems($event)"></ion-searchbar>
     </div>
 </div>

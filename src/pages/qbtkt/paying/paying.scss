@@ -1,7 +1,4 @@
 page-paying {
-    .qb-header {
-        font-size: 1em;
-    }
     .header-height {
         height: 140px;
     }
@@ -9,6 +6,7 @@ page-paying {
         padding: 10px 16px;
     }
     .step-group {
+        font-size: 1.1em;
         height: 48px;
         .number {
             font-size: .8em;
@@ -73,7 +71,7 @@ page-paying {
             border-top-right-radius: 5px;
             text-align: center;
             font-size: 1.2em;
-            font-weight: bold;
+            font-weight: 500;
             .icon {
                 img {
                     height: 1.5em;

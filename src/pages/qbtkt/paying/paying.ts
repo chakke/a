@@ -80,4 +80,8 @@ export class PayingPage {
     this.navCtrl.push("PreviewBookingPage");
   }
 
+  onClickClosePage(){
+    this.navCtrl.pop();
+  }
+
 }

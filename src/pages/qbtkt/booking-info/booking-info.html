@@ -1,4 +1,5 @@
 <ion-content class="qb-ion-content" no-bounce>
+    <div class="header-height"></div>
     <div class="a1-fill-parent overflow-auto">
         <div class="a1-fill-parent" id="main-content" (touchend)="onTouchEnd($event)">
             <div class="a1-fill-parent overflow-auto" id="top-main-content">
@@ -240,7 +241,7 @@
                 </div>
                 <div class="a1-fill-parent overflow-auto">
                     <ion-grid padding>
-                        <ion-row class="main-row">
+                        <ion-row class="main-row  qb-shadow">
                             <div class="a1-fill-parent">
                                 <ion-row class="main-row-header">
                                     <ion-col col-4 class="a1-no-padding a3-container a3-items-center">
@@ -274,7 +275,7 @@
                                 </ion-row>
                             </div>
                         </ion-row>
-                        <ion-row class="main-row" style="padding-bottom: 10px;">
+                        <ion-row class="main-row  qb-shadow" style="padding-bottom: 10px;">
                             <div class="a1-fill-parent">
                                 <ion-row class="main-row-header">
                                     <ion-col class="a1-no-padding a3-container a3-items-center">
@@ -333,8 +334,12 @@
 <div class="qb-header">
     <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
     <div class="a-header-toolbar small-toolbar">
-        <ion-icon name="ios-arrow-back-outline" class="button-left" (tap)="onClickClosePage()"></ion-icon>
-        {{mDatas.headerTitle}}
+        <span class="button-left" (tap)="onClickClosePage()">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </span>
+        <span class="title">
+                {{mDatas.headerTitle}}
+        </span>
         <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
     </div>
     <div class="step-group">

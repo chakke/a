@@ -40,6 +40,9 @@ page-qbtkt-find-hotel {
         padding: 20px;
         background-color: #FFF;
         border-radius: 10px;
+        position: relative;
+        z-index: 9;
+        box-shadow: -1px 0px 18px 0px rgba(128, 128, 128, 0.08);
     }
     .section {
         .col {
@@ -96,7 +99,7 @@ page-qbtkt-find-hotel {
         background-color: map-get($QBTKTColors, orange);
         color: #FFF;
         margin-bottom: 5px;
-        float: right;
+        display: inline-block;
         white-space: nowrap;
     }
     .right-20 {
@@ -112,10 +115,6 @@ page-qbtkt-find-hotel {
     .button-search {
         border-radius: 5px;
         background-color: map-get($QBTKTColors, primary);
-        background-image: -webkit-gradient(linear, left top, right top, from(#84BF38), to(#007628));
-        background-image: linear-gradient(to right, #84BF38, #007628);
-        -webkit-background-image: -webkit-gradient(linear, left top, right top, from(#84BF38), to(#007628));
-        -webkit-background-image: linear-gradient(to right, #84BF38, #007628);
         color: #FFF;
         font-size: 1.2em;
     }
@@ -132,6 +131,9 @@ page-qbtkt-find-hotel {
         border-radius: 50%;
         background-color: map-get($QBTKTColors, orange);
         color: #3C1719;
+        height: 40px;
+        width: 50px;
+        margin-top: 8px;
     }
     .full-width {
         display: block;

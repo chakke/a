@@ -1,16 +1,19 @@
 <ion-content class="qb-ion-content">
     <div class="header-height"></div>
+    <div class="below-header">
+        <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    </div>
     <div class="qb-content">
         <div class="content-header">
             <ion-row>
                 <ion-col text-center class="flight-point a1-text-ellipsis" (click)="onClickFindAirport(0)">
-                    <img src="assets/qbtkt/findflight/icon_departure_flight.png" style="width:1.2em; height: 1.2em; margin: 0 4px"> Điểm đi
+                    <img src="assets/qbtkt/findflight/icon_departure_flight.png" style="width: auto;height: 1.1em; margin: 0 4px"> Điểm đi
                 </ion-col>
                 <ion-col col-2>
                     <!-- <img src="assets/qbtkt/findflight/btn_divert.png"> -->
                 </ion-col>
                 <ion-col text-center class="flight-point a1-text-ellipsis" (click)="onClickFindAirport(1)">
-                    <img src="assets/qbtkt/findflight/icon_arrival_flight.png" style="width:1.2em; height: 1.2em; margin: 0 4px"> Điểm đến
+                    <img src="assets/qbtkt/findflight/icon_arrival_flight.png" style="width: auto; height: 1.1em; margin: 0 4px"> Điểm đến
                 </ion-col>
             </ion-row>
             <ion-row>
@@ -147,11 +150,11 @@
 <div class="qb-header">
     <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
     <div class="a-header-toolbar small-toolbar">
-        <ion-icon name="ios-arrow-back-outline" class="button-left" (tap)="onClickClosePage()"></ion-icon>
+        <!-- <ion-icon name="ios-arrow-back-outline" class="button-left" (tap)="onClickClosePage()"></ion-icon> -->
+        <span class="button-left" (tap)="onClickClosePage()">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </span>
         <span class="title">Tìm chuyến bay</span>
         <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
     </div>
-</div>
-<div class="below-header">
-    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
 </div>

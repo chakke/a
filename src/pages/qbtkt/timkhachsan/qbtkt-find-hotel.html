@@ -1,4 +1,7 @@
 <ion-content class="qb-ion-content">
+    <div class="below-header">
+        <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
+    </div>
     <div class="header-height"></div>
     <div class="main-content">
         <div class="section" style="padding-top: 0" (click)="selectPlace()">
@@ -101,7 +104,7 @@
             </ion-row>
         </div>
         <div class="button-group">
-            <button ion-button full class="button-search" (click)="find()">Tìm kiếm</button>
+            <button ion-button full class="button-search qb-btn" (click)="find()">Tìm kiếm</button>
             <button ion-button round icon-only class="button-map" [navPush]="'SamplePage'">
                 <i class="fa fa-map" aria-hidden="true"></i>
             </button>
@@ -111,15 +114,12 @@
 <div class="qb-header">
     <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
     <div class="a-header-toolbar small-toolbar">
-        <span class="button-left">
-            <ion-icon name="ios-arrow-back-outline" (tap)="onClickClosePage()"></ion-icon>
+        <span class="button-left" (tap)="onClickClosePage()">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
         </span>
         <span class="title">
                 Tìm khách sạn
         </span>
         <img src="assets/qbtkt/home/btn_more.png" class="button-right" (tap)="onClickSubMenu()">
     </div>
-</div>
-<div class="below-header">
-    <img src="assets/qbtkt/home/top_bar_logo_2.png" class="logo">
 </div>

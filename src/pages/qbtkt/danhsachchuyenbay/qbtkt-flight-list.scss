@@ -4,6 +4,33 @@ page-qbtkt-flight-list {
             overflow: hidden;
         }
     }
+    .flight-container {
+        position: relative;
+        &::before {
+            width: 86%;
+            position: absolute;
+            top: -20px;
+            left: 7%;
+            display: block;
+            content: "";
+            height: 20px;
+            z-index: 8;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
+        }
+        &::after {
+            width: 80%;
+            position: absolute;
+            top: -25px;
+            left: 10%;
+            display: block;
+            content: "";
+            height: 40px;
+            z-index: 7;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
+        }
+    }
     .qb-content {
         padding-top: 0;
     }
@@ -19,6 +46,21 @@ page-qbtkt-flight-list {
     }
     flight {
         margin-top: 10px;
+        position: relative;
+        z-index: 9;
+        &.smart-combo::before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 16px;
+            top: 0;
+            background-image: url('../assets/qbtkt/flight-list/image_smartcombo_1.png');
+            width: 40px;
+            height: 50px;
+            z-index: 10;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
         &.first-flight {
             @media (max-width: 720px) {
                 margin-top: -15px;
