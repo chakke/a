@@ -11,7 +11,7 @@
                                     <ion-col col-4 class="a1-no-padding a3-container a3-items-center">
                                         <div class="green-title">{{mDatas.bookingDatas.title}}</div>
                                     </ion-col>
-                                    <ion-col col-8 class="qb-big qb-black  qb-bold a3-container a3-items-center a3-justify-end">
+                                    <ion-col style="padding-right: 10px" col-8 class="qb-big qb-black  qb-bold a3-container a3-items-center a3-justify-end">
                                         <ion-row>
                                             <ion-col col-5 class="a3-container a3-items-center">
                                                 <span class="a1-fill-parent a1-text-right qb-bold">{{mBookingDatas.fromCity}}</span>
@@ -322,7 +322,7 @@
                             </div>
                         </ion-row>
                         <ion-row class="a3-justify-center">
-                            <div class="button-next" (tap)="onClickConfirm()"> {{mDatas.text_next}} </div>
+                            <div class="qb-btn button-next" (tap)="onClickConfirm()"> {{mDatas.text_next}} </div>
                         </ion-row>
                     </ion-grid>
                 </div>

@@ -43,16 +43,16 @@
         <div *ngIf="pickingType==DEPARTURE" class="title">
             <div class="a1-fill-parent a3-container a3-items-center a3-justify-center">
                 <div class="header-index a3-container a3-items-center a3-justify-center"><span style="font-size: 0.8em">1</span></div>
-                <div>{{mDatePickerData.roundtrip_title1}}</div>
+                <div nowrap>{{mDatePickerData.roundtrip_title1}}</div>
             </div>
         </div>
         <div *ngIf="pickingType==RETURN" class="title">
             <div class="a1-fill-parent a3-container a3-items-center a3-justify-center">
                 <div class="header-index a3-container a3-items-center a3-justify-center"><span style="font-size: 0.8em">2</span></div>
-                <div>{{mDatePickerData.roundtrip_title2}}</div>
+                <div nowrap>{{mDatePickerData.roundtrip_title2}}</div>
             </div>
         </div>
-        <div padding *ngIf="isRoundTrip" class="button-right n-button-right" (tap)="onClickRepick()">{{mDatePickerData.text_reset}}</div>
+        <div style="padding: 0 16px" nowrap *ngIf="isRoundTrip" class="button-right n-button-right" (tap)="onClickRepick()">{{mDatePickerData.text_reset}}</div>
     </div>
     <div style="height:48px" class="a3-container">
         <div class="calendar-arrow">

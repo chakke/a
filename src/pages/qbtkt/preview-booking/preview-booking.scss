@@ -56,6 +56,9 @@ page-preview-booking {
         }
     }
     .qb-section {
+        .section-header {
+            height: auto;
+        }
         .fly {
             width: 100%;
             border-bottom: solid 1px #ddd;
@@ -81,7 +84,7 @@ page-preview-booking {
             }
             .fly-header {
                 .right-col {
-                    flex-grow: 0;
+                    padding: 0;
                     display: flex;
                     justify-content: center;
                     align-items: center;

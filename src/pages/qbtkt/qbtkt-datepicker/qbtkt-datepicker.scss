@@ -2,6 +2,11 @@ page-qbtkt-datepicker {
     .header-height {
         height: 96px;
     }
+    .qb-header {
+        .title {
+            white-space: nowrap;
+        }
+    }
     #footer {
         z-index: 9;
         position: absolute;

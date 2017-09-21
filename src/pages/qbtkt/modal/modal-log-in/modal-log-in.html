@@ -3,7 +3,7 @@
     <div padding class="a1-fill-parent">
         <ion-grid class="qb-section">
             <ion-row class="qb-big">
-                <div>{{mLogIn.id_input}}</div>
+                <div nowrap>{{mLogIn.id_input}}</div>
             </ion-row>
             <ion-row class="black input-container a1-margin-bottom">
                 <div class="a1-fill-parent">
@@ -30,7 +30,7 @@
             </ion-row>
             <ion-row>
                 <div class="qb-btn login-button qb-big a3-container a3-items-center a3-justify-center bold" (tap)="onClickLogin()">
-                    <span>{{mLogIn.text_login}}</span>
+                    <span nowrap>{{mLogIn.text_login}}</span>
                 </div>
             </ion-row>
             <ion-row class="a3-items-center a3-justify-center a3-nowrap">
@@ -39,19 +39,19 @@
                 <div class="line"></div>
             </ion-row>
             <ion-row>
-                <div class="qb-btn qb-big bold a3-container a3-items-center a3-justify-center a1-margin-bottom" style="background: #FF5A60 !important" (tap)="onClickLoginGoogle()">
+                <div nowrap class="qb-btn qb-big bold a3-container a3-items-center a3-justify-center a1-margin-bottom" style="background: #FF5A60 !important" (tap)="onClickLoginGoogle()">
                     <div class="a1-height-100" style="padding: 8px">
                         <img class="a1-height-100" src="assets/qbtkt/login/icon_google_plus.png">
                     </div>
-                    <div>{{mLogIn.text_login_google}}</div>
+                    <div nowrap>{{mLogIn.text_login_google}}</div>
                 </div>
             </ion-row>
             <ion-row>
-                <div class="qb-btn qb-big bold a3-container a3-items-center a3-justify-center" style="background: #5285C6 !important" (tap)="onClickLoginFacebook()">
+                <div nowrap class="qb-btn qb-big bold a3-container a3-items-center a3-justify-center" style="background: #5285C6 !important" (tap)="onClickLoginFacebook()">
                     <div class="a1-height-100" style="padding: 8px">
                         <img class="a1-height-100" src="assets/qbtkt/login/icon_fb.png">
                     </div>
-                    <span>{{mLogIn.text_login_facebook}}</span>
+                    <span nowrap>{{mLogIn.text_login_facebook}}</span>
                 </div>
             </ion-row>
         </ion-grid>

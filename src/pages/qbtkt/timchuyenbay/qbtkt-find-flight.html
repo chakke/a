@@ -35,7 +35,7 @@
                         <span *ngIf="departurePlace.hasData">
                             <img src="{{departurePlace.nationalFlag}}" class="national_flag">{{ departurePlace.city}}
                         </span>
-                        <span *ngIf="!departurePlace.hasData">Chọn điểm đi</span>
+                        <span *ngIf="!departurePlace.hasData" nowrap>Chọn điểm đi</span>
                     </div>
 
                 </ion-col>
@@ -47,7 +47,7 @@
                         <span *ngIf="arrivePlace.hasData">
                             <img src="{{arrivePlace.nationalFlag}}" class="national_flag"> {{ arrivePlace.city}}
                         </span>
-                        <span *ngIf="!arrivePlace.hasData">Chọn điểm đến</span>
+                        <span *ngIf="!arrivePlace.hasData" nowrap>Chọn điểm đến</span>
                     </div>
                 </ion-col>
             </ion-row>
@@ -57,7 +57,7 @@
         <div style="padding: 20px 30px 10px 30px;margin-top: -10px" [class.padding-bottom-20]="mFlightData.isRoundTrip">
             <div class="a3-container departure-day">
                 <div class="a3-container" nowrap style="min-width:72px; padding-top:2px" (click)="onClickPickDay()">
-                    <img src="assets/qbtkt/findflight/icon_departure_day.png" style="width:1.2em; height : 1.2em; margin-right:6px"> Ngày đi
+                    <img src="assets/qbtkt/findflight/icon_departure_day.png" style="width:1.2em; height : 1.2em; margin-right:6px"><span nowrap> Ngày đi</span>
                 </div>
                 <div class="a3-flex-1" style="padding-left:4%" (click)="onClickPickDay()">
                     <div class="a3-container">
@@ -78,7 +78,7 @@
 
             <div class="a3-container arriver-day" [hidden]="!mFlightData.isRoundTrip" [class.arriver-enable]="mFlightData.isRoundTrip">
                 <div class="a3-container" style="min-width:72px;padding-top:2px" (tap)="onClickPickReturnDay()">
-                    <img src="assets/qbtkt/findflight/icon_arrival_day.png" style="width:1.2em; height : 1.2em; margin-right:6px"> Ngày về
+                    <img src="assets/qbtkt/findflight/icon_arrival_day.png" style="width:1.2em; height : 1.2em; margin-right:6px"> <span>Ngày về</span>
                 </div>
                 <div class="a3-flex-1" style="padding-left:4%" (tap)="onClickPickReturnDay()">
                     <div class="a3-container">
@@ -141,7 +141,7 @@
         </div>
         <div class="gray-line"></div>
         <div style="height:40px"> </div>
-        <div class="button-find qb-big" id="btnFind" (click)="onClickFindFlight()"> Tìm kiếm </div>
+        <div class="button-find qb-btn qb-big" id="btnFind" (click)="onClickFindFlight()"> Tìm kiếm </div>
     </div>
 
     <div style="height: 20px;"></div>
