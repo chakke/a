@@ -6,13 +6,13 @@
     <div class="qb-content">
         <div class="content-header">
             <ion-row>
-                <ion-col text-center class="flight-point a1-text-ellipsis" (click)="onClickFindAirport(0)">
+                <ion-col text-center class="flight-point a1-text-ellipsis" (tap)="onClickFindAirport(0)">
                     <img src="assets/qbtkt/findflight/icon_departure_flight.png" style="width: auto;height: 1.1em; margin: 0 4px"> Điểm đi
                 </ion-col>
                 <ion-col col-2>
                     <!-- <img src="assets/qbtkt/findflight/btn_divert.png"> -->
                 </ion-col>
-                <ion-col text-center class="flight-point a1-text-ellipsis" (click)="onClickFindAirport(1)">
+                <ion-col text-center class="flight-point a1-text-ellipsis" (tap)="onClickFindAirport(1)">
                     <img src="assets/qbtkt/findflight/icon_arrival_flight.png" style="width: auto; height: 1.1em; margin: 0 4px"> Điểm đến
                 </ion-col>
             </ion-row>
@@ -56,10 +56,10 @@
 
         <div style="padding: 20px 30px 10px 30px;margin-top: -10px" [class.padding-bottom-20]="mFlightData.isRoundTrip">
             <div class="a3-container departure-day">
-                <div class="a3-container" nowrap style="min-width:72px; padding-top:2px" (click)="onClickPickDay()">
+                <div class="a3-container" nowrap style="min-width:72px; padding-top:2px" (tap)="onClickPickDay()">
                     <img src="assets/qbtkt/findflight/icon_departure_day.png" style="width:1.2em; height : 1.2em; margin-right:6px"> Ngày đi
                 </div>
-                <div class="a3-flex-1" style="padding-left:4%" (click)="onClickPickDay()">
+                <div class="a3-flex-1" style="padding-left:4%" (tap)="onClickPickDay()">
                     <div class="a3-container">
                         <div class="flight-day"> {{mFlightData.from.date}}</div>
                         <div class="a3-flex-1">
@@ -141,7 +141,7 @@
         </div>
         <div class="gray-line"></div>
         <div style="height:40px"> </div>
-        <div class="button-find qb-big" id="btnFind" (click)="onClickFindFlight()"> Tìm kiếm </div>
+        <div class="button-find qb-big" id="btnFind" (tap)="onClickFindFlight()"> Tìm kiếm </div>
     </div>
 
     <div style="height: 20px;"></div>

@@ -16,7 +16,7 @@ export class MyApp {
       splashScreen.hide();
 
       this.mStatusBar.overlaysWebView(false);
-      this.mStatusBar.backgroundColorByHexString("#50830D");
+      this.mStatusBar.backgroundColorByHexString("#31904d");
 
       AppController.getInstance().setPlatform(platform);
     });

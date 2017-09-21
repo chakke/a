@@ -82,7 +82,7 @@ page-ticket-detail {
             }
         }
         .right-content {
-            color: #000;
+            color: map-get($QBTKTColors, black);
             font-weight: bold;
             float: right;
         }
@@ -107,7 +107,7 @@ page-ticket-detail {
             }
         }
         .fly-name {
-            color: #000;
+            color: map-get($QBTKTColors, black);
         }
         &:last-child {
             border-bottom: none;
@@ -120,7 +120,7 @@ page-ticket-detail {
                 background-color: #e3e1e2;
             }
             .place {
-                color: #000;
+                color: map-get($QBTKTColors, black);
                 font-weight: bold;
             }
             .airport {

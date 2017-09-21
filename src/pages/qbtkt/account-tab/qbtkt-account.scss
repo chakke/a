@@ -38,6 +38,12 @@ page-qbtkt-account {
         width: 20%;
         height: 100%;
         text-align: right;
+        img {
+            display: block;
+            max-width: 16px;
+            height: auto;
+            float: right
+        }
     }
     #content-container {
         overflow: auto;
