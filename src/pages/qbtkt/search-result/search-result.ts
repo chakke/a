@@ -46,10 +46,11 @@ export class SearchResultPage {
         this.menuButtonClick(button, 6 - i);
       })
     }
-    let breakPoint = 1.5 * this.infoHeight; 
-    
-    this.content.ionScroll.subscribe(() => { 
-      let scrollTop = this.content.scrollTop;
+    let breakPoint = 1.5 * this.infoHeight;
+
+    let scrollContent = <HTMLElement>document.querySelector('#search-result-content .scroll-content');
+    scrollContent.addEventListener('scroll', () => {
+      let scrollTop = scrollContent.scrollTop;
       if (scrollTop >= breakPoint) {
         this.btnGroup.classList.add("fixed-top");
         this.btnGroup.style.transform = `translateY(-${breakPoint}px)`;

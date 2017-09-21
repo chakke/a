@@ -139,6 +139,7 @@ page-hotel-rate {
                             color: map-get($QBTKTColors, blue);
                         }
                         .point-group {
+                            white-space: nowrap;
                             float: right;
                         }
                         margin: 5px 0;

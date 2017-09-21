@@ -4,6 +4,9 @@ page-qbtkt-flight-list {
             overflow: hidden;
         }
     }
+    .footer-height {
+        height: 56px;
+    }
     .flight-container {
         position: relative;
         &::before {
@@ -41,8 +44,8 @@ page-qbtkt-flight-list {
         height: 48px;
     }
     #page-content {
-        overflow-y: auto;
-        max-height: 60vh;
+        overflow-y: scroll;
+        max-height: auto !important;
     }
     flight {
         margin-top: 10px;
