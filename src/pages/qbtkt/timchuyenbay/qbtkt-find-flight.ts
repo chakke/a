@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, Content, NavController, ModalController } from 'ionic-angular';
+import { IonicPage, Content, NavController, ModalController, NavParams } from 'ionic-angular';
 import { Utils } from '../../../providers/app-utils';
 
 import { CalendarDate } from '../../../providers/qbtkt/classes/calendar';
@@ -43,6 +43,7 @@ export class QBTicketingFindFlightPage {
 
   constructor(
     private navCtrl: NavController,
+    private navParams: NavParams,
     private mAppModule: QBTicketingModule,
     private mModalController: ModalController
   ) {
@@ -52,6 +53,24 @@ export class QBTicketingFindFlightPage {
     this.mDatas = this.mAppModule.getAppConfig().getViewData("QBTicketingFindFlightPage");
     this.mFlightData.toDate.setTime(Utils.getTimeAfter(this.mFlightData.fromDate, 6));
     this.onDateChanged();
+
+    if (this.navParams.get('departurePlace')) {
+      this.departurePlace = this.navParams.get('departurePlace');
+      this.departurePlace["hasData"] = true;
+      let country = this.mAppModule.getCountries().getItem(this.departurePlace["countryId"]);
+      if (country) {
+        this.departurePlace["nationalFlag"] = country.nationalFlag;
+      }
+    }
+
+    if (this.navParams.get('arrivePlace')) {
+      this.arrivePlace = this.navParams.get('arrivePlace');
+      this.arrivePlace["hasData"] = true;
+      let country = this.mAppModule.getCountries().getItem(this.arrivePlace["countryId"]);
+      if (country) {
+        this.arrivePlace["nationalFlag"] = country.nationalFlag;
+      }
+    }    
   }
 
   ionViewWillEnter() {

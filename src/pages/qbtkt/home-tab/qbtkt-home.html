@@ -49,7 +49,7 @@
 
         <div class="horizontal-list">
             <div>
-                <image-card *ngFor="let item of category.items" [src]="item.src" [description]="item.description" [navPush]="'SamplePage'"></image-card>
+                <image-card *ngFor="let item of category.items" [src]="item.src" [description]="item.description" (click)="itemClick(item.href, item.dataHref)"></image-card>
             </div>
         </div>
     </div>

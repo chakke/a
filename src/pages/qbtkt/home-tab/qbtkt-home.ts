@@ -1,4 +1,4 @@
-import { Component  } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, ModalController, IonicFormInput } from 'ionic-angular';
 import { QBTicketingModule } from '../../../providers/qbtkt/qbtkt';
 import { AppController } from "../../../providers/app-controller";
@@ -9,8 +9,8 @@ import { AppController } from "../../../providers/app-controller";
   selector: 'page-qbtkt-home',
   templateUrl: 'qbtkt-home.html',
 })
-export class QBTicketingHomePage {  
-  mViewData: any = {}; 
+export class QBTicketingHomePage {
+  mViewData: any = {};
 
   mCategories = [];
 
@@ -22,8 +22,8 @@ export class QBTicketingHomePage {
     this.mViewData = this.mAppModule.getAppConfig().getViewData("QBTicketingHomePage");
     this.mCategories = this.mViewData.categories;
 
-  } 
-  
+  }
+
   onTapFunction(index: number) {
     if (index == 0) this.navCtrl.push("QBTicketingFindFlightPage");
     else if (index == 1) this.navCtrl.push("QBTicketingFindHotelPage");
@@ -38,6 +38,12 @@ export class QBTicketingHomePage {
   }
   onClickLogo() {
     if (AppController.getInstance().getNavController()) AppController.getInstance().getNavController().setRoot("StoreHomePage", {}, { animate: true });
+  }
+
+  itemClick(href, dataHref) {
+    if (href && dataHref) {
+      this.navCtrl.push(href, dataHref);
+    } else this.navCtrl.push("SamplePage");
   }
 
 }

@@ -9,9 +9,46 @@
         "categories": [{
                 "id": 0,
                 "title": "Chặng bay phổ biến",
-                "items": [
-                    { "id": 0, "src": "assets/qbtkt/home/image_1.png", "description": "Hồ Chí Minh - Hà Nội" },
-                    { "id": 1, "src": "assets/qbtkt/home/image_2.png", "description": "Hà Nội - Đà Nẵng" }
+                "items": [{
+                        "id": 0,
+                        "src": "assets/qbtkt/home/image_1.png",
+                        "description": "Hồ Chí Minh - Hà Nội",
+                        "href": "QBTicketingFindFlightPage",
+                        "dataHref": {
+                            "departurePlace": {
+                                "city": "TP Hồ Chí Minh",
+                                "country": "Việt Nam",
+                                "countryId": "VN",
+                                "code": "SGN"
+                            },
+                            "arrivePlace": {
+                                "city": "Hà Nội",
+                                "country": "Việt Nam",
+                                "countryId": "VN",
+                                "code": "HAN"
+                            }
+                        }
+                    },
+                    {
+                        "id": 1,
+                        "src": "assets/qbtkt/home/image_2.png",
+                        "description": "Hà Nội - Đà Nẵng",
+                        "href": "QBTicketingFindFlightPage",
+                        "dataHref": {
+                            "departurePlace": {
+                                "city": "Hà Nội",
+                                "country": "Việt Nam",
+                                "countryId": "HAN",
+                                "code": "HAN"
+                            },
+                            "arrivePlace": {
+                                "city": "Đà Nẵng",
+                                "country": "Việt Nam",
+                                "countryId": "VN",
+                                "code": "DAD"
+                            }
+                        }
+                    }
                 ]
             },
             {
